@@ -109,7 +109,7 @@ public class StartApp extends Application {
     public void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/MainWindow.fxml"));
+            loader.setLocation(StartApp.class.getResource("/MainWindow.fxml"));
             rootLayout = (BorderPane) loader.load();
 
             Scene scene = new Scene(rootLayout);
@@ -129,7 +129,7 @@ public class StartApp extends Application {
     public void initEnterWindow() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/EnterWindow.fxml"));
+            loader.setLocation(StartApp.class.getResource("/EnterWindow.fxml"));
             enterWindowLayout = (AnchorPane) loader.load();
 
             enterWindowController = loader.getController();
@@ -145,7 +145,7 @@ public class StartApp extends Application {
     public void initChooseOrderLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/ChooseOrder.fxml"));
+            loader.setLocation(StartApp.class.getResource("/ChooseOrder.fxml"));
             chooseOrderLayout = (AnchorPane) loader.load();
 
             chooseOrderCntrl = loader.getController();
@@ -159,7 +159,7 @@ public class StartApp extends Application {
     public void initCreateOrderFormLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/CreateOrderForm.fxml"));
+            loader.setLocation(StartApp.class.getResource("/CreateOrderForm.fxml"));
             createOrderFormLayout = (AnchorPane) loader.load();
 
             createOrderFormCntrl = loader.getController();
@@ -173,7 +173,7 @@ public class StartApp extends Application {
     public void initDriverRegisterFormLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/DriverRegisterForm.fxml"));
+            loader.setLocation(StartApp.class.getResource("/DriverRegisterForm.fxml"));
             driverRegisterFormLayout = (AnchorPane) loader.load();
 
             driverRegisterFormCntrl = loader.getController();
@@ -188,7 +188,7 @@ public class StartApp extends Application {
     public void initOrderStatusLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/OrderStatus.fxml"));
+            loader.setLocation(StartApp.class.getResource("/OrderStatus.fxml"));
             orderStatusLayout = (AnchorPane) loader.load();
 
             orderStatusCntrl = loader.getController();
@@ -201,7 +201,7 @@ public class StartApp extends Application {
     public void initPassangerRegisterFormLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/PassangerRegisterForm.fxml"));
+            loader.setLocation(StartApp.class.getResource("/PassangerRegisterForm.fxml"));
             passangerRegisterFormLayout = (AnchorPane) loader.load();
 
             passangerRegisterFormCntrl = loader.getController();
@@ -215,7 +215,7 @@ public class StartApp extends Application {
     public void initChooseOrderInfo() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(StartApp.class.getResource("view/ChooseOrderInfo.fxml"));
+            loader.setLocation(StartApp.class.getResource("/ChooseOrderInfo.fxml"));
             chooseOrderInfoLayout = (AnchorPane) loader.load();
 
             chooseOrderInfoCntrl = loader.getController();
