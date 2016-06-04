@@ -47,7 +47,7 @@ public class AppDB implements OrderDao, UserDao {
     @Override
     public Collection<User> addUser(User user) {
         users.put(user.getPhone(), user);
-        saveUsers();
+     //   saveUsers();
         return users.values();
     }
 
@@ -82,7 +82,7 @@ public class AppDB implements OrderDao, UserDao {
     @Override
     public Collection<Order> addOrder(Order order) {
         orders.put(order.getUserPhone(), order);
-        saveOrders();
+        //saveOrders();
         return orders.values();
     }
 
@@ -92,10 +92,10 @@ public class AppDB implements OrderDao, UserDao {
         order.setOrderStatus(newStatus);
         return orders.replace(phone, order);
     }
-
+}
     /**
      * ******************* XML Save-Load *************************************************
-     */
+
     private void saveOrders() {
         try {
 
@@ -180,3 +180,4 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 }
+*/
