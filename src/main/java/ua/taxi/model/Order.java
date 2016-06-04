@@ -34,6 +34,7 @@ public class Order {
         this.userName = new SimpleStringProperty(userName);
         orderStatus = new SimpleObjectProperty<>(OrderStatus.NEW);
         createTime = new SimpleObjectProperty<>(LocalDateTime.now());
+
         createTimeAsString = new SimpleStringProperty(createTime.get()
                 .format(DateTimeFormatter.ofPattern("HH.mm.ss a")));
         this.distance = new SimpleStringProperty(String.format("%3.2f km", distance / 1000));
