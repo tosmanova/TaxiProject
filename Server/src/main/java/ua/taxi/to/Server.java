@@ -1,4 +1,7 @@
 package ua.taxi.to;
+
+import ua.taxi.remote.RemoteOrder;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -12,35 +15,40 @@ public class Server {
     private ObjectInputStream reader;
     private ServerSocket serverSocket;
     private Socket client;
+    private RemoteOrder remoteOrder;
+    private long count;
+    private final int PORT = 8080;
 
 
-    public Server() throws IOException {
-        serverSocket = new ServerSocket(8080);
+    public Server(RemoteOrder remoteOrder) throws IOException, ClassNotFoundException {
+        this.remoteOrder = remoteOrder;
+        serverSocket = new ServerSocket(PORT);
+        run();
     }
 
-    public void send(Object object) throws IOException {
-        write(object);
+    private void run() throws IOException, ClassNotFoundException {
+        while (true) {
+            System.out.println("Server: Wait for client");
+            client = serverSocket.accept();
+            reader = new ObjectInputStream(client.getInputStream());
+            Object object = reader.readObject();
+            object = objectHandler(object);
+            reader.close();
+            client.close();
+
+            client = serverSocket.accept();
+            writer = new ObjectOutputStream(client.getOutputStream());
+            writer.writeObject(object);
+            count++;
+            System.out.printf("Server: Object -" + count + "- send to client");
+            writer.flush();
+            writer.close();
+        }
+
     }
 
-    public Object recive() throws IOException, ClassNotFoundException {
-        return read();
+    private Object objectHandler(Object object) {
+        return remoteOrder.handler(object);
     }
 
-    private void write(Object object) throws IOException {
-        client = serverSocket.accept();
-        writer = new ObjectOutputStream(client.getOutputStream());
-        writer.writeObject(object);
-        writer.flush();
-        writer.close();
-    }
-
-    private Object read() throws IOException, ClassNotFoundException {
-        client = serverSocket.accept();
-        System.out.println("Wait for client");
-        reader = new ObjectInputStream(client.getInputStream());
-        Object object = reader.readObject();
-        reader.close();
-        client.close();
-        return object;
-    }
 }

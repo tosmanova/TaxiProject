@@ -1,5 +1,7 @@
 package ua.taxi.model;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Роман
@@ -8,13 +10,17 @@ package ua.taxi.model;
  * <p>
  * To change this template use File | Settings | File Templates.
  */
-public class Driver extends User {
+public class Driver extends User implements Serializable {
 
     private Car car;
 
     public Driver(String phone, String pass, String name, Car car) {
         super(phone, pass, name);
         this.car = car;
+    }
+
+    public Driver(String phone, String pass, String name) {
+        super(phone, pass, name);
     }
 
     public Car getCar() {

@@ -1,6 +1,7 @@
 package ua.taxi.remote;
 
 import ua.taxi.model.*;
+import ua.taxi.model.RemoteObject;
 import ua.taxi.service.OrderService;
 import ua.taxi.to.Client;
 
@@ -22,7 +23,7 @@ public class RemoteOrderService implements OrderService {
     public int ordersRegisteredQuantity() {
 
         try {
-            return (int) send("ordersRegisteredQuantity", null);
+            return (int) send(new RemoteObject(OrderMethods.ORDERS_REGISTERED_QUANTITY));
         } catch (IOException e) {
             e.printStackTrace();
             return 0;
@@ -35,14 +36,14 @@ public class RemoteOrderService implements OrderService {
     @Override
     public OrderValidateMessage createOrder(String userPhone, String userName, Address from, Address to) {
 
-        Order order = new Order();
-        order.setUserPhone(userPhone);
-        order.setUserName(userName);
-        order.setFrom(from.toString());
-        order.setTo(to.toString());
+        RemoteObject remoteObject = new RemoteObject(OrderMethods.CREATE_ORDER);
+        remoteObject.setUserPhone(userPhone);
+        remoteObject.setUserName(userName);
+        remoteObject.setFrom(from);
+        remoteObject.setTo(to);
 
         try {
-            return (OrderValidateMessage) send("createOrder", order);
+            return (OrderValidateMessage) send(remoteObject);
         } catch (IOException e) {
             e.printStackTrace();
             return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
@@ -113,8 +114,8 @@ public class RemoteOrderService implements OrderService {
         return null;
     }
 
-    private Object send(String methodName, Object object) throws IOException, ClassNotFoundException {
-        client.send(new RemoteObject(methodName, object));
-        return client.recive();
+    private Object send(RemoteObject remoteObject) throws IOException, ClassNotFoundException {
+        client.send(remoteObject);
+        return client.receive();
     }
 }

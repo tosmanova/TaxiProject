@@ -3,6 +3,7 @@ package ua.taxi.model;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,7 +14,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  */
 
 @XmlRootElement
-public class Car {
+public class Car implements Serializable {
 
     String number;
     String model;

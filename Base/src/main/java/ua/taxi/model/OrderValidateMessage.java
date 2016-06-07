@@ -1,9 +1,11 @@
 package ua.taxi.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Andrii on 5/4/2016.
  */
-public class OrderValidateMessage {
+public class OrderValidateMessage implements Serializable {
 
     private Order order;
     private String title;

@@ -42,13 +42,13 @@ public class ChooseOrderCntrl implements Controller {
 
     @FXML
     private void initialize() {
-
+/*
         fromColumn.setCellValueFactory(cellData -> cellData.getValue().fromProperty());
         toColumn.setCellValueFactory(cellData -> cellData.getValue().toProperty());
         priceColumn.setCellValueFactory(cellData -> cellData.getValue().priceProperty());
         createdColumn.setCellValueFactory(cellData -> cellData.getValue().createTimeAsStringProperty());
         distanceColumn.setCellValueFactory(cellData -> cellData.getValue().distanceProperty());
-
+*/
     }
 
     public void clear() {

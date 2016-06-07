@@ -1,11 +1,12 @@
 package ua.taxi.model;
 
+import java.io.Serializable;
 import java.util.GregorianCalendar;
 
 /**
  * Created by Andrii on 4/25/2016.
  */
-public class Passanger extends User {
+public class Passanger extends User implements Serializable {
 
     private Address homeAdress;
 

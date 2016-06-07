@@ -38,11 +38,11 @@ public class ChooseOrderInfoCntrl implements Controller{
         this.activeOrder = activeOrder;
         goFromLabel.setText(activeOrder.getFrom().toString());
         goToLabel.setText(activeOrder.getTo().toString());
-        distanceLabel.setText(activeOrder.getDistance());
+      //  distanceLabel.setText(activeOrder.getDistance());
         phoneLabel.setText(activeOrder.getUserPhone());
         nameLabel.setText(activeOrder.getUserName());
-        timeLabel.setText(activeOrder.getCreateTimeAsString());
-        priceLabel.setText(activeOrder.getPrice());
+      //  timeLabel.setText(activeOrder.getCreateTimeAsString());
+       // priceLabel.setText(activeOrder.getPrice());
     }
 
     @FXML

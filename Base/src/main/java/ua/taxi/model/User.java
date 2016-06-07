@@ -1,11 +1,12 @@
 package ua.taxi.model;
 
 
+import java.io.Serializable;
 
 /**
  * Created by serhii on 23.04.16.
  */
-public abstract class User {
+public abstract class User implements Serializable {
 
     private String phone;
     private String pass;

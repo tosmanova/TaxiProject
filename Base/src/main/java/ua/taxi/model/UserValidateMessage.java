@@ -1,9 +1,11 @@
 package ua.taxi.model;
 
+import java.io.Serializable;
+
 /**
  * Created by serhii on 23.04.16.
  */
-public class UserValidateMessage {
+public class UserValidateMessage implements Serializable {
 
     private User user;
     private String title;

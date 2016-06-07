@@ -1,9 +1,11 @@
 package ua.taxi.model;
 
+import java.io.Serializable;
+
 /**
  * Created by serhii on 23.04.16.
  */
-public class Address {
+public class Address implements Serializable{
 
     private String street;
     private String houseNum;
@@ -11,6 +13,8 @@ public class Address {
     // google api
     private double lat;
     private double lon;
+
+
 
     public Address(String street, String houseNum) {
         this.street = street;
@@ -20,12 +24,6 @@ public class Address {
     public Address(double lat, double lon) {
         this.lat = lat;
         this.lon = lon;
-    }
-
-    public Address(String address) {
-        String[] arr = address.split("\\s(?=([\\d]{1,2}(\\b|\\w\\b)))");
-        street = arr[0];
-        houseNum = arr[arr.length - 1];
     }
 
     public Address() {
