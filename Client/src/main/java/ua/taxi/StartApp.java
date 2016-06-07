@@ -4,18 +4,18 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import ua.taxi.dao.*;
 import ua.taxi.model.*;
+import ua.taxi.remote.RemoteOrderService;
+import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
+import ua.taxi.to.Client;
 import ua.taxi.view.*;
-
 import java.io.IOException;
-import java.util.Collection;
+
 
 public class StartApp extends Application {
 
@@ -50,10 +50,11 @@ public class StartApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        userService = new UserServiceImpl(new UserDaoInnerDbImpl(new AppDB()));
-        orderService = new OrderServiceImpl(new OrderDaoInnerDbImpl(new AppDB()));
+        userService = new RemoteUserService(new Client());
+        orderService = new RemoteOrderService(new Client());
 
         this.primaryStage = primaryStage;
+
         this.primaryStage.setTitle("TaxiApp");
 
         initDaoWithSomeUsers();

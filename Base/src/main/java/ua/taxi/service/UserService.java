@@ -15,8 +15,8 @@ public interface UserService {
 
     UserValidateMessage getUser(String phone);
 
-    int driverRegisteredQuantity ();
-    int passangerRegisteredQuantity ();
+    int driverRegisteredQuantity();
+    int passangerRegisteredQuantity();
 
     UserValidateMessage login(String phone, String pass);
 

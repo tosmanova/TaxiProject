@@ -1,7 +1,7 @@
 package ua.taxi.model;
 
 import javafx.beans.property.*;
-import ua.taxi.exception.*;
+
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -25,6 +25,8 @@ public class Order {
     private StringProperty createTimeAsString;
     private ObjectProperty<OrderStatus> orderStatus;
 
+    public Order() {
+    }
 
     public Order(Address from, Address to, String userPhone, String userName, Double price, Double distance) {
         this.from = new SimpleStringProperty(from.toString());

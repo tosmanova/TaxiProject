@@ -6,7 +6,6 @@ import ua.taxi.model.Address;
 import ua.taxi.model.Order;
 import ua.taxi.model.OrderStatus;
 import ua.taxi.model.OrderValidateMessage;
-import ua.taxi.service.OrderService;
 import ua.taxi.service.OrderServiceImpl;
 
 /**

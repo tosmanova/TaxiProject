@@ -1,7 +1,6 @@
 package ua.taxi.model;
 
-import ua.taxi.exception.TaxiAppException;
-import ua.taxi.exception.UserIdIsSettedException;
+
 
 /**
  * Created by serhii on 23.04.16.

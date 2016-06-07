@@ -2,6 +2,7 @@ package ua.taxi.service;
 
 import ua.taxi.model.*;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
 
