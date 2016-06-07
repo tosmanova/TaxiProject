@@ -4,11 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import ua.taxi.StartApp;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.OrderStatus;
 
-import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -50,7 +48,7 @@ public class MainWindowCntrl implements Controller {
         mainAnchorPane.setTopAnchor(anchorPane, 0.0);
     }
 
-    public void updateOrderCounters() {
+    public void updateOrderCounters() throws RemoteConnectionError {
         Map<OrderStatus, Integer> counterMap = startApp.getOrderService().getStatusCounterMap();
         ordersLabel.setText(String.valueOf(startApp.getOrderService().ordersRegisteredQuantity()));
         newLabel.setText(String.valueOf(counterMap.get(OrderStatus.NEW)));
@@ -58,7 +56,7 @@ public class MainWindowCntrl implements Controller {
         doneLabel.setText(String.valueOf(counterMap.get(OrderStatus.DONE)));
     }
 
-    public void updateUserCounters() {
+    public void updateUserCounters() throws RemoteConnectionError {
 
         allUsersLabel.setText(String.valueOf(startApp.getUserService().driverRegisteredQuantity()
                 + startApp.getUserService().passangerRegisteredQuantity()));

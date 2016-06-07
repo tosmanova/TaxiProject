@@ -1,6 +1,6 @@
 package ua.taxi.test;
 
-import ua.taxi.model.Address;
+import ua.taxi.model.Order.Address;
 import ua.taxi.utils.Utils;
 
 /**

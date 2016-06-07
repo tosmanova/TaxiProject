@@ -1,4 +1,4 @@
-package ua.taxi.model;
+package ua.taxi.model.User;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;

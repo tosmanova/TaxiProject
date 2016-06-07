@@ -7,9 +7,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import ua.taxi.StartApp;
-import ua.taxi.model.Address;
-import ua.taxi.model.Passanger;
-import ua.taxi.model.UserValidateMessage;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 /**
@@ -116,7 +117,7 @@ public class PassangerRegisterFormCntrl implements Controller {
     }
 
     @FXML
-    private void create() {
+    private void create() throws RemoteConnectionError {
 
         if (textFieldsValidate()) {
             UserValidateMessage userValidate;

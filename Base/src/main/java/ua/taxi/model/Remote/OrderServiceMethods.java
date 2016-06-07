@@ -1,4 +1,4 @@
-package ua.taxi.model;
+package ua.taxi.model.Remote;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * Created by andrii on 07.06.16.
  */
-public enum OrderMethods implements Serializable{
+public enum OrderServiceMethods implements Serializable{
 
     ORDERS_REGISTERED_QUANTITY,
 

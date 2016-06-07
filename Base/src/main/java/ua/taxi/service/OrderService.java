@@ -1,9 +1,13 @@
 package ua.taxi.service;
 
-import ua.taxi.model.*;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.Order.OrderValidateMessage;
 
-import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,11 +25,11 @@ public interface OrderService {
 
     OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone);
 
-    Collection<Order> getAllOrders();
+    List<Order> getAllOrders() throws RemoteConnectionError;
 
-    Collection<Order> getNewOrders();
+    List<Order> getNewOrders() throws RemoteConnectionError;
 
-    Map<OrderStatus,Integer> getStatusCounterMap();
+    Map<OrderStatus, Integer> getStatusCounterMap() throws RemoteConnectionError;
 
     OrderValidateMessage changeOrder(String phone, String name, Address from, Address to);
 
@@ -33,10 +37,10 @@ public interface OrderService {
 
     OrderValidateMessage cancelOrder(String phone);
 
-    Double getDistance(Address from, Address to);
+    Double getDistance(Address from, Address to) throws RemoteConnectionError;
 
-    Double getPrice(Double distance);
+    Double getPrice(Double distance) throws RemoteConnectionError;
 
-    Double getPrice(Address from, Address to);
+    Double getPrice(Address from, Address to) throws RemoteConnectionError;
 
 }

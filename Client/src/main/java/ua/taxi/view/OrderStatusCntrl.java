@@ -4,10 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
-import ua.taxi.model.Driver;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
-import ua.taxi.model.Passanger;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.User.Driver;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
 
 import java.time.format.DateTimeFormatter;
 
@@ -83,7 +83,7 @@ public class OrderStatusCntrl implements Controller {
     }
 
     @FXML
-    private void cancelOrder() {
+    private void cancelOrder() throws RemoteConnectionError {
         startApp.getOrderService().cancelOrder(activeOrder.getUserPhone());
         mainWindowCntrl.updateOrderCounters();
         startApp.showEnterWindow();

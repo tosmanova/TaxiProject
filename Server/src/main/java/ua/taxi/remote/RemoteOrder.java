@@ -1,8 +1,8 @@
 package ua.taxi.remote;
 
 
-import ua.taxi.model.OrderMethods;
-import ua.taxi.model.RemoteObject;
+import ua.taxi.model.Remote.OrderServiceMethods;
+import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.service.OrderServiceImpl;
 
 /**
@@ -18,20 +18,65 @@ public class RemoteOrder {
 
     public Object handler(Object object) {
 
-        RemoteObject remote = (RemoteObject) object;
+        RemoteOrderObject remote = (RemoteOrderObject) object;
 
-        if (remote.getOrderMethods() == OrderMethods.ORDERS_REGISTERED_QUANTITY) {
+        if (remote.getOrderMethods() == OrderServiceMethods.ORDERS_REGISTERED_QUANTITY) {
             return service.ordersRegisteredQuantity();
 
-        } else if (remote.getOrderMethods() == OrderMethods.CREATE_ORDER) {
+        } else if (remote.getOrderMethods() == OrderServiceMethods.CREATE_ORDER) {
             return service.createOrder(
                     remote.getUserPhone(),
                     remote.getUserName(),
                     remote.getFrom(),
                     remote.getTo());
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_ORDER) {
+            return service.getOrder(remote.getUserPhone());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_ORDER_IN_PROGRES_BY_DRIVERPHONE) {
+            return service.getOrderInProgresByDriverPhone(
+                    remote.getDriverPhone());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_ALL_ORDERS) {
+            return service.getAllOrders();
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_NEW_ORDERS) {
+            return service.getNewOrders();
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_STATUS_COUNTERMAP) {
+            return service.getStatusCounterMap();
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.CHANGE_ORDER_4) {
+            return service.changeOrder(
+                    remote.getUserPhone(),
+                    remote.getUserName(),
+                    remote.getFrom(),
+                    remote.getTo());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.CHANGE_ORDER_2) {
+            return service.changeOrder(
+                    remote.getUserPhone(),
+                    remote.getOrder());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.CANCEL_ORDER) {
+            return service.cancelOrder(
+                    remote.getUserPhone());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_DISTANCE) {
+            return service.getDistance(
+                    remote.getFrom(),
+                    remote.getTo());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_PRICE) {
+            return service.getPrice(
+                    remote.getDistance());
+
+        } else if (remote.getOrderMethods() == OrderServiceMethods.GET_PRICE2) {
+            return service.getPrice(
+                    remote.getFrom(),
+                    remote.getTo());
+        } else {
+            return "UNKNOWN Method";
         }
 
-        return "UNKNOWN Method";
     }
-
 }

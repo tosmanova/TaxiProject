@@ -4,11 +4,12 @@ import ua.taxi.dao.OrderDao;
 import ua.taxi.geolocation.GoogleMapsAPI;
 import ua.taxi.geolocation.GoogleMapsAPIImpl;
 import ua.taxi.geolocation.Location;
-import ua.taxi.model.*;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.Order.OrderValidateMessage;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
@@ -97,16 +98,16 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public Collection<Order> getAllOrders() {
-        return orderDao.getOrderList();
+    public List<Order> getAllOrders() {
+        return new ArrayList<>(orderDao.getOrderList());
     }
 
     @Override
-    public Collection<Order> getNewOrders() {
+    public List<Order> getNewOrders() {
         Collection<Order> allOrders = orderDao.getOrderList();
         Collection<Order> newOrders = allOrders.stream().filter(order -> order.getOrderStatus() == OrderStatus.NEW)
                 .collect(Collectors.toCollection(CopyOnWriteArrayList::new));
-        return newOrders;
+        return new ArrayList<>(newOrders);
     }
 
     @Override
@@ -153,14 +154,14 @@ public class OrderServiceImpl implements OrderService {
         Location locationTo = googleMapsAPI.findLocation("Ukraine", "Kiev", to.getStreet(), to.getHouseNum());
 
         double distance = googleMapsAPI.getDistance(locationFrom, locationTo);
-     //   System.out.println(distance);
+        //   System.out.println(distance);
         return distance;
     }
 
     @Override
     public Double getPrice(Double distance) {
         double price = MIN_PRICE + (distance / 1000) * KILOMETRE_PRICE;
-     //   System.out.println(price);
+        //   System.out.println(price);
         return price;
     }
 

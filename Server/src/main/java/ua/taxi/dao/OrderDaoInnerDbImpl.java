@@ -1,10 +1,9 @@
 package ua.taxi.dao;
 
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
 
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by Andrii on 4/25/2016.

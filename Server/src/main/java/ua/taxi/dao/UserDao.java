@@ -1,7 +1,6 @@
 package ua.taxi.dao;
 
-import ua.taxi.exception.TaxiAppException;
-import ua.taxi.model.*;
+import ua.taxi.model.User.User;
 
 import java.util.Collection;
 import java.util.List;

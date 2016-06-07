@@ -1,15 +1,8 @@
-package ua.taxi.model;
+package ua.taxi.model.User;
 
 import java.io.Serializable;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Роман
- * Date: 23.04.16
- * Time: 17:02
- * <p>
- * To change this template use File | Settings | File Templates.
- */
+
 public class Driver extends User implements Serializable {
 
     private Car car;

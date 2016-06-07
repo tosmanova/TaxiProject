@@ -1,13 +1,9 @@
 package ua.taxi.dao;
 
-import javafx.scene.control.Alert;
-import ua.taxi.exception.TaxiAppException;
-import ua.taxi.model.*;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.User.User;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.util.*;
 

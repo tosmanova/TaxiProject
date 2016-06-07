@@ -3,7 +3,11 @@ package ua.taxi.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import ua.taxi.StartApp;
-import ua.taxi.model.*;
+import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.Order.OrderValidateMessage;
+import ua.taxi.model.User.Driver;
+import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 /**

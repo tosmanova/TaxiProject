@@ -1,6 +1,6 @@
 package ua.taxi.dao;
 
-import ua.taxi.model.Order;
+import ua.taxi.model.Order.Order;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

@@ -1,6 +1,6 @@
 package ua.taxi.dao;
 
-import ua.taxi.model.User;
+import ua.taxi.model.User.User;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;

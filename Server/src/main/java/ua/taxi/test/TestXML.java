@@ -1,6 +1,6 @@
 package ua.taxi.test;
 
-import ua.taxi.model.Car;
+import ua.taxi.model.User.Car;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;

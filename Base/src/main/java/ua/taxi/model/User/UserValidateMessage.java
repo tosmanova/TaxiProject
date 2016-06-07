@@ -1,4 +1,6 @@
-package ua.taxi.model;
+package ua.taxi.model.User;
+
+import ua.taxi.model.User.User;
 
 import java.io.Serializable;
 

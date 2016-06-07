@@ -5,9 +5,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ua.taxi.StartApp;
-import ua.taxi.model.Driver;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.User.Driver;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
 
 
 /**
@@ -61,7 +62,7 @@ public class ChooseOrderCntrl implements Controller {
     }
 
     @FXML
-    private void getOrder() {
+    private void getOrder() throws RemoteConnectionError {
 
 
         Order order = orderTable.getSelectionModel().getSelectedItem();

@@ -1,6 +1,7 @@
 package ua.taxi.to;
 
-import ua.taxi.model.RemoteObject;
+import ua.taxi.model.Remote.RemoteOrderObject;
+import ua.taxi.model.Remote.RemoteUserObject;
 
 import java.io.*;
 import java.net.Socket;
@@ -17,9 +18,10 @@ public class Client {
     private Socket socket;
     private final String IP = "127.0.0.1";
     private final int PORT = 8080;
+    private int count;
 
 
-    public void send(RemoteObject object) throws IOException {
+    public void send(Object object) throws IOException {
         write(object);
     }
 
@@ -27,11 +29,12 @@ public class Client {
         return read();
     }
 
-    private void write(RemoteObject object) throws IOException {
+    private void write(Object object) throws IOException {
         socket = new Socket(IP, PORT);
         writer = new ObjectOutputStream(socket.getOutputStream());
         writer.writeObject(object);
         System.out.println("Client: Object send to server");
+        System.out.println(printMessage(object));
         writer.flush();
         writer.close();
         socket.close();
@@ -45,6 +48,19 @@ public class Client {
         reader.close();
         socket.close();
         return object;
+    }
+
+    private String printMessage(Object object) {
+
+        if (object instanceof RemoteOrderObject){
+            RemoteOrderObject remoteOrderObject = (RemoteOrderObject) object;
+            return remoteOrderObject.getOrderMethods().toString();
+        }else if(object instanceof RemoteUserObject){
+            RemoteUserObject remoteUserObject = (RemoteUserObject) object;
+            return remoteUserObject.getUserServiceMethods().toString();
+        }else {
+            return "Unknown object";
+        }
 
     }
 

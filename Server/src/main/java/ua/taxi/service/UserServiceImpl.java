@@ -1,7 +1,8 @@
 package ua.taxi.service;
 
 import ua.taxi.dao.*;
-import ua.taxi.model.*;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.User.*;
 
 import java.util.Collection;
 

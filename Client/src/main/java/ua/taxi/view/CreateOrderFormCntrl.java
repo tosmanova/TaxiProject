@@ -6,10 +6,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
-import ua.taxi.model.Address;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderValidateMessage;
-import ua.taxi.model.Passanger;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderValidateMessage;
+import ua.taxi.model.User.Passanger;
 import ua.taxi.utils.Utils;
 
 /**
@@ -121,7 +122,7 @@ public class CreateOrderFormCntrl implements Controller {
     }
 
     @FXML
-    private void calculateOrder() {
+    private void calculateOrder() throws RemoteConnectionError {
 
         if (textFieldsValidate()) {
             distanceLabel.setText(String.format("%3.2f km",startApp.getOrderService().getDistance(goFromAddress, goToAddress)/1000));
@@ -130,7 +131,7 @@ public class CreateOrderFormCntrl implements Controller {
     }
 
     @FXML
-    private void create() {
+    private void create() throws RemoteConnectionError {
 
         if (textFieldsValidate()) {
             OrderValidateMessage orderValidateMessage;

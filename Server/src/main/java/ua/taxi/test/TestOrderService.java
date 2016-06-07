@@ -2,10 +2,10 @@ package ua.taxi.test;
 
 import ua.taxi.dao.AppDB;
 import ua.taxi.dao.OrderDaoInnerDbImpl;
-import ua.taxi.model.Address;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
-import ua.taxi.model.OrderValidateMessage;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.service.OrderService;
 import ua.taxi.service.OrderServiceImpl;
 

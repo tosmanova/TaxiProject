@@ -6,7 +6,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
-import ua.taxi.model.*;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.User.Car;
+import ua.taxi.model.User.Driver;
+import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 /**
@@ -121,7 +124,7 @@ public class DriverRegisterFormCntrl implements Controller {
     }
 
     @FXML
-    private void create() {
+    private void create() throws RemoteConnectionError {
 
         if (textFieldsValidate()) {
 

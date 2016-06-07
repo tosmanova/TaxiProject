@@ -8,7 +8,10 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import ua.taxi.model.*;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.User.Car;
 import ua.taxi.remote.RemoteOrderService;
 import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
@@ -50,8 +53,9 @@ public class StartApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        userService = new RemoteUserService(new Client());
-        orderService = new RemoteOrderService(new Client());
+        Client client = new Client();
+        userService = new RemoteUserService(client);
+        orderService = new RemoteOrderService(client);
 
         this.primaryStage = primaryStage;
 
@@ -76,7 +80,7 @@ public class StartApp extends Application {
         showEnterWindow();
     }
 
-    public void initOrderList(){
+    public void initOrderList() throws RemoteConnectionError {
         orderList.setAll(orderService.getNewOrders());
     }
 
@@ -124,6 +128,8 @@ public class StartApp extends Application {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (RemoteConnectionError remoteConnectionError) {
+            remoteConnectionError.printStackTrace();
         }
     }
 

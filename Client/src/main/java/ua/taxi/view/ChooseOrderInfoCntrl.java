@@ -2,12 +2,10 @@ package ua.taxi.view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 import ua.taxi.StartApp;
-import ua.taxi.model.Order;
-import ua.taxi.model.OrderStatus;
-
-import java.util.Collection;
+import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.OrderStatus;
 
 /**
  * Created by Andrii on 5/9/2016.
@@ -51,7 +49,7 @@ public class ChooseOrderInfoCntrl implements Controller{
     }
 
     @FXML
-    private void complete(){
+    private void complete() throws RemoteConnectionError {
         startApp.getOrderService().changeOrderStatus(activeOrder.getUserPhone(), OrderStatus.DONE);
         mainWindowCntrl.updateOrderCounters();
         startApp.showEnterWindow();

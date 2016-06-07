@@ -1,7 +1,7 @@
 package ua.taxi.test;
 
-import ua.taxi.model.Address;
-import ua.taxi.model.OrderValidateMessage;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.remote.RemoteOrderService;
 import ua.taxi.to.Client;
 

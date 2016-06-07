@@ -1,7 +1,8 @@
-package ua.taxi.model;
+package ua.taxi.model.User;
+
+import ua.taxi.model.Order.Address;
 
 import java.io.Serializable;
-import java.util.GregorianCalendar;
 
 /**
  * Created by Andrii on 4/25/2016.

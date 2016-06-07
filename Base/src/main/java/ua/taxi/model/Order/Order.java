@@ -1,4 +1,4 @@
-package ua.taxi.model;
+package ua.taxi.model.Order;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
