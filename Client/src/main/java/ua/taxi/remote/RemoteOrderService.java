@@ -63,7 +63,7 @@ public class RemoteOrderService implements OrderService {
     @Override
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
 
-        RemoteOrderObject remoteOrderObject = new RemoteOrderObject(OrderServiceMethods.CHANGE_ORDER_2);
+        RemoteOrderObject remoteOrderObject = new RemoteOrderObject(OrderServiceMethods.CHANGE_ORDER_STATUS);
         remoteOrderObject.setUserPhone(phone);
         remoteOrderObject.setOrderStatus(newStatus);
 
