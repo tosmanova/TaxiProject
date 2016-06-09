@@ -1,5 +1,6 @@
 package ua.taxi.service;
 
+import org.apache.log4j.Logger;
 import ua.taxi.dao.OrderDao;
 import ua.taxi.geolocation.GoogleMapsAPI;
 import ua.taxi.geolocation.GoogleMapsAPIImpl;
@@ -22,6 +23,7 @@ public class OrderServiceImpl implements OrderService {
     private GoogleMapsAPI googleMapsAPI = new GoogleMapsAPIImpl();
     private final double MIN_PRICE = 40;
     private final double KILOMETRE_PRICE = 5;
+    public static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class);
 
     public OrderServiceImpl(OrderDao orderDao) {
         this.orderDao = orderDao;
@@ -35,8 +37,10 @@ public class OrderServiceImpl implements OrderService {
         if (orderDao.getOrder(phone) == null) {
             Order newOrder = new Order(from, to, phone, name, price, distance);
             orderDao.addOrder(newOrder);
+            LOGGER.trace("createOrder: " + newOrder);
             return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
         }
+        LOGGER.warn("Order Creation: You already have active orders");
         return new OrderValidateMessage(null, "Order Creation", "You already have active orders", false);
     }
 
@@ -45,8 +49,10 @@ public class OrderServiceImpl implements OrderService {
 
         Order order = orderDao.getOrder(phone);
         if (order != null) {
+            LOGGER.trace("getOrder" + order);
             return new OrderValidateMessage(order, "Get Order", order.toString(), true);
         }
+        LOGGER.warn("Get Order. You don`t have any orders");
         return new OrderValidateMessage(null, "Get Order", "You don`t have any orders", false);
     }
 
@@ -57,8 +63,10 @@ public class OrderServiceImpl implements OrderService {
         if (orderDao.getOrder(phone) != null) {
             Order newOrder = new Order(from, to, phone, name, price, distance);
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
+            LOGGER.trace("Change Order4 new: " + newOrder + ";  old:" + oldOrder);
             return new OrderValidateMessage(newOrder, "Change Order", oldOrder.toString(), true);
         }
+        LOGGER.warn("Change Order4 error, You don`t have order with this phone");
         return new OrderValidateMessage(null, "Change Order error", "You don`t have order with this phone", false);
     }
 
@@ -67,8 +75,10 @@ public class OrderServiceImpl implements OrderService {
 
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
+            LOGGER.trace("Change Order2 new: " + newOrder + "; old" + oldOrder);
             return new OrderValidateMessage(newOrder, "Change Order", oldOrder.toString(), true);
         }
+        LOGGER.warn("Change Order2 error, You don`t have order with this phone");
         return new OrderValidateMessage(null, "Change Order error", "You don`t have order with this phone", false);
     }
 
@@ -76,8 +86,10 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage cancelOrder(String phone) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.deleteOrder(phone);
+            LOGGER.trace("Cancel Order:" + oldOrder);
             return new OrderValidateMessage(oldOrder, "Cancel Order", oldOrder.toString(), true);
         }
+        LOGGER.warn("Cancel Order You don`t have any orders");
         return new OrderValidateMessage(null, "Cancel Order", "You don`t have any orders", false);
 
     }
@@ -85,6 +97,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int ordersRegisteredQuantity() {
         Collection<Order> orders = orderDao.getOrderList();
+        LOGGER.trace("ordersRegisteredQuantity: " + orders.size());
         return orders.size();
     }
 
@@ -92,13 +105,17 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.changeStatus(phone, newStatus);
+            LOGGER.trace("changeOrderStatus new: " + newStatus);
             return new OrderValidateMessage(oldOrder, "Change Order Status", oldOrder.toString(), true);
         }
+        LOGGER.warn("Change Order Status, You don`t have any orders");
         return new OrderValidateMessage(null, "Change Order Status", "You don`t have any orders", false);
     }
 
     @Override
     public List<Order> getAllOrders() {
+
+        LOGGER.trace("getAllOrders size:" + orderDao.getOrderList().size());
         return new ArrayList<>(orderDao.getOrderList());
     }
 
@@ -107,6 +124,7 @@ public class OrderServiceImpl implements OrderService {
         Collection<Order> allOrders = orderDao.getOrderList();
         Collection<Order> newOrders = allOrders.stream().filter(order -> order.getOrderStatus() == OrderStatus.NEW)
                 .collect(Collectors.toCollection(CopyOnWriteArrayList::new));
+        LOGGER.trace("getNewOrders size:" + newOrders.size());
         return new ArrayList<>(newOrders);
     }
 
@@ -117,10 +135,12 @@ public class OrderServiceImpl implements OrderService {
         for (Order order : orderDao.getOrderList()) {
             if (order.getDriverPhone().equals(driverPhone)) {
                 if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
+                    LOGGER.trace("getOrderInProgresByDriverPhone: " + order);
                     return new OrderValidateMessage(order, "Active driver Order", "Active driver Order", true);
                 }
             }
         }
+        LOGGER.warn("Active driver Order, Active driver Order not found");
         return new OrderValidateMessage(null, "Active driver Order", "Active driver Order not found", false);
     }
 
@@ -134,7 +154,7 @@ public class OrderServiceImpl implements OrderService {
         int done = 0;
 
         for (Order order : orders) {
-            System.out.println(orders.size() + " OrderStatus: " + order.getOrderStatus());
+
             if (order.getOrderStatus() == OrderStatus.NEW) {
                 newOrder++;
             } else if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
@@ -146,6 +166,7 @@ public class OrderServiceImpl implements OrderService {
         counterMap.put(OrderStatus.NEW, newOrder);
         counterMap.put(OrderStatus.DONE, done);
         counterMap.put(OrderStatus.IN_PROGRESS, inProgress);
+        LOGGER.trace("getStatusCounterMap: " + " newOrder:" + newOrder + "; done: " + done + "; inProgress: " + inProgress);
         return counterMap;
     }
 
@@ -156,19 +177,20 @@ public class OrderServiceImpl implements OrderService {
         Location locationTo = googleMapsAPI.findLocation("Ukraine", "Kiev", to.getStreet(), to.getHouseNum());
 
         double distance = googleMapsAPI.getDistance(locationFrom, locationTo);
-        //   System.out.println(distance);
+        LOGGER.trace(String.format("getDistance: from %s  to %s = %f", from, to, distance));
         return distance;
     }
 
     @Override
     public Double getPrice(Double distance) {
         double price = MIN_PRICE + (distance / 1000) * KILOMETRE_PRICE;
-        //   System.out.println(price);
+        LOGGER.trace(String.format("getPrice: for distance %f = %f", distance, price));
         return price;
     }
 
     public Double getPrice(Address from, Address to) {
-
-        return getPrice(getDistance(from, to));
+        double price = getPrice(getDistance(from, to));
+        LOGGER.trace(String.format("getDistance: from %s  to %s = %f", from, to, price));
+        return price;
     }
 }

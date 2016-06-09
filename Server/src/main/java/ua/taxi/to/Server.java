@@ -1,8 +1,11 @@
 package ua.taxi.to;
 
+import org.apache.log4j.Logger;
 import ua.taxi.dao.AppDB;
 import ua.taxi.dao.OrderDaoInnerDbImpl;
 import ua.taxi.dao.UserDaoInnerDbImpl;
+import ua.taxi.model.Order.Address;
+import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.model.Remote.RemoteUserObject;
 import ua.taxi.remote.RemoteOrder;
@@ -13,6 +16,7 @@ import ua.taxi.service.UserServiceImpl;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.time.LocalDateTime;
 
 /**
  * Created by andrii on 06.06.16.
@@ -27,19 +31,20 @@ public class Server {
     private RemoteUser remoteUser;
     private long count;
     private final int PORT = 8080;
+    private static final Logger LOGGER = Logger.getLogger(Server.class);
 
 
     public Server(RemoteOrder remoteOrder, RemoteUser remoteUser) throws IOException, ClassNotFoundException {
         this.remoteOrder = remoteOrder;
         this.remoteUser = remoteUser;
         serverSocket = new ServerSocket(PORT);
-        System.out.printf("Start TaxiApp Server\nPort: %d; InetAdress: %s; \n", PORT, serverSocket.getInetAddress());
+        LOGGER.info("Start TaxiApp Server \n Port: " + PORT + "  InetAdress: " + serverSocket.getInetAddress());
         run();
     }
 
     private void run() throws IOException, ClassNotFoundException {
         while (true) {
-            System.out.println("Server: Wait for client");
+
             client = serverSocket.accept();
             reader = new ObjectInputStream(client.getInputStream());
             Object object = reader.readObject();
@@ -51,7 +56,7 @@ public class Server {
             writer = new ObjectOutputStream(client.getOutputStream());
             writer.writeObject(object);
             count++;
-            System.out.println("Server: Object -" + count + " - send to client");
+            LOGGER.trace("Send object N: "+ count);
             writer.flush();
             writer.close();
         }

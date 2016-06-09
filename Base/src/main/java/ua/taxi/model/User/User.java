@@ -48,7 +48,7 @@ public abstract class User implements Serializable {
     public String toString() {
         return "User{" +
                 "phone='" + phone + '\'' +
-                ", pass='" + pass + '\'' +
+                ", pass='" + "******" + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }

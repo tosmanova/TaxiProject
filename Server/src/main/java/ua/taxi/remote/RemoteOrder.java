@@ -1,6 +1,7 @@
 package ua.taxi.remote;
 
 
+import org.apache.log4j.Logger;
 import ua.taxi.model.Remote.OrderServiceMethods;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.service.OrderServiceImpl;
@@ -11,6 +12,7 @@ import ua.taxi.service.OrderServiceImpl;
 public class RemoteOrder {
 
     private OrderServiceImpl service;
+    public static final Logger LOGGER = Logger.getLogger(RemoteOrder.class);
 
     public RemoteOrder(OrderServiceImpl service) {
         this.service = service;
