@@ -9,6 +9,4 @@ public enum OrderStatus implements Serializable{
 
     NEW(), IN_PROGRESS(), CANCELLED(), DONE();
 
-    OrderStatus() {
-    }
 }

@@ -112,7 +112,8 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone) {
-
+        System.out.println(driverPhone);
+        System.out.println(orderDao.getOrderList().size());
         for (Order order : orderDao.getOrderList()) {
             if (order.getDriverPhone().equals(driverPhone)) {
                 if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
@@ -133,6 +134,7 @@ public class OrderServiceImpl implements OrderService {
         int done = 0;
 
         for (Order order : orders) {
+            System.out.println(orders.size() + " OrderStatus: " + order.getOrderStatus());
             if (order.getOrderStatus() == OrderStatus.NEW) {
                 newOrder++;
             } else if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {

@@ -7,9 +7,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="420.0" styleClass="background" stylesheets="@GrayBlue.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.taxi.view.EnterWindowCntrl">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" styleClass="background" stylesheets="@GrayBlue.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.taxi.view.EnterWindowCntrl">
    <children>
-      <HBox layoutX="180.0" layoutY="282.0" prefHeight="40.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox layoutX="180.0" layoutY="282.0" prefHeight="40.0" prefWidth="430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
          <children>
             <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#goNow" prefHeight="30.0" prefWidth="205.0" styleClass="button-darkblue" stylesheets="@GrayBlue.css" text="Go Now!">
                <HBox.margin>
@@ -19,12 +19,12 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="70.0" text="Register">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#register" prefHeight="30.0" prefWidth="90.0" text="Register">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="60.0" text="Login" />
+            <Button mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" text="Login" />
          </children>
       </HBox>
       <GridPane layoutX="67.0" layoutY="132.0" prefHeight="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="150.0">
@@ -65,12 +65,12 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </PasswordField>
-            <Label prefHeight="17.0" prefWidth="204.0" text="You can Login or go to register form" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label prefHeight="17.0" prefWidth="239.0" text="You can Login or go to register form" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <Label prefHeight="17.0" prefWidth="223.0" text="If You don`t want to register - Go Now!" GridPane.rowIndex="3">
+            <Label prefHeight="17.0" prefWidth="249.0" text="If You don`t want to register - Go Now!" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="2.0" />
                </GridPane.margin>

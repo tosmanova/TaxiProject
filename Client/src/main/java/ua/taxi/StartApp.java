@@ -11,13 +11,17 @@ import javafx.stage.Stage;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
+import ua.taxi.model.Order.TableViewOrder;
 import ua.taxi.model.User.Car;
 import ua.taxi.remote.RemoteOrderService;
 import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
 import ua.taxi.to.Client;
 import ua.taxi.view.*;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class StartApp extends Application {
@@ -44,7 +48,7 @@ public class StartApp extends Application {
     private ChooseOrderCntrl chooseOrderCntrl;
     private ChooseOrderInfoCntrl chooseOrderInfoCntrl;
 
-    private ObservableList<Order> orderList = FXCollections.observableArrayList();
+    private ObservableList<TableViewOrder> orderList = FXCollections.observableArrayList();
 
 
     public static void main(String[] args) {
@@ -80,11 +84,20 @@ public class StartApp extends Application {
         showEnterWindow();
     }
 
-    public void initOrderList() throws RemoteConnectionError {
-        orderList.setAll(orderService.getNewOrders());
+    public void initOrderList()  {
+        List<Order> list = null;
+        try {
+            list = orderService.getNewOrders();
+        } catch (RemoteConnectionError remoteConnectionError) {
+            remoteConnectionError.printStackTrace();
+        }
+        orderList.clear();
+        for (Order order : list) {
+            orderList.add(new TableViewOrder(order));
+        }
     }
 
-    private  void initCrossLinks(){
+    private void initCrossLinks() {
 
         enterWindowController.setChooseOrderCntrl(chooseOrderCntrl);
         enterWindowController.setCreateOrderFormCntrl(createOrderFormCntrl);
@@ -146,7 +159,6 @@ public class StartApp extends Application {
             e.printStackTrace();
         }
     }
-
 
 
     public void initChooseOrderLayout() {
@@ -252,11 +264,14 @@ public class StartApp extends Application {
         orderService.createOrder("(093)306-01-15", "Andrii", new Address("ул. Ентузиастов", "27"), new Address("ул. Княжий Затон", "3"));
     }
 
-    public void showChooseOrder() {
+    public void showChooseOrder() throws RemoteConnectionError {
+
+        initOrderList();
         mainWindowController.setMainAnchorPane(chooseOrderLayout);
     }
 
     public void showChooseOrderInfo() {
+
         mainWindowController.setMainAnchorPane(chooseOrderInfoLayout);
     }
 
@@ -292,7 +307,7 @@ public class StartApp extends Application {
         return orderService;
     }
 
-    public ObservableList<Order> getOrderList() {
+    public ObservableList<TableViewOrder> getOrderList() {
         return orderList;
     }
 }

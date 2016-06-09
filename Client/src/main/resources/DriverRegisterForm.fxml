@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.taxi.view.DriverRegisterFormCntrl">
    <children>
-      <GridPane layoutX="56.0" layoutY="70.0" prefHeight="310.0" prefWidth="319.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+      <GridPane layoutX="6.0" layoutY="6.0" prefHeight="294.0" prefWidth="364.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="6.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -55,7 +55,7 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Enter your new password" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <Label text="Enter your new password:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -88,9 +88,9 @@
             <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <HBox layoutX="220.0" layoutY="270.0" prefHeight="50.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox layoutX="220.0" layoutY="270.0" prefHeight="50.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button fx:id="createButton" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="80.0" text="Create">
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="90.0" text="Create">
                <font>
                   <Font size="14.0" />
                </font>

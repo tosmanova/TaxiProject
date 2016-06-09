@@ -125,8 +125,8 @@ public class CreateOrderFormCntrl implements Controller {
     private void calculateOrder() throws RemoteConnectionError {
 
         if (textFieldsValidate()) {
-            distanceLabel.setText(String.format("%3.2f km",startApp.getOrderService().getDistance(goFromAddress, goToAddress)/1000));
-            priceLabel.setText(String.format("%3.0f грн.",startApp.getOrderService().getPrice(goFromAddress, goToAddress)));
+            distanceLabel.setText(Utils.distanceFormat(startApp.getOrderService().getDistance(goFromAddress, goToAddress)));
+            priceLabel.setText(Utils.priceFormat(startApp.getOrderService().getPrice(goFromAddress, goToAddress)));
         }
     }
 

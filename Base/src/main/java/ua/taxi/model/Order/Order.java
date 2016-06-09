@@ -20,8 +20,9 @@ public class Order implements Serializable {
     private LocalDateTime createTime;
     private OrderStatus orderStatus;
 
-    public Order() {
-    }
+
+   public Order() {}
+
 
     public Order(Address from, Address to, String userPhone, String userName, Double price, Double distance) {
 
@@ -32,6 +33,7 @@ public class Order implements Serializable {
         this.price = price;
         this.distance = distance;
 
+        driverPhone = "";
         createTime = LocalDateTime.now();
         orderStatus = OrderStatus.NEW;
 

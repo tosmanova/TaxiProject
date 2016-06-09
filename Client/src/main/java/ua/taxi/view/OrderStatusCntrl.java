@@ -8,6 +8,8 @@ import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.User.Driver;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.utils.DateUtils;
+import ua.taxi.utils.Utils;
 
 import java.time.format.DateTimeFormatter;
 
@@ -48,8 +50,8 @@ public class OrderStatusCntrl implements Controller {
         this.activeOrder = activeOrder;
         goFromLabel.setText(activeOrder.getFrom().toString());
         goToLabel.setText(activeOrder.getTo().toString());
-     //   distanceLabel.setText(activeOrder.getDistance());
-      //  priceLabel.setText(activeOrder.getPrice());
+        distanceLabel.setText(Utils.distanceFormat(activeOrder.getDistance()));
+        priceLabel.setText(Utils.priceFormat(activeOrder.getPrice()));
 
         if (activeOrder.getOrderStatus() == OrderStatus.IN_PROGRESS) {
             String driverPhone = activeOrder.getDriverPhone();
@@ -60,19 +62,19 @@ public class OrderStatusCntrl implements Controller {
             yourDriverLabel.setText("Waiting for Driver");
             yourCarLabel.setText("Waiting for Driver");
         }
-        orderCreated.setText(activeOrder.getCreateTime().format(DateTimeFormatter.ofPattern("HH.mm.ss a")));
+        orderCreated.setText(DateUtils.HHmm(activeOrder.getCreateTime()));
     }
 
     @FXML
     private void addToPrice() {
-/*
+
         String addPriceField = addToPriceField.getText();
         if (addPriceField.matches("^\\d+$")) {
-            activeOrder.setPrice(Double.parseDouble(activeOrder.getPrice().replaceAll("[\\D]+", "")) + Double.parseDouble(addPriceField));
-            priceLabel.setText(activeOrder.getPrice());
+            activeOrder.setPrice(activeOrder.getPrice() + Double.parseDouble(addPriceField));
+            priceLabel.setText(Utils.priceFormat(activeOrder.getPrice()));
             startApp.getOrderService().changeOrder(activeOrder.getUserPhone(), activeOrder);
         }
-        startApp.initOrderList();*/
+        startApp.initOrderList();
     }
 
     @FXML

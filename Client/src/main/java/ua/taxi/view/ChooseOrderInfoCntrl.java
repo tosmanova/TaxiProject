@@ -6,6 +6,8 @@ import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.utils.DateUtils;
+import ua.taxi.utils.Utils;
 
 /**
  * Created by Andrii on 5/9/2016.
@@ -36,11 +38,11 @@ public class ChooseOrderInfoCntrl implements Controller{
         this.activeOrder = activeOrder;
         goFromLabel.setText(activeOrder.getFrom().toString());
         goToLabel.setText(activeOrder.getTo().toString());
-      //  distanceLabel.setText(activeOrder.getDistance());
+        distanceLabel.setText(Utils.distanceFormat(activeOrder.getDistance()));
         phoneLabel.setText(activeOrder.getUserPhone());
         nameLabel.setText(activeOrder.getUserName());
-      //  timeLabel.setText(activeOrder.getCreateTimeAsString());
-       // priceLabel.setText(activeOrder.getPrice());
+        timeLabel.setText(DateUtils.HHmm(activeOrder.getCreateTime()));
+        priceLabel.setText(Utils.priceFormat(activeOrder.getPrice()));
     }
 
     @FXML

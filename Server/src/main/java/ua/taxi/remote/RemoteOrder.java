@@ -57,6 +57,11 @@ public class RemoteOrder {
                     remote.getUserPhone(),
                     remote.getOrder());
 
+        } else if (remote.getOrderMethods() == OrderServiceMethods.CHANGE_ORDER_STATUS) {
+            return service.changeOrderStatus(
+                    remote.getUserPhone(),
+                    remote.getOrderStatus());
+
         } else if (remote.getOrderMethods() == OrderServiceMethods.CANCEL_ORDER) {
             return service.cancelOrder(
                     remote.getUserPhone());

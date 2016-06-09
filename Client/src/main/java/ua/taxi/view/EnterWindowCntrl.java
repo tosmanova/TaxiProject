@@ -3,6 +3,7 @@ package ua.taxi.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import ua.taxi.StartApp;
+import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.model.User.Driver;
@@ -112,7 +113,7 @@ public class EnterWindowCntrl implements Controller {
     }
 
     @FXML
-    private void login() {
+    private void login() throws RemoteConnectionError {
         if (textFieldsValidate()) {
 
             UserValidateMessage validateMessage = startApp.getUserService().login(phoneNumber.getText(), password.getText());

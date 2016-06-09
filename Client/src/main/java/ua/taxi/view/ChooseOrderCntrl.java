@@ -1,11 +1,14 @@
 package ua.taxi.view;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
+import ua.taxi.model.Order.OrderValidateMessage;
+import ua.taxi.model.Order.TableViewOrder;
 import ua.taxi.model.User.Driver;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
@@ -22,17 +25,17 @@ public class ChooseOrderCntrl implements Controller {
     private MainWindowCntrl mainWindowCntrl;
 
     @FXML
-    private TableView<Order> orderTable;
+    private TableView<TableViewOrder> orderTable;
     @FXML
-    private TableColumn<Order, String> fromColumn;
+    private TableColumn<TableViewOrder, String> fromColumn;
     @FXML
-    private TableColumn<Order, String> toColumn;
+    private TableColumn<TableViewOrder, String> toColumn;
     @FXML
-    private TableColumn<Order, String> priceColumn;
+    private TableColumn<TableViewOrder, String> priceColumn;
     @FXML
-    private TableColumn<Order, String> createdColumn;
+    private TableColumn<TableViewOrder, String> createdColumn;
     @FXML
-    private TableColumn<Order, String> distanceColumn;
+    private TableColumn<TableViewOrder, String> distanceColumn;
 
     @FXML
     private Label driverNameField;
@@ -43,13 +46,13 @@ public class ChooseOrderCntrl implements Controller {
 
     @FXML
     private void initialize() {
-/*
+
         fromColumn.setCellValueFactory(cellData -> cellData.getValue().fromProperty());
         toColumn.setCellValueFactory(cellData -> cellData.getValue().toProperty());
         priceColumn.setCellValueFactory(cellData -> cellData.getValue().priceProperty());
-        createdColumn.setCellValueFactory(cellData -> cellData.getValue().createTimeAsStringProperty());
+        createdColumn.setCellValueFactory(cellData -> cellData.getValue().createTimeProperty());
         distanceColumn.setCellValueFactory(cellData -> cellData.getValue().distanceProperty());
-*/
+
     }
 
     public void clear() {
@@ -64,14 +67,21 @@ public class ChooseOrderCntrl implements Controller {
     @FXML
     private void getOrder() throws RemoteConnectionError {
 
-
-        Order order = orderTable.getSelectionModel().getSelectedItem();
+        Order order = orderTable.getSelectionModel().getSelectedItem().getOrder();
         order.setDriverPhone(driver.getPhone());
         chooseOrderInfoCntrl.setActiveOrder(order);
-        startApp.getOrderService().changeOrderStatus(order.getUserPhone(), OrderStatus.IN_PROGRESS);
-        mainWindowCntrl.updateOrderCounters();
-        startApp.getOrderService().changeOrder(order.getUserPhone(), order);
-        startApp.showChooseOrderInfo();
+        OrderValidateMessage message = startApp.getOrderService().changeOrderStatus(order.getUserPhone(), OrderStatus.IN_PROGRESS);
+        if (!message.isState()){
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(startApp.getPrimaryStage());
+            alert.setTitle(message.getTitle());
+            alert.setContentText(message.getBody());
+            alert.showAndWait();
+        }else {
+            mainWindowCntrl.updateOrderCounters();
+            startApp.getOrderService().changeOrder(order.getUserPhone(), order);
+            startApp.showChooseOrderInfo();
+        }
     }
 
     @FXML

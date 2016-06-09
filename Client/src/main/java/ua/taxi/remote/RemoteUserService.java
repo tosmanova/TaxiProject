@@ -152,7 +152,7 @@ public class RemoteUserService implements UserService {
 
     @Override
     public UserValidateMessage login(String phone, String pass) {
-        RemoteUserObject remoteUserObject = new RemoteUserObject(UserServiceMethods.REGISTER_PASSANGER);
+        RemoteUserObject remoteUserObject = new RemoteUserObject(UserServiceMethods.LOGIN);
         remoteUserObject.setPhone(phone);
         remoteUserObject.setPass(pass);
 

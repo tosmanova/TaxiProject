@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.taxi.view.CreateOrderFormCntrl">
    <children>
-      <GridPane layoutX="61.0" layoutY="43.0" prefHeight="257.0" prefWidth="294.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+      <GridPane layoutX="14.0" layoutY="23.0" prefHeight="266.0" prefWidth="356.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="23.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="106.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="214.0" />
@@ -33,17 +33,17 @@
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="I want go To:" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+            <Label text="I want go To:" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Distance:" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+            <Label text="Distance:" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
             </Label>
-            <Label text="Price:" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+            <Label text="Price:" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -55,9 +55,9 @@
                </GridPane.margin>
             </Button>
             <TextField fx:id="goFromField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="goToField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label fx:id="distanceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Label fx:id="priceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="goToField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="distanceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="priceLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <Label text="Label" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             <Label text="Phone number:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
                <GridPane.margin>
@@ -71,23 +71,23 @@
             </Label>
             <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button mnemonicParsing="false" onAction="#replace" prefHeight="25.0" prefWidth="80.0" text="replace" GridPane.columnIndex="1" GridPane.rowIndex="4" />
          </children>
       </GridPane>
-      <HBox layoutX="6.0" layoutY="310.0" prefHeight="60.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <HBox layoutX="6.0" layoutY="310.0" prefHeight="60.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button maxWidth="120.0" mnemonicParsing="false" onAction="#calculateOrder" prefHeight="40.0" text="Calculate Order" />
-            <Button fx:id="createButton" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="70.0" text="Create">
+            <Button maxWidth="140.0" mnemonicParsing="false" onAction="#calculateOrder" prefHeight="40.0" prefWidth="139.0" text="Calculate Order" />
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="90.0" text="Create">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
             </Button>
-            <Button maxWidth="100.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="70.0" text="Cancel">
+            <Button maxWidth="100.0" mnemonicParsing="false" onAction="#cancel" prefHeight="40.0" prefWidth="90.0" text="Cancel">
                <HBox.margin>
                   <Insets left="30.0" />
                </HBox.margin>
             </Button>
          </children>
       </HBox>
-      <Button layoutX="364.0" layoutY="143.0" mnemonicParsing="false" onAction="#replace" prefWidth="60.0" rotate="90.0" text="replace" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="143.0" />
    </children>
 </AnchorPane>

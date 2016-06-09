@@ -6,7 +6,7 @@
 }
 
 .label {
-    -fx-font: 11px "Arial";
+    -fx-font: 12px "Arial";
     -fx-text-fill: #002856;
 
 }
@@ -16,7 +16,7 @@
 }
 
 .button {
-  -fx-font: 11px "Arial";
+  -fx-font: 13px "Arial";
   -fx-background-color: #6AA6E9;
   -fx-border-color: #2d477b #2d477b #263c68;
   -fx-border-width: 1px;
