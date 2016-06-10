@@ -8,10 +8,8 @@ import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.model.Remote.OrderServiceMethods;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.service.OrderService;
-import ua.taxi.to.Client;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -258,7 +256,6 @@ public class RemoteOrderService implements OrderService {
     }
 
     private Object send(RemoteOrderObject remoteOrderObject) throws IOException, ClassNotFoundException {
-        client.send(remoteOrderObject);
-        return client.receive();
+        return client.send(remoteOrderObject);
     }
 }

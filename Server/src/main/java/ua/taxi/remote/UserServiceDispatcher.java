@@ -7,11 +7,11 @@ import ua.taxi.service.UserServiceImpl;
 /**
  * Created by andrii on 07.06.16.
  */
-public class RemoteUser {
+public class UserServiceDispatcher {
 
     private UserServiceImpl service;
 
-    public RemoteUser(UserServiceImpl service) {
+    public UserServiceDispatcher(UserServiceImpl service) {
         this.service = service;
     }
 

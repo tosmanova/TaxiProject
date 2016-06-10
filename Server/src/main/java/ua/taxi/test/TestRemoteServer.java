@@ -3,11 +3,11 @@ package ua.taxi.test;
 import ua.taxi.dao.AppDB;
 import ua.taxi.dao.OrderDaoInnerDbImpl;
 import ua.taxi.dao.UserDaoInnerDbImpl;
-import ua.taxi.remote.RemoteOrder;
-import ua.taxi.remote.RemoteUser;
+import ua.taxi.remote.OrderServiceDispatcher;
+import ua.taxi.remote.UserServiceDispatcher;
 import ua.taxi.service.OrderServiceImpl;
 import ua.taxi.service.UserServiceImpl;
-import ua.taxi.to.Server;
+import ua.taxi.remote.Server;
 
 import java.io.IOException;
 
@@ -19,7 +19,7 @@ public class TestRemoteServer {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         AppDB appDB = new AppDB();
         Server server = new Server(
-                new RemoteOrder(new OrderServiceImpl(new OrderDaoInnerDbImpl(appDB))),
-                new RemoteUser(new UserServiceImpl(new UserDaoInnerDbImpl(appDB))));
+                new OrderServiceDispatcher(new OrderServiceImpl(new OrderDaoInnerDbImpl(appDB))),
+                new UserServiceDispatcher(new UserServiceImpl(new UserDaoInnerDbImpl(appDB))));
     }
 }

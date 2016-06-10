@@ -16,11 +16,10 @@ import ua.taxi.model.User.Car;
 import ua.taxi.remote.RemoteOrderService;
 import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
-import ua.taxi.to.Client;
+import ua.taxi.remote.Client;
 import ua.taxi.view.*;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 

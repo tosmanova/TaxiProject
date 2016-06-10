@@ -9,12 +9,12 @@ import ua.taxi.service.OrderServiceImpl;
 /**
  * Created by andrii on 07.06.16.
  */
-public class RemoteOrder {
+public class OrderServiceDispatcher {
 
     private OrderServiceImpl service;
-    public static final Logger LOGGER = Logger.getLogger(RemoteOrder.class);
+    public static final Logger LOGGER = Logger.getLogger(OrderServiceDispatcher.class);
 
-    public RemoteOrder(OrderServiceImpl service) {
+    public OrderServiceDispatcher(OrderServiceImpl service) {
         this.service = service;
     }
 

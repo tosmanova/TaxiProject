@@ -2,14 +2,11 @@ package ua.taxi.remote;
 
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
-import ua.taxi.model.Remote.OrderServiceMethods;
-import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.model.Remote.RemoteUserObject;
 import ua.taxi.model.Remote.UserServiceMethods;
 import ua.taxi.model.User.Car;
 import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.service.UserService;
-import ua.taxi.to.Client;
 
 import java.io.IOException;
 
@@ -168,7 +165,6 @@ public class RemoteUserService implements UserService {
     }
 
     private Object send(RemoteUserObject remoteUserObject) throws IOException, ClassNotFoundException {
-        client.send(remoteUserObject);
-        return client.receive();
+        return client.send(remoteUserObject);
     }
 }

@@ -3,7 +3,7 @@ package ua.taxi.test;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.remote.RemoteOrderService;
-import ua.taxi.to.Client;
+import ua.taxi.remote.Client;
 
 /**
  * Created by andrii on 07.06.16.
