@@ -69,19 +69,13 @@ public class ChooseOrderCntrl implements Controller {
 
         Order order = orderTable.getSelectionModel().getSelectedItem().getOrder();
         order.setDriverPhone(driver.getPhone());
+        order.setOrderStatus(OrderStatus.IN_PROGRESS);
+
+        startApp.getOrderService().changeOrder(order.getUserPhone(), order);
         chooseOrderInfoCntrl.setActiveOrder(order);
-        OrderValidateMessage message = startApp.getOrderService().changeOrderStatus(order.getUserPhone(), OrderStatus.IN_PROGRESS);
-        if (!message.isState()){
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(startApp.getPrimaryStage());
-            alert.setTitle(message.getTitle());
-            alert.setContentText(message.getBody());
-            alert.showAndWait();
-        }else {
-            mainWindowCntrl.updateOrderCounters();
-            startApp.getOrderService().changeOrder(order.getUserPhone(), order);
-            startApp.showChooseOrderInfo();
-        }
+        mainWindowCntrl.updateOrderCounters();
+        startApp.showChooseOrderInfo();
+
     }
 
     @FXML
