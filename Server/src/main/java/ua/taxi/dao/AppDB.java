@@ -100,6 +100,7 @@ public class AppDB implements OrderDao, UserDao {
     private void saveUsers() {
         if(users != null) {
             saveLoad.saveUserMap(users);
+            LOGGER.info("saved all Users" );
         }else {
             LOGGER.error("saveUsers error. No users" );
         }
@@ -108,6 +109,7 @@ public class AppDB implements OrderDao, UserDao {
     private void loadUsers() {
         try {
             users = saveLoad.loadUserMap();
+            LOGGER.info("all Users loaded" );
         } catch (IOException e) {
             LOGGER.error("loadUserMap error", e);
         }
@@ -116,6 +118,7 @@ public class AppDB implements OrderDao, UserDao {
     private void saveOrders() {
         if(orders != null) {
             saveLoad.saveOrderMap(orders);
+            LOGGER.info("saved all Orders" );
         }else {
             LOGGER.error("saveOrders error. No orders" );
         }
@@ -124,6 +127,7 @@ public class AppDB implements OrderDao, UserDao {
     private void loadOrders() {
         try {
             orders = saveLoad.loadOrderMap();
+            LOGGER.info("all Orders loaded" );
         } catch (IOException e) {
             LOGGER.error("loadOrderMap error", e);
         }
@@ -132,6 +136,7 @@ public class AppDB implements OrderDao, UserDao {
     private void saveBlackList() {
         if(phoneBlackList != null){
         saveLoad.saveBlackList(phoneBlackList);
+            LOGGER.info("saved BlackList" );
         }else {
             LOGGER.error("saveBlackList error. No phones" );
         }
@@ -140,6 +145,7 @@ public class AppDB implements OrderDao, UserDao {
     private void loadBlackList() {
         try {
             phoneBlackList = saveLoad.loadBlackList();
+            LOGGER.info("BlackList Loaded" );
         } catch (IOException e) {
             LOGGER.error("loadBlackList error", e);
 
