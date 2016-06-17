@@ -9,7 +9,7 @@ import ua.taxi.utils.Utils;
 public class TestUtils {
 
     public static void main(String[] args) {
-        //System.out.println(phoneValidateTest("+380933060113", "(093)306-01-13"));
+
         System.out.println(addressValidateTest("Kiev 45", new Address("Kiev","45")));
         System.out.println(addressValidateTest("Kiev 45a", new Address("Kiev","45a")));
         System.out.println(addressValidateTest("Kiev 45/2", new Address("Kiev","45/2")));

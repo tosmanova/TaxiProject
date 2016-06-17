@@ -97,7 +97,7 @@ public class AppDB implements OrderDao, UserDao {
      * ******************* Save-Load *************************************************
      */
 
-    private void saveUsers() {
+    public void saveUsers() {
         if(users != null) {
             saveLoad.saveUserMap(users);
             LOGGER.info("saved all Users" );
@@ -106,7 +106,7 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 
-    private void loadUsers() {
+    public void loadUsers() {
         try {
             users = saveLoad.loadUserMap();
             LOGGER.info("all Users loaded" );
@@ -115,7 +115,7 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 
-    private void saveOrders() {
+    public void saveOrders() {
         if(orders != null) {
             saveLoad.saveOrderMap(orders);
             LOGGER.info("saved all Orders" );
@@ -124,7 +124,7 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 
-    private void loadOrders() {
+    public void loadOrders() {
         try {
             orders = saveLoad.loadOrderMap();
             LOGGER.info("all Orders loaded" );
@@ -133,7 +133,7 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 
-    private void saveBlackList() {
+    public void saveBlackList() {
         if(phoneBlackList != null){
         saveLoad.saveBlackList(phoneBlackList);
             LOGGER.info("saved BlackList" );
@@ -142,7 +142,7 @@ public class AppDB implements OrderDao, UserDao {
         }
     }
 
-    private void loadBlackList() {
+    public void loadBlackList() {
         try {
             phoneBlackList = saveLoad.loadBlackList();
             LOGGER.info("BlackList Loaded" );
