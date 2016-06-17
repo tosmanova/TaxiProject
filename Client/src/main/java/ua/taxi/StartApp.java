@@ -64,8 +64,8 @@ public class StartApp extends Application {
 
         this.primaryStage.setTitle("TaxiApp");
 
-        initDaoWithSomeUsers();
-        initDaoWithSomeOrders();
+        //initDaoWithSomeUsers();
+        //initDaoWithSomeOrders();
 
         initOrderList();
 

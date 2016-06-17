@@ -1,5 +1,7 @@
 package ua.taxi.dao;
 
+import ua.taxi.dao.AppDB;
+import ua.taxi.dao.OrderDao;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 

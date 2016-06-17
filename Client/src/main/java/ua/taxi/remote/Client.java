@@ -1,5 +1,6 @@
 package ua.taxi.remote;
 
+import org.apache.log4j.Logger;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.model.Remote.RemoteUserObject;
 
@@ -19,6 +20,7 @@ public class Client {
     private Socket socket;
     private ObjectOutput out;
     private ObjectInput in;
+    private static final Logger LOGGER = Logger.getLogger(Client.class);
 
     public Client() {
         try {
@@ -26,11 +28,10 @@ public class Client {
             out = new ObjectOutputStream(socket.getOutputStream());
             in = new ObjectInputStream(socket.getInputStream());
         } catch (UnknownHostException e) {
-            System.err.println("Don't know about host " + IP);
+            LOGGER.error("Don't know about host " + IP + "\n", e);
             System.exit(1);
         } catch (IOException e) {
-            System.err.println("Couldn't get I/O for the connection to " +
-                    IP);
+            LOGGER.error("Couldn't get I/O for the connection to " + IP + "\n", e);
             System.exit(1);
         }
     }
@@ -39,8 +40,7 @@ public class Client {
     public Object send(Object object) throws IOException, ClassNotFoundException {
 
         out.writeObject(object);
-        System.out.println("Client: Object send to server");
-        System.out.println(printMessage(object));
+        LOGGER.trace("Client: " + count++ + ".Object send to server - " + printMessage(object));
         printMessage(object);
         return in.readObject();
     }

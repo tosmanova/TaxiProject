@@ -1,22 +1,28 @@
 package ua.taxi.dao;
 
+import org.apache.log4j.Logger;
+import ua.taxi.dao.serialize.JsonSaveLoad;
+import ua.taxi.dao.serialize.SaveLoad;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.User.User;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 // operations in application
 public class AppDB implements OrderDao, UserDao {
 
-    private final String PATH_NAME = "C:\\Java\\TaxiProject\\DataXML\\";
-    private File orderData = new File(PATH_NAME + "orderData.xml");
-    private File userData = new File(PATH_NAME + "userData.xml");
     private Map<String, User> users = new HashMap<>();
     private List<String> phoneBlackList = new ArrayList<>();
-
     private Map<String, Order> orders = new HashMap<>();
+    private SaveLoad saveLoad;
+    private static final Logger LOGGER = Logger.getLogger(AppDB.class);
+
+    public AppDB(SaveLoad saveLoad) {
+        this.saveLoad = saveLoad;
+    }
 
     @Override
     public User update(User newUser) {
@@ -43,7 +49,6 @@ public class AppDB implements OrderDao, UserDao {
     @Override
     public Collection<User> addUser(User user) {
         users.put(user.getPhone(), user);
-     //   saveUsers();
         return users.values();
     }
 
@@ -78,7 +83,6 @@ public class AppDB implements OrderDao, UserDao {
     @Override
     public Collection<Order> addOrder(Order order) {
         orders.put(order.getUserPhone(), order);
-        //saveOrders();
         return orders.values();
     }
 
@@ -88,92 +92,69 @@ public class AppDB implements OrderDao, UserDao {
         order.setOrderStatus(newStatus);
         return orders.replace(phone, order);
     }
-}
+
     /**
-     * ******************* XML Save-Load *************************************************
-
-    private void saveOrders() {
-        try {
-
-            JAXBContext jaxbContext = JAXBContext.newInstance(OrderMapWriter.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-            OrderMapWriter wrapper = new OrderMapWriter();
-            wrapper.setOrders(orders);
-
-            jaxbMarshaller.marshal(wrapper, orderData);
-
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not save data");
-            alert.setContentText("Could not save data to file:\n" + orderData.getPath());
-
-            alert.showAndWait();
-        }
-    }
-
-    private void loadOrders() {
-
-        try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(OrderMapWriter.class);
-            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-            OrderMapWriter wrapper = (OrderMapWriter) jaxbUnmarshaller.unmarshal(orderData);
-            orders.clear();
-            orders.putAll(wrapper.getOrders());
-
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not save data");
-            alert.setContentText("Could not save data to file:\n" + orderData.getPath());
-
-            alert.showAndWait();
-        }
-    }
+     * ******************* Save-Load *************************************************
+     */
 
     private void saveUsers() {
-        try {
-
-            JAXBContext jaxbContext = JAXBContext.newInstance(UserMapWriter.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-            UserMapWriter wrapper = new UserMapWriter();
-            wrapper.setUsers(users);
-
-            jaxbMarshaller.marshal(wrapper, userData);
-
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not save data");
-            alert.setContentText("Could not save data to file:\n" + userData.getPath());
-
-            alert.showAndWait();
+        if(users != null) {
+            saveLoad.saveUserMap(users);
+        }else {
+            LOGGER.error("saveUsers error. No users" );
         }
     }
 
     private void loadUsers() {
-
         try {
-            JAXBContext jaxbContext = JAXBContext.newInstance(UserMapWriter.class);
-            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-            UserMapWriter wrapper = (UserMapWriter) jaxbUnmarshaller.unmarshal(userData);
-            users.clear();
-            users.putAll(wrapper.getUsers());
-
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error");
-            alert.setHeaderText("Could not load data");
-            alert.setContentText("Could not load data to file:\n" + userData.getPath());
-
-            alert.showAndWait();
+            users = saveLoad.loadUserMap();
+        } catch (IOException e) {
+            LOGGER.error("loadUserMap error", e);
         }
     }
+
+    private void saveOrders() {
+        if(orders != null) {
+            saveLoad.saveOrderMap(orders);
+        }else {
+            LOGGER.error("saveOrders error. No orders" );
+        }
+    }
+
+    private void loadOrders() {
+        try {
+            orders = saveLoad.loadOrderMap();
+        } catch (IOException e) {
+            LOGGER.error("loadOrderMap error", e);
+        }
+    }
+
+    private void saveBlackList() {
+        if(phoneBlackList != null){
+        saveLoad.saveBlackList(phoneBlackList);
+        }else {
+            LOGGER.error("saveBlackList error. No phones" );
+        }
+    }
+
+    private void loadBlackList() {
+        try {
+            phoneBlackList = saveLoad.loadBlackList();
+        } catch (IOException e) {
+            LOGGER.error("loadBlackList error", e);
+
+        }
+    }
+
+    public void saveAllData(){
+        saveUsers();
+        saveOrders();
+        saveBlackList();
+    }
+
+    public void loadAllData(){
+        loadOrders();
+        loadUsers();
+        loadBlackList();
+    }
 }
-*/

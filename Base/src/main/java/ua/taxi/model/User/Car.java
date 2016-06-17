@@ -55,6 +55,6 @@ public class Car implements Serializable {
 
     @Override
     public String toString() {
-        return  color + " " + model + " " + number;
+        return  number + " " + model + " " + color;
     }
 }

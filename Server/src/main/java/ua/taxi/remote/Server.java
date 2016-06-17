@@ -1,10 +1,10 @@
 package ua.taxi.remote;
 
-import com.fasterxml.jackson.databind.ObjectWriter;
 import org.apache.log4j.Logger;
 import ua.taxi.dao.AppDB;
 import ua.taxi.dao.OrderDaoInnerDbImpl;
 import ua.taxi.dao.UserDaoInnerDbImpl;
+import ua.taxi.dao.serialize.JsonSaveLoad;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.model.Remote.RemoteUserObject;
 import ua.taxi.service.OrderServiceImpl;
@@ -22,21 +22,22 @@ public class Server {
 
     private OrderServiceDispatcher orderServiceDispatcher;
     private UserServiceDispatcher userServiceDispatcher;
+    private Object inObject;
+    private Object outObject;
     private long count;
     private final int PORT = 8080;
     private static final Logger LOGGER = Logger.getLogger(Server.class);
-    private Object inObject;
-    private Object outObject;
 
 
-    public Server(OrderServiceDispatcher orderServiceDispatcher, UserServiceDispatcher userServiceDispatcher) throws IOException, ClassNotFoundException {
+    public Server(OrderServiceDispatcher orderServiceDispatcher,
+                  UserServiceDispatcher userServiceDispatcher) throws ClassNotFoundException {
         this.orderServiceDispatcher = orderServiceDispatcher;
         this.userServiceDispatcher = userServiceDispatcher;
         LOGGER.info("Start TaxiApp Server \n Port: " + PORT);
         run();
     }
 
-    private void run() throws IOException, ClassNotFoundException {
+    private void run() throws ClassNotFoundException {
         try (ServerSocket serverSocket = new ServerSocket(PORT);
              Socket client = serverSocket.accept();
              ObjectInput reader = new ObjectInputStream(client.getInputStream());
@@ -50,9 +51,8 @@ public class Server {
                 LOGGER.trace("Send object N: " + count);
             }
         } catch (IOException e) {
-            System.out.println("Exception caught when trying to listen on port "
-                    + PORT + " or listening for a connection");
-            System.out.println(e.getMessage());
+            LOGGER.error("Exception caught when trying to listen on port "
+                    + PORT + " or listening for a connection", e);
         }
     }
 
@@ -67,11 +67,17 @@ public class Server {
         }
     }
 
-    public static void main(String[] args) throws IOException, ClassNotFoundException {
-        AppDB appDB = new AppDB();
-        new Server(
-                new OrderServiceDispatcher(new OrderServiceImpl(new OrderDaoInnerDbImpl(appDB))),
-                new UserServiceDispatcher(new UserServiceImpl(new UserDaoInnerDbImpl(appDB))));
+    public static void main(String[] args) {
+        AppDB appDB = new AppDB(new JsonSaveLoad());
+        appDB.loadAllData();
+        try {
+            new Server(
+                    new OrderServiceDispatcher(new OrderServiceImpl(new OrderDaoInnerDbImpl(appDB))),
+                    new UserServiceDispatcher(new UserServiceImpl(new UserDaoInnerDbImpl(appDB))));
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        appDB.saveAllData();
     }
 
 }
