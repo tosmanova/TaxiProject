@@ -98,6 +98,7 @@ public class EnterWindowCntrl implements Controller {
 
     @FXML
     private void goNow() {
+
         startApp.showCreateOrder();
     }
 
@@ -134,7 +135,7 @@ public class EnterWindowCntrl implements Controller {
 
                     //If we have order with phone of logged user, we go to OrderStatus
                     OrderValidateMessage orderValidateMessage = startApp.getOrderService().getOrder(phoneNumber.getText());
-                    if (orderValidateMessage.isState() && orderValidateMessage.getOrder().getOrderStatus() != OrderStatus.DONE) {
+                    if (orderValidateMessage.isState() && (orderValidateMessage.getOrder().getOrderStatus() != OrderStatus.DONE)) {
                         orderStatusCntrl.setActiveOrder(orderValidateMessage.getOrder());
                         startApp.showOrderStatus();
                         clear();

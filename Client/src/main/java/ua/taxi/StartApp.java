@@ -61,11 +61,7 @@ public class StartApp extends Application {
         orderService = new RemoteOrderService(client);
 
         this.primaryStage = primaryStage;
-
         this.primaryStage.setTitle("TaxiApp");
-
-        //initDaoWithSomeUsers();
-        //initDaoWithSomeOrders();
 
         initOrderList();
 
@@ -242,25 +238,6 @@ public class StartApp extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private void initDaoWithSomeUsers() {
-        //default registered passengers
-        userService.register("(093)306-01-13", "0933060113", "Andrey", new Address("ул. Ентузиастов", "27"));
-        userService.register("(093)306-56-89", "0933065689", "Vasia", new Address("пр. Харьковский", "103"));
-        userService.register("(097)506-61-89", "0975066189", "Kolya", new Address("пр. Победы", "103"));
-
-        //default registered drivers
-        userService.register("(063)306-01-13", "0633060113", "Lihach", new Car("AA3254AE", "Daewoo Lanos", "Gray"));
-        userService.register("(066)506-61-89", "0665066189", "Borodach", new Car("AA7777AE", "Toyota Camry", "Black"));
-        userService.register("(073)636-65-89", "0736366589", "Macho", new Car("AA5555AE", "Porshe Cayenne", "Gold"));
-    }
-
-    private void initDaoWithSomeOrders() {
-
-        orderService.createOrder("(093)306-01-13", "Andrey", new Address("ул. Ентузиастов", "27"), new Address("ул. Российская", "82"));
-        orderService.createOrder("(093)306-01-14", "Andrii", new Address("ул. Хрещатик", "1"), new Address("ул. Бориспольская", "4"));
-        orderService.createOrder("(093)306-01-15", "Andrii", new Address("ул. Ентузиастов", "27"), new Address("ул. Княжий Затон", "3"));
     }
 
     public void showChooseOrder() throws RemoteConnectionError {

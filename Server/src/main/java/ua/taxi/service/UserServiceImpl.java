@@ -16,7 +16,9 @@ public class UserServiceImpl implements UserService {
     public static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
 
     public UserServiceImpl(UserDao userDao) {
+
         this.userDao = userDao;
+        LOGGER.info("init UserServiceImpl");
     }
 
     @Override

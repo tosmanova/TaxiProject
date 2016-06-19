@@ -76,7 +76,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label alignment="CENTER_RIGHT" prefHeight="14.0" prefWidth="102.0" text="Done:" GridPane.halignment="RIGHT" GridPane.rowIndex="8">
+                  <Label alignment="CENTER_RIGHT" prefHeight="14.0" prefWidth="102.0" text="Done:" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
@@ -86,19 +86,13 @@
                   <Label fx:id="driversLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Label fx:id="ordersLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <Label fx:id="inProgresLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                  <Label fx:id="doneLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label fx:id="doneLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                   <Label alignment="CENTER_RIGHT" prefHeight="14.0" prefWidth="99.0" text="New:" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </Label>
                   <Label fx:id="newLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Label alignment="CENTER_RIGHT" prefHeight="14.0" prefWidth="94.0" text="Canceled:" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
-                     <GridPane.margin>
-                        <Insets right="5.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                </children>
             </GridPane>
             <Separator orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />

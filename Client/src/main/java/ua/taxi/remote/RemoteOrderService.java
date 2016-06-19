@@ -127,7 +127,7 @@ public class RemoteOrderService implements OrderService {
     public List<Order> getNewOrders() throws RemoteConnectionError {
 
         try {
-            return (List<Order>) send(new RemoteOrderObject(OrderServiceMethods.GET_ALL_ORDERS));
+            return (List<Order>) send(new RemoteOrderObject(OrderServiceMethods.GET_NEW_ORDERS));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

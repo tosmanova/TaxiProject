@@ -27,6 +27,7 @@ public class OrderServiceImpl implements OrderService {
 
     public OrderServiceImpl(OrderDao orderDao) {
         this.orderDao = orderDao;
+        LOGGER.info("init OrderServiceImpl");
     }
 
 
@@ -105,7 +106,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.changeStatus(phone, newStatus);
-            LOGGER.trace("changeOrderStatus new: " + newStatus);
+            LOGGER.trace("changeOrderStatus new: " + newStatus + " Old Order: " + oldOrder);
             return new OrderValidateMessage(oldOrder, "Change Order Status", oldOrder.toString(), true);
         }
         LOGGER.warn("Change Order Status, You don`t have any orders");
@@ -122,8 +123,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> getNewOrders() {
         Collection<Order> allOrders = orderDao.getOrderList();
-        Collection<Order> newOrders = allOrders.stream().filter(order -> order.getOrderStatus() == OrderStatus.NEW)
-                .collect(Collectors.toCollection(CopyOnWriteArrayList::new));
+        List<Order> newOrders = new ArrayList<>();
+
+        for (Order order : allOrders) {
+            if (order.getOrderStatus() == OrderStatus.NEW){
+                newOrders.add(order);
+            }
+        }
         LOGGER.trace("getNewOrders size:" + newOrders.size());
         return new ArrayList<>(newOrders);
     }
@@ -140,8 +146,8 @@ public class OrderServiceImpl implements OrderService {
                 }
             }
         }
-        LOGGER.warn("Active driver Order, Active driver Order not found");
-        return new OrderValidateMessage(null, "Active driver Order", "Active driver Order not found", false);
+        LOGGER.warn("IN_PROGRESS driver Order not found");
+        return new OrderValidateMessage(null, "Active driver Order", "IN_PROGRESS driver Order not found", false);
     }
 
     @Override

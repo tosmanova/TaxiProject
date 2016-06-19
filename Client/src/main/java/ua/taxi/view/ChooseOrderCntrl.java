@@ -85,6 +85,7 @@ public class ChooseOrderCntrl implements Controller {
 
     @FXML
     private void Cancel() {
+
         startApp.showEnterWindow();
     }
 

@@ -21,7 +21,9 @@ public class AppDB implements OrderDao, UserDao {
     private static final Logger LOGGER = Logger.getLogger(AppDB.class);
 
     public AppDB(SaveLoad saveLoad) {
+
         this.saveLoad = saveLoad;
+        LOGGER.info("init AppDB");
     }
 
     @Override
