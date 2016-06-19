@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<orders>
+    <orders>
+        <entry>
+            <key>(093)309-12-19</key>
+            <value>
+                <createTime/>
+                <createTimeAsString>11.09.51 AM</createTimeAsString>
+                <distance>8.74 km</distance>
+                <driverPhone> </driverPhone>
+                <orderStatus>NEW</orderStatus>
+                <price> 84 грн.</price>
+                <userName>Serhii</userName>
+                <userPhone>(093)309-12-19</userPhone>
+            </value>
+        </entry>
+        <entry>
+            <key>(093)306-01-13</key>
+            <value>
+                <createTime/>
+                <createTimeAsString>11.08.49 AM</createTimeAsString>
+                <distance>7.20 km</distance>
+                <driverPhone> </driverPhone>
+                <orderStatus>NEW</orderStatus>
+                <price> 76 грн.</price>
+                <userName>Andrey</userName>
+                <userPhone>(093)306-01-13</userPhone>
+            </value>
+        </entry>
+        <entry>
+            <key>(093)306-01-15</key>
+            <value>
+                <createTime/>
+                <createTimeAsString>11.08.50 AM</createTimeAsString>
+                <distance>6.85 km</distance>
+                <driverPhone> </driverPhone>
+                <orderStatus>NEW</orderStatus>
+                <price> 74 грн.</price>
+                <userName>Andrii</userName>
+                <userPhone>(093)306-01-15</userPhone>
+            </value>
+        </entry>
+        <entry>
+            <key>(093)306-01-14</key>
+            <value>
+                <createTime/>
+                <createTimeAsString>11.08.49 AM</createTimeAsString>
+                <distance>16.00 km</distance>
+                <driverPhone> </driverPhone>
+                <orderStatus>NEW</orderStatus>
+                <price>120 грн.</price>
+                <userName>Andrii</userName>
+                <userPhone>(093)306-01-14</userPhone>
+            </value>
+        </entry>
+    </orders>
+</orders>

@@ -1,0 +1,30 @@
+2016-06-19 14:06:47 INFO  AppDB:130 - all Orders loaded
+2016-06-19 14:06:47 TRACE OrderServiceImpl:100 - ordersRegisteredQuantity: 3
+2016-06-19 14:06:47 TRACE OrderServiceImpl:100 - ordersRegisteredQuantity: 3
+2016-06-19 14:06:47 TRACE OrderServiceImpl:108 - changeOrderStatus new: DONE
+2016-06-19 14:06:47 TRACE OrderServiceImpl:108 - changeOrderStatus new: DONE
+2016-06-19 14:06:48 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:187 - getPrice: for distance 7204.000000 = 76.020000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 76.020000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:40 - createOrder: Order{from=ул. Ентузиастов 27, to=ул. Российская 82, userPhone='(093)306-11-11', userName='Andrey', driverPhone='', price=76.02, distance=7204.0, createTime=2016-06-19T14:06:48.558, orderStatus=NEW}
+2016-06-19 14:06:48 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:187 - getPrice: for distance 7204.000000 = 76.020000
+2016-06-19 14:06:48 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 76.020000
+2016-06-19 14:06:49 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:06:49 WARN  OrderServiceImpl:43 - Order Creation: You already have active orders
+2016-06-19 14:07:12 INFO  AppDB:130 - all Orders loaded
+2016-06-19 14:07:12 TRACE OrderServiceImpl:100 - ordersRegisteredQuantity: 3
+2016-06-19 14:07:12 TRACE OrderServiceImpl:100 - ordersRegisteredQuantity: 3
+2016-06-19 14:07:12 TRACE OrderServiceImpl:108 - changeOrderStatus new: DONE
+2016-06-19 14:07:12 TRACE OrderServiceImpl:108 - changeOrderStatus new: DONE
+2016-06-19 14:07:13 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:07:13 TRACE OrderServiceImpl:187 - getPrice: for distance 7204.000000 = 76.020000
+2016-06-19 14:07:13 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 76.020000
+2016-06-19 14:07:14 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:07:14 TRACE OrderServiceImpl:40 - createOrder: Order{from=ул. Ентузиастов 27, to=ул. Российская 82, userPhone='(093)306-11-11', userName='Andrey', driverPhone='', price=76.02, distance=7204.0, createTime=2016-06-19T14:07:14.061, orderStatus=NEW}
+2016-06-19 14:07:14 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:07:14 TRACE OrderServiceImpl:187 - getPrice: for distance 7204.000000 = 76.020000
+2016-06-19 14:07:14 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 76.020000
+2016-06-19 14:07:14 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to ул. Российская 82 = 7204.000000
+2016-06-19 14:07:14 WARN  OrderServiceImpl:43 - Order Creation: You already have active orders

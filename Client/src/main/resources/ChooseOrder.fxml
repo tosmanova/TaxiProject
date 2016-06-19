@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.taxi.view.ChooseOrderCntrl">
+   <children>
+      <SplitPane dividerPositions="0.7" layoutX="62.0" layoutY="110.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="orderTable" layoutX="96.0" layoutY="28.0" prefHeight="255.0" prefWidth="418.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="createdColumn" prefWidth="100.0" text="Created" />
+                      <TableColumn fx:id="priceColumn" prefWidth="90.0" text="Price" />
+                        <TableColumn fx:id="distanceColumn" prefWidth="90.0" text="Distance" />
+                      <TableColumn fx:id="fromColumn" prefWidth="180.0" text="From" />
+                        <TableColumn fx:id="toColumn" prefWidth="180.0" text="To" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox layoutX="218.0" layoutY="4.0" prefHeight="50.0" prefWidth="250.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#getOrder" prefHeight="40.0" prefWidth="120.0" text="Get Order" />
+                        <Button mnemonicParsing="false" onAction="#Cancel" prefHeight="40.0" prefWidth="120.0" text="Cancel">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button layoutX="307.0" layoutY="16.0" mnemonicParsing="false" onAction="#editAccount" text="Edit account" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="50.0" />
+                  <Separator layoutX="-27.0" layoutY="26.0" prefWidth="200.0" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Label layoutX="23.0" layoutY="6.0" text="Your car:" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="20.0" />
+                  <Label fx:id="carLabel" layoutX="79.0" layoutY="5.0" text="Label" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="80.0" />
+                  <HBox layoutX="76.0" layoutY="25.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                     <children>
+                        <Label prefHeight="15.0" prefWidth="92.0" text="You enter as:">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="driverNameField" prefHeight="18.0" prefWidth="96.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="4.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
