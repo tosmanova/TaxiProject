@@ -1,4 +1,4 @@
-package ua.taxi.geolocation;
+package ua.taxi.model.geolocation;
 
 import com.google.gson.*;
 import org.json.simple.JSONArray;

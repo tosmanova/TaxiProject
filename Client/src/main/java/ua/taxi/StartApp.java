@@ -9,10 +9,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.TableViewOrder;
-import ua.taxi.model.User.Car;
 import ua.taxi.remote.RemoteOrderService;
 import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
@@ -46,6 +44,8 @@ public class StartApp extends Application {
     private OrderStatusCntrl orderStatusCntrl;
     private ChooseOrderCntrl chooseOrderCntrl;
     private ChooseOrderInfoCntrl chooseOrderInfoCntrl;
+    private Scene rootScene;
+
 
     private ObservableList<TableViewOrder> orderList = FXCollections.observableArrayList();
 
@@ -79,7 +79,7 @@ public class StartApp extends Application {
         showEnterWindow();
     }
 
-    public void initOrderList()  {
+    public void initOrderList() {
         List<Order> list = null;
         try {
             list = orderService.getNewOrders();
@@ -98,6 +98,7 @@ public class StartApp extends Application {
         enterWindowController.setCreateOrderFormCntrl(createOrderFormCntrl);
         enterWindowController.setOrderStatusCntrl(orderStatusCntrl);
         enterWindowController.setChooseOrderInfoCntrl(chooseOrderInfoCntrl);
+        enterWindowController.setMainWindowCntrl(mainWindowController);
 
         createOrderFormCntrl.setMainWindowCntrl(mainWindowController);
         createOrderFormCntrl.setOrderStatusCntrl(orderStatusCntrl);
@@ -117,6 +118,7 @@ public class StartApp extends Application {
         chooseOrderCntrl.setMainWindowCntrl(mainWindowController);
 
         chooseOrderInfoCntrl.setMainWindowCntrl(mainWindowController);
+        chooseOrderInfoCntrl.setEnterWindowCntrl(enterWindowController);
     }
 
     public void initRootLayout() {
@@ -125,8 +127,8 @@ public class StartApp extends Application {
             loader.setLocation(StartApp.class.getResource("/MainWindow.fxml"));
             rootLayout = (BorderPane) loader.load();
 
-            Scene scene = new Scene(rootLayout);
-            primaryStage.setScene(scene);
+            rootScene = new Scene(rootLayout, 670, 450);
+            primaryStage.setScene(rootScene);
             primaryStage.show();
 
             mainWindowController = loader.getController();
@@ -243,11 +245,17 @@ public class StartApp extends Application {
     public void showChooseOrder() throws RemoteConnectionError {
 
         initOrderList();
+        primaryStage.setHeight(500);
+        primaryStage.setWidth(900);
+        primaryStage.show();
         mainWindowController.setMainAnchorPane(chooseOrderLayout);
     }
 
     public void showChooseOrderInfo() {
 
+        primaryStage.setHeight(450);
+        primaryStage.setWidth(670);
+        primaryStage.show();
         mainWindowController.setMainAnchorPane(chooseOrderInfoLayout);
     }
 
@@ -268,6 +276,10 @@ public class StartApp extends Application {
     }
 
     public void showEnterWindow() {
+        primaryStage.setHeight(450);
+        primaryStage.setWidth(670);
+        primaryStage.show();
+        mainWindowController.hideGoogleMap();
         mainWindowController.setMainAnchorPane(enterWindowLayout);
     }
 
@@ -286,4 +298,6 @@ public class StartApp extends Application {
     public ObservableList<TableViewOrder> getOrderList() {
         return orderList;
     }
+
+
 }

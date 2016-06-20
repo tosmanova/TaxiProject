@@ -76,6 +76,7 @@ public class PassangerRegisterFormCntrl implements Controller {
     }
 
     public void setOpenForEdit(Passanger passanger) {
+        mainWindowCntrl.hideGoogleMap();
         isOpenForEdit = true;
         createButton.setText("Change");
         phoneNumberField.setText(passanger.getPhone());

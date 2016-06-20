@@ -17,6 +17,7 @@ public class ChooseOrderInfoCntrl implements Controller{
     private StartApp startApp;
     private Order activeOrder;
     private MainWindowCntrl mainWindowCntrl;
+    private EnterWindowCntrl enterWindowCntrl;
 
     @FXML
     private Label goFromLabel;
@@ -47,6 +48,7 @@ public class ChooseOrderInfoCntrl implements Controller{
 
     @FXML
     private void exit(){
+        enterWindowCntrl.clear();
         startApp.showEnterWindow();
     }
 
@@ -54,10 +56,9 @@ public class ChooseOrderInfoCntrl implements Controller{
     private void complete() throws RemoteConnectionError {
         startApp.getOrderService().changeOrderStatus(activeOrder.getUserPhone(), OrderStatus.DONE);
         mainWindowCntrl.updateOrderCounters();
+        enterWindowCntrl.clear();
         startApp.showEnterWindow();
     }
-
-
 
     @Override
     public void setStartApp(StartApp startApp) {
@@ -68,4 +69,7 @@ public class ChooseOrderInfoCntrl implements Controller{
         this.mainWindowCntrl = mainWindowCntrl;
     }
 
+    public void setEnterWindowCntrl(EnterWindowCntrl enterWindowCntrl) {
+        this.enterWindowCntrl = enterWindowCntrl;
+    }
 }

@@ -63,6 +63,7 @@ public class DriverRegisterFormCntrl implements Controller {
     }
 
     public void setOpenForEdit(Driver driver) {
+
         isOpenForEdit = true;
         createButton.setText("Change");
         phoneNumberField.setText(driver.getPhone());

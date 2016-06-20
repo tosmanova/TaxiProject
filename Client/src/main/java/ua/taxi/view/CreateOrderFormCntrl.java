@@ -131,6 +131,7 @@ public class CreateOrderFormCntrl implements Controller {
         if (textFieldsValidate()) {
             distanceLabel.setText(Utils.distanceFormat(startApp.getOrderService().getDistance(goFromAddress, goToAddress)));
             priceLabel.setText(Utils.priceFormat(startApp.getOrderService().getPrice(goFromAddress, goToAddress)));
+            mainWindowCntrl.showGoogleMapRoute(goFromAddress, goToAddress);
         }
     }
 
@@ -178,13 +179,13 @@ public class CreateOrderFormCntrl implements Controller {
 
     @FXML
     private void editAccount() {
-        if(passenger == null){
+        if (passenger == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.initOwner(startApp.getPrimaryStage());
             alert.setTitle("Not registered");
             alert.setContentText("You not registered !");
             alert.showAndWait();
-        }else {
+        } else {
             passangerRegisterFormCntrl.setOpenForEdit(passenger);
             startApp.showPassangerRegisterForm();
             clear();

@@ -1,4 +1,4 @@
-package ua.taxi.geolocation;
+package ua.taxi.model.geolocation;
 
 public class Location {
 
@@ -6,6 +6,15 @@ public class Location {
     private double lat;
     private double lng;
     private String placeId;
+    private String label;
+
+
+    public Location(double lat, double lng, String label) {
+        this.lat = lat;
+        this.lng = lng;
+        this.label = label;
+    }
+
 
     public Location(String formattedAddress, double lat, double lng) {
         this.formattedAddress = formattedAddress;

@@ -2,17 +2,16 @@ package ua.taxi.service;
 
 import org.apache.log4j.Logger;
 import ua.taxi.dao.OrderDao;
-import ua.taxi.geolocation.GoogleMapsAPI;
-import ua.taxi.geolocation.GoogleMapsAPIImpl;
-import ua.taxi.geolocation.Location;
+
+import ua.taxi.model.geolocation.GoogleMapsAPI;
+import ua.taxi.model.geolocation.GoogleMapsAPIImpl;
+import ua.taxi.model.geolocation.Location;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.Order.OrderValidateMessage;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.Collectors;
 
 /**
  * Created by Andrii on 4/29/2016.
@@ -36,6 +35,12 @@ public class OrderServiceImpl implements OrderService {
         double price = getPrice(from, to);
         double distance = getDistance(from, to);
         if (orderDao.getOrder(phone) == null) {
+            Order newOrder = new Order(from, to, phone, name, price, distance);
+            orderDao.addOrder(newOrder);
+            LOGGER.trace("createOrder: " + newOrder);
+            return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
+        } else if (orderDao.getOrder(phone).getOrderStatus() == OrderStatus.DONE) {
+            orderDao.deleteOrder(phone);
             Order newOrder = new Order(from, to, phone, name, price, distance);
             orderDao.addOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
@@ -126,7 +131,7 @@ public class OrderServiceImpl implements OrderService {
         List<Order> newOrders = new ArrayList<>();
 
         for (Order order : allOrders) {
-            if (order.getOrderStatus() == OrderStatus.NEW){
+            if (order.getOrderStatus() == OrderStatus.NEW) {
                 newOrders.add(order);
             }
         }

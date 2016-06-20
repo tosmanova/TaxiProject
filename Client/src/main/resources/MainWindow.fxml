@@ -103,4 +103,7 @@
    <center>
       <AnchorPane fx:id="mainAnchorPane" BorderPane.alignment="CENTER" />
    </center>
+   <left>
+      <AnchorPane fx:id="leftAnchorPane" prefHeight="425.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
 </BorderPane>
