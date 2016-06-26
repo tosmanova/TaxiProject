@@ -1,0 +1,79 @@
+2016-06-19 14:11:42 INFO  AppDB:130 - all Orders loaded
+2016-06-19 14:11:42 INFO  AppDB:112 - all Users loaded
+2016-06-19 14:11:42 INFO  AppDB:148 - BlackList Loaded
+2016-06-19 14:11:42 INFO  Server:36 - Start TaxiApp Server 
+ Port: 8080
+2016-06-19 14:12:05 TRACE OrderServiceImpl:118 - getAllOrders size:3
+2016-06-19 14:12:05 TRACE Server:51 - Send object N: 1
+2016-06-19 14:12:07 TRACE OrderServiceImpl:169 - getStatusCounterMap:  newOrder:2; done: 1; inProgress: 0
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 2
+2016-06-19 14:12:07 TRACE OrderServiceImpl:100 - ordersRegisteredQuantity: 3
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 3
+2016-06-19 14:12:07 TRACE UserServiceImpl:60 - driverRegisteredQuantity: 4
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 4
+2016-06-19 14:12:07 TRACE UserServiceImpl:73 - passangerRegisteredQuantity: 3
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 5
+2016-06-19 14:12:07 TRACE UserServiceImpl:73 - passangerRegisteredQuantity: 3
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 6
+2016-06-19 14:12:07 TRACE UserServiceImpl:60 - driverRegisteredQuantity: 4
+2016-06-19 14:12:07 TRACE Server:51 - Send object N: 7
+2016-06-19 14:12:38 TRACE UserServiceImpl:82 - login: Passanger{homeAdress=ул. Ентузиастов 27User{phone='(093)306-01-13', pass='******', name='Andrey'}}
+2016-06-19 14:12:38 TRACE Server:51 - Send object N: 8
+2016-06-19 14:12:38 TRACE OrderServiceImpl:52 - getOrderOrder{from=ул. Ентузиастов 27, to=ул. Хрещатик 1, userPhone='(093)306-01-13', userName='Andrey', driverPhone='(063)306-01-13', price=88.05, distance=9610.0, createTime=2016-06-17T16:41:17.255, orderStatus=DONE}
+2016-06-19 14:12:38 TRACE Server:51 - Send object N: 9
+2016-06-19 14:13:00 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:00 TRACE Server:51 - Send object N: 10
+2016-06-19 14:13:00 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:00 TRACE OrderServiceImpl:187 - getPrice: for distance 13123.000000 = 105.615000
+2016-06-19 14:13:00 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 105.615000
+2016-06-19 14:13:00 TRACE Server:51 - Send object N: 11
+2016-06-19 14:13:13 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:13 TRACE OrderServiceImpl:187 - getPrice: for distance 13123.000000 = 105.615000
+2016-06-19 14:13:13 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 105.615000
+2016-06-19 14:13:13 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:13 WARN  OrderServiceImpl:43 - Order Creation: You already have active orders
+2016-06-19 14:13:13 TRACE Server:51 - Send object N: 12
+2016-06-19 14:13:19 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:19 TRACE OrderServiceImpl:187 - getPrice: for distance 13123.000000 = 105.615000
+2016-06-19 14:13:19 TRACE OrderServiceImpl:193 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 105.615000
+2016-06-19 14:13:20 TRACE OrderServiceImpl:180 - getDistance: from ул. Ентузиастов 27  to Старокиєвська 10 = 13123.000000
+2016-06-19 14:13:20 WARN  OrderServiceImpl:43 - Order Creation: You already have active orders
+2016-06-19 14:13:20 TRACE Server:51 - Send object N: 13
+2016-06-26 09:17:38 INFO  AppDB:26 - init AppDB
+2016-06-26 09:17:39 INFO  AppDB:132 - all Orders loaded
+2016-06-26 09:17:39 INFO  AppDB:114 - all Users loaded
+2016-06-26 09:17:39 INFO  AppDB:150 - BlackList Loaded
+2016-06-26 09:17:39 INFO  OrderServiceImpl:29 - init OrderServiceImpl
+2016-06-26 09:17:39 INFO  UserServiceImpl:21 - init UserServiceImpl
+2016-06-26 09:17:39 INFO  Server:36 - Start TaxiApp Server 
+ Port: 8080
+2016-06-26 09:17:50 TRACE OrderServiceImpl:138 - getNewOrders size:1
+2016-06-26 09:17:50 TRACE Server:51 - Send object N: 1
+2016-06-26 09:17:53 TRACE OrderServiceImpl:180 - getStatusCounterMap:  newOrder:1; done: 1; inProgress: 0
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 2
+2016-06-26 09:17:53 TRACE OrderServiceImpl:106 - ordersRegisteredQuantity: 2
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 3
+2016-06-26 09:17:53 TRACE UserServiceImpl:62 - driverRegisteredQuantity: 4
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 4
+2016-06-26 09:17:53 TRACE UserServiceImpl:75 - passangerRegisteredQuantity: 4
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 5
+2016-06-26 09:17:53 TRACE UserServiceImpl:75 - passangerRegisteredQuantity: 4
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 6
+2016-06-26 09:17:53 TRACE UserServiceImpl:62 - driverRegisteredQuantity: 4
+2016-06-26 09:17:53 TRACE Server:51 - Send object N: 7
+2016-06-26 09:18:15 TRACE UserServiceImpl:84 - login: Passanger{homeAdress=ул. Ентузиастов 27User{phone='(093)306-01-13', pass='******', name='Andrey'}}
+2016-06-26 09:18:15 TRACE Server:51 - Send object N: 8
+2016-06-26 09:18:15 WARN  OrderServiceImpl:61 - Get Order. You don`t have any orders
+2016-06-26 09:18:15 TRACE Server:51 - Send object N: 9
+2016-06-26 09:18:30 TRACE OrderServiceImpl:191 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 15310.000000
+2016-06-26 09:18:30 TRACE Server:51 - Send object N: 10
+2016-06-26 09:18:30 TRACE OrderServiceImpl:191 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 15310.000000
+2016-06-26 09:18:30 TRACE OrderServiceImpl:198 - getPrice: for distance 15310.000000 = 116.550000
+2016-06-26 09:18:30 TRACE OrderServiceImpl:204 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 116.550000
+2016-06-26 09:18:30 TRACE Server:51 - Send object N: 11
+2016-06-26 09:20:04 TRACE OrderServiceImpl:191 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 15310.000000
+2016-06-26 09:20:04 TRACE Server:51 - Send object N: 12
+2016-06-26 09:20:04 TRACE OrderServiceImpl:191 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 15310.000000
+2016-06-26 09:20:04 TRACE OrderServiceImpl:198 - getPrice: for distance 15310.000000 = 116.550000
+2016-06-26 09:20:04 TRACE OrderServiceImpl:204 - getDistance: from ул. Ентузиастов 27  to Ушинського 3 = 116.550000
+2016-06-26 09:20:04 TRACE Server:51 - Send object N: 13

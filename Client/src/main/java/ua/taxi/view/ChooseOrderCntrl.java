@@ -75,6 +75,7 @@ public class ChooseOrderCntrl implements Controller {
         chooseOrderInfoCntrl.setActiveOrder(order);
         mainWindowCntrl.updateOrderCounters();
         startApp.showChooseOrderInfo();
+        mainWindowCntrl.showGoogleMapRoute(order.getFrom(), order.getTo());
 
     }
 
@@ -85,6 +86,7 @@ public class ChooseOrderCntrl implements Controller {
 
     @FXML
     private void Cancel() {
+
         startApp.showEnterWindow();
     }
 

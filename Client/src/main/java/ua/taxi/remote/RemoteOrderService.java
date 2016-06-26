@@ -94,8 +94,7 @@ public class RemoteOrderService implements OrderService {
     }
 
     @Override
-    public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone)
-    {
+    public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone) {
         RemoteOrderObject remoteOrderObject = new RemoteOrderObject(OrderServiceMethods.GET_ORDER_IN_PROGRES_BY_DRIVERPHONE);
         remoteOrderObject.setDriverPhone(driverPhone);
 
@@ -127,7 +126,7 @@ public class RemoteOrderService implements OrderService {
     public List<Order> getNewOrders() throws RemoteConnectionError {
 
         try {
-            return (List<Order>) send(new RemoteOrderObject(OrderServiceMethods.GET_ALL_ORDERS));
+            return (List<Order>) send(new RemoteOrderObject(OrderServiceMethods.GET_NEW_ORDERS));
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {

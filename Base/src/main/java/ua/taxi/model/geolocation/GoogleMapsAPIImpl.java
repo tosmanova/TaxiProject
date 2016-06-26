@@ -1,4 +1,4 @@
-package ua.taxi.geolocation;
+package ua.taxi.model.geolocation;
 
 import com.google.gson.*;
 import org.json.simple.JSONArray;
@@ -86,7 +86,7 @@ public class GoogleMapsAPIImpl implements GoogleMapsAPI {
         con.setRequestMethod("GET");
 
         int responseCode = con.getResponseCode();
-       // System.out.println("Response Code : " + responseCode);
+        // System.out.println("Response Code : " + responseCode);
 
         return getStringContent(con.getInputStream());
 

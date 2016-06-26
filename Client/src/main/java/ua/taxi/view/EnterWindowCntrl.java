@@ -22,6 +22,7 @@ public class EnterWindowCntrl implements Controller {
     private ChooseOrderCntrl chooseOrderCntrl;
     private ChooseOrderInfoCntrl chooseOrderInfoCntrl;
     private OrderStatusCntrl orderStatusCntrl;
+    private MainWindowCntrl mainWindowCntrl;
     private final ToggleGroup togleGroup = new ToggleGroup();
 
     @FXML
@@ -98,6 +99,7 @@ public class EnterWindowCntrl implements Controller {
 
     @FXML
     private void goNow() {
+
         startApp.showCreateOrder();
     }
 
@@ -122,10 +124,11 @@ public class EnterWindowCntrl implements Controller {
                 if (validateMessage.getUser() instanceof Driver) {
                     OrderValidateMessage orderInProgresValidate = startApp.getOrderService()
                             .getOrderInProgresByDriverPhone(validateMessage.getUser().getPhone());
-                    if(orderInProgresValidate.isState()){
+                    if (orderInProgresValidate.isState()) {
                         chooseOrderInfoCntrl.setActiveOrder(orderInProgresValidate.getOrder());
                         startApp.showChooseOrderInfo();
-                    }else {
+                        mainWindowCntrl.showGoogleMapRoute(orderInProgresValidate.getOrder().getFrom(), orderInProgresValidate.getOrder().getTo());
+                    } else {
                         chooseOrderCntrl.setLogedDriver((Driver) validateMessage.getUser());
                         startApp.showChooseOrder();
                         clear();
@@ -134,9 +137,10 @@ public class EnterWindowCntrl implements Controller {
 
                     //If we have order with phone of logged user, we go to OrderStatus
                     OrderValidateMessage orderValidateMessage = startApp.getOrderService().getOrder(phoneNumber.getText());
-                    if (orderValidateMessage.isState() && orderValidateMessage.getOrder().getOrderStatus() != OrderStatus.DONE) {
+                    if (orderValidateMessage.isState() && (orderValidateMessage.getOrder().getOrderStatus() != OrderStatus.DONE)) {
                         orderStatusCntrl.setActiveOrder(orderValidateMessage.getOrder());
                         startApp.showOrderStatus();
+                        mainWindowCntrl.showGoogleMapRoute(orderValidateMessage.getOrder().getFrom(), orderValidateMessage.getOrder().getTo());
                         clear();
                     } else {
                         createOrderFormCntrl.setLogedPassenger((Passanger) validateMessage.getUser());
@@ -173,5 +177,9 @@ public class EnterWindowCntrl implements Controller {
 
     public void setChooseOrderInfoCntrl(ChooseOrderInfoCntrl chooseOrderInfoCntrl) {
         this.chooseOrderInfoCntrl = chooseOrderInfoCntrl;
+    }
+
+    public void setMainWindowCntrl(MainWindowCntrl mainWindowCntrl) {
+        this.mainWindowCntrl = mainWindowCntrl;
     }
 }

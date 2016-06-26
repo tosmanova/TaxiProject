@@ -59,12 +59,16 @@ public class CreateOrderFormCntrl implements Controller {
         nameField.clear();
         goFromField.clear();
         goToField.clear();
+        phoneNumberField.editableProperty().set(true);
+        nameField.editableProperty().set(true);
     }
 
     public void setOpenForEdit(Order order) {
         isOpenForEdit = true;
         createButton.setText("Change");
-        setLogedPassenger(passenger);
+        if (passenger != null) {
+            setLogedPassenger(passenger);
+        }
         goFromField.setText(order.getFrom().toString());
         goToField.setText(order.getTo().toString());
         priceLabel.setText(String.valueOf(order.getPrice()));
@@ -127,6 +131,7 @@ public class CreateOrderFormCntrl implements Controller {
         if (textFieldsValidate()) {
             distanceLabel.setText(Utils.distanceFormat(startApp.getOrderService().getDistance(goFromAddress, goToAddress)));
             priceLabel.setText(Utils.priceFormat(startApp.getOrderService().getPrice(goFromAddress, goToAddress)));
+            mainWindowCntrl.showGoogleMapRoute(goFromAddress, goToAddress);
         }
     }
 
@@ -174,9 +179,17 @@ public class CreateOrderFormCntrl implements Controller {
 
     @FXML
     private void editAccount() {
-        passangerRegisterFormCntrl.setOpenForEdit(passenger);
-        startApp.showPassangerRegisterForm();
-        clear();
+        if (passenger == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.initOwner(startApp.getPrimaryStage());
+            alert.setTitle("Not registered");
+            alert.setContentText("You not registered !");
+            alert.showAndWait();
+        } else {
+            passangerRegisterFormCntrl.setOpenForEdit(passenger);
+            startApp.showPassangerRegisterForm();
+            clear();
+        }
     }
 
     @Override

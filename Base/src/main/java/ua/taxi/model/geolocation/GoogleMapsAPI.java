@@ -1,4 +1,6 @@
-package ua.taxi.geolocation;
+package ua.taxi.model.geolocation;
+
+import ua.taxi.model.geolocation.Location;
 
 public interface GoogleMapsAPI {
 

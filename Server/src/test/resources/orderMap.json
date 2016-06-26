@@ -31,5 +31,16 @@
     "distance": "9610.0",
     "createTime": "2016-06-17T16:41:17.255",
     "orderStatus": "DONE"
+  },
+  "(095)306-01-13": {
+    "from": "ул. Ентузиастов 27",
+    "to": "ул. Хрещатик 1",
+    "userPhone": "(095)306-01-13",
+    "userName": "Andrey",
+    "driverPhone": "(073)306-01-13",
+    "price": "88.05",
+    "distance": "9610.0",
+    "createTime": "2016-06-17T16:41:17.255",
+    "orderStatus": "IN_PROGRESS"
   }
 }

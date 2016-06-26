@@ -63,6 +63,7 @@ public class DriverRegisterFormCntrl implements Controller {
     }
 
     public void setOpenForEdit(Driver driver) {
+
         isOpenForEdit = true;
         createButton.setText("Change");
         phoneNumberField.setText(driver.getPhone());
@@ -130,7 +131,7 @@ public class DriverRegisterFormCntrl implements Controller {
 
             UserValidateMessage userValidate;
 
-            if(isOpenForEdit) {
+            if (isOpenForEdit) {
 
                 userValidate = startApp.getUserService().changeDriver(
                         phoneNumberField.getText()
@@ -138,7 +139,7 @@ public class DriverRegisterFormCntrl implements Controller {
                         , nameField.getText()
                         , new Car(carNumberField.getText(), carModelField.getText(), carColorField.getText()));
 
-            }else {
+            } else {
 
                 userValidate = startApp.getUserService().register(
                         phoneNumberField.getText()

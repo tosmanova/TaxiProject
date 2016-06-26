@@ -2,17 +2,16 @@ package ua.taxi.service;
 
 import org.apache.log4j.Logger;
 import ua.taxi.dao.OrderDao;
-import ua.taxi.geolocation.GoogleMapsAPI;
-import ua.taxi.geolocation.GoogleMapsAPIImpl;
-import ua.taxi.geolocation.Location;
+
+import ua.taxi.model.geolocation.GoogleMapsAPI;
+import ua.taxi.model.geolocation.GoogleMapsAPIImpl;
+import ua.taxi.model.geolocation.Location;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.Order.OrderValidateMessage;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.stream.Collectors;
 
 /**
  * Created by Andrii on 4/29/2016.
@@ -27,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
 
     public OrderServiceImpl(OrderDao orderDao) {
         this.orderDao = orderDao;
+        LOGGER.info("init OrderServiceImpl");
     }
 
 
@@ -35,6 +35,12 @@ public class OrderServiceImpl implements OrderService {
         double price = getPrice(from, to);
         double distance = getDistance(from, to);
         if (orderDao.getOrder(phone) == null) {
+            Order newOrder = new Order(from, to, phone, name, price, distance);
+            orderDao.addOrder(newOrder);
+            LOGGER.trace("createOrder: " + newOrder);
+            return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
+        } else if (orderDao.getOrder(phone).getOrderStatus() == OrderStatus.DONE) {
+            orderDao.deleteOrder(phone);
             Order newOrder = new Order(from, to, phone, name, price, distance);
             orderDao.addOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
@@ -105,7 +111,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.changeStatus(phone, newStatus);
-            LOGGER.trace("changeOrderStatus new: " + newStatus);
+            LOGGER.trace("changeOrderStatus new: " + newStatus + " Old Order: " + oldOrder);
             return new OrderValidateMessage(oldOrder, "Change Order Status", oldOrder.toString(), true);
         }
         LOGGER.warn("Change Order Status, You don`t have any orders");
@@ -122,8 +128,13 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public List<Order> getNewOrders() {
         Collection<Order> allOrders = orderDao.getOrderList();
-        Collection<Order> newOrders = allOrders.stream().filter(order -> order.getOrderStatus() == OrderStatus.NEW)
-                .collect(Collectors.toCollection(CopyOnWriteArrayList::new));
+        List<Order> newOrders = new ArrayList<>();
+
+        for (Order order : allOrders) {
+            if (order.getOrderStatus() == OrderStatus.NEW) {
+                newOrders.add(order);
+            }
+        }
         LOGGER.trace("getNewOrders size:" + newOrders.size());
         return new ArrayList<>(newOrders);
     }
@@ -140,8 +151,8 @@ public class OrderServiceImpl implements OrderService {
                 }
             }
         }
-        LOGGER.warn("Active driver Order, Active driver Order not found");
-        return new OrderValidateMessage(null, "Active driver Order", "Active driver Order not found", false);
+        LOGGER.warn("IN_PROGRESS driver Order not found");
+        return new OrderValidateMessage(null, "Active driver Order", "IN_PROGRESS driver Order not found", false);
     }
 
     @Override

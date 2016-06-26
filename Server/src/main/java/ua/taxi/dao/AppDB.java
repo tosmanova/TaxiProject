@@ -21,7 +21,9 @@ public class AppDB implements OrderDao, UserDao {
     private static final Logger LOGGER = Logger.getLogger(AppDB.class);
 
     public AppDB(SaveLoad saveLoad) {
+
         this.saveLoad = saveLoad;
+        LOGGER.info("init AppDB");
     }
 
     @Override
@@ -98,67 +100,67 @@ public class AppDB implements OrderDao, UserDao {
      */
 
     public void saveUsers() {
-        if(users != null) {
+        if (users != null) {
             saveLoad.saveUserMap(users);
-            LOGGER.info("saved all Users" );
-        }else {
-            LOGGER.error("saveUsers error. No users" );
+            LOGGER.info("saved all Users");
+        } else {
+            LOGGER.error("saveUsers error. No users");
         }
     }
 
     public void loadUsers() {
         try {
             users = saveLoad.loadUserMap();
-            LOGGER.info("all Users loaded" );
+            LOGGER.info("all Users loaded");
         } catch (IOException e) {
             LOGGER.error("loadUserMap error", e);
         }
     }
 
     public void saveOrders() {
-        if(orders != null) {
+        if (orders != null) {
             saveLoad.saveOrderMap(orders);
-            LOGGER.info("saved all Orders" );
-        }else {
-            LOGGER.error("saveOrders error. No orders" );
+            LOGGER.info("saved all Orders");
+        } else {
+            LOGGER.error("saveOrders error. No orders");
         }
     }
 
     public void loadOrders() {
         try {
             orders = saveLoad.loadOrderMap();
-            LOGGER.info("all Orders loaded" );
+            LOGGER.info("all Orders loaded");
         } catch (IOException e) {
             LOGGER.error("loadOrderMap error", e);
         }
     }
 
     public void saveBlackList() {
-        if(phoneBlackList != null){
-        saveLoad.saveBlackList(phoneBlackList);
-            LOGGER.info("saved BlackList" );
-        }else {
-            LOGGER.error("saveBlackList error. No phones" );
+        if (phoneBlackList != null) {
+            saveLoad.saveBlackList(phoneBlackList);
+            LOGGER.info("saved BlackList");
+        } else {
+            LOGGER.error("saveBlackList error. No phones");
         }
     }
 
     public void loadBlackList() {
         try {
             phoneBlackList = saveLoad.loadBlackList();
-            LOGGER.info("BlackList Loaded" );
+            LOGGER.info("BlackList Loaded");
         } catch (IOException e) {
             LOGGER.error("loadBlackList error", e);
 
         }
     }
 
-    public void saveAllData(){
+    public void saveAllData() {
         saveUsers();
         saveOrders();
         saveBlackList();
     }
 
-    public void loadAllData(){
+    public void loadAllData() {
         loadOrders();
         loadUsers();
         loadBlackList();

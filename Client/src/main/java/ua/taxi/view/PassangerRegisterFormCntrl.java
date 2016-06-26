@@ -76,6 +76,7 @@ public class PassangerRegisterFormCntrl implements Controller {
     }
 
     public void setOpenForEdit(Passanger passanger) {
+        mainWindowCntrl.hideGoogleMap();
         isOpenForEdit = true;
         createButton.setText("Change");
         phoneNumberField.setText(passanger.getPhone());
@@ -136,7 +137,7 @@ public class PassangerRegisterFormCntrl implements Controller {
             }
             if (userValidate.getState()) {
                 createOrderFormCntrl.setLogedPassenger((Passanger) userValidate.getUser());
-                if(!isOpenForEdit) mainWindowCntrl.updateUserCounters();
+                if (!isOpenForEdit) mainWindowCntrl.updateUserCounters();
                 startApp.showCreateOrder();
                 clear();
             } else {
