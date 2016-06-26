@@ -1,5 +1,6 @@
 package ua.taxi.dao.sql;
 
+
 import java.util.List;
 
 /**
@@ -14,11 +15,10 @@ public interface GenericDao<T> {
 
     T findById(int id);
 
-    List<T> getAll(int offset, int length);
+    List <T> getAll(int offset, int length);
 
     // use el id for find in db
     T update(T el);
 
     T getLast();
-
 }
