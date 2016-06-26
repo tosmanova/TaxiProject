@@ -94,8 +94,7 @@ public class RemoteOrderService implements OrderService {
     }
 
     @Override
-    public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone)
-    {
+    public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone) {
         RemoteOrderObject remoteOrderObject = new RemoteOrderObject(OrderServiceMethods.GET_ORDER_IN_PROGRES_BY_DRIVERPHONE);
         remoteOrderObject.setDriverPhone(driverPhone);
 

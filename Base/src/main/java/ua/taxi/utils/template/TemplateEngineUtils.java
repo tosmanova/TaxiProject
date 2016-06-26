@@ -1,6 +1,7 @@
 package ua.taxi.utils.template;
 
 import freemarker.template.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.StringWriter;
@@ -32,12 +33,10 @@ public class TemplateEngineUtils {
     /**
      * @param fileName relative name, begins from src/resources/templates/
      *                 example googlemapmarker.html
-     *
-     *
-     * */
+     */
     public static String merge(String fileName, Map proper) throws IOException, TemplateException {
-        Template template = cfg.getTemplate(fileName,"UTF-8");
-        try(StringWriter writer = new StringWriter()){
+        Template template = cfg.getTemplate(fileName, "UTF-8");
+        try (StringWriter writer = new StringWriter()) {
             template.process(proper, writer);
             return writer.toString();
         }

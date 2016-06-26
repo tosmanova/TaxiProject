@@ -137,7 +137,7 @@ public class PassangerRegisterFormCntrl implements Controller {
             }
             if (userValidate.getState()) {
                 createOrderFormCntrl.setLogedPassenger((Passanger) userValidate.getUser());
-                if(!isOpenForEdit) mainWindowCntrl.updateUserCounters();
+                if (!isOpenForEdit) mainWindowCntrl.updateUserCounters();
                 startApp.showCreateOrder();
                 clear();
             } else {

@@ -86,7 +86,7 @@ public class GoogleMapsAPIImpl implements GoogleMapsAPI {
         con.setRequestMethod("GET");
 
         int responseCode = con.getResponseCode();
-       // System.out.println("Response Code : " + responseCode);
+        // System.out.println("Response Code : " + responseCode);
 
         return getStringContent(con.getInputStream());
 

@@ -40,7 +40,6 @@ public class MainWindowCntrl implements Controller {
     private Label doneLabel;
 
 
-
     @FXML
     private void initialize() {
         AnchorPane initPane = new AnchorPane();
@@ -65,7 +64,7 @@ public class MainWindowCntrl implements Controller {
         leftAnchorPane.setTopAnchor(anchorPane, 0.0);
     }
 
-    public void showGoogleMapRoute(Address from, Address to){
+    public void showGoogleMapRoute(Address from, Address to) {
 
         GoogleMapCntrl googleMapCntrl = new GoogleMapCntrl();
 
@@ -80,12 +79,12 @@ public class MainWindowCntrl implements Controller {
         googlePan.getChildren().add(googleMapCntrl);
         googlePan.setPrefWidth(600);
         setLeftAnchorPane(googlePan);
-        startApp.getPrimaryStage().setWidth(1300);
-        startApp.getPrimaryStage().setHeight(640);
+        startApp.getPrimaryStage().setWidth(1360);
+        startApp.getPrimaryStage().setHeight(650);
         startApp.getPrimaryStage().show();
     }
 
-    public void hideGoogleMap(){
+    public void hideGoogleMap() {
 
         AnchorPane clearPan = new AnchorPane();
         clearPan.setPrefWidth(20);
@@ -94,7 +93,6 @@ public class MainWindowCntrl implements Controller {
         startApp.getPrimaryStage().setHeight(450);
         startApp.getPrimaryStage().show();
     }
-
 
 
     public void updateOrderCounters() throws RemoteConnectionError {

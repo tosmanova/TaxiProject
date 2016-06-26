@@ -12,7 +12,7 @@ import ua.taxi.utils.Utils;
 /**
  * Created by Andrii on 5/9/2016.
  */
-public class ChooseOrderInfoCntrl implements Controller{
+public class ChooseOrderInfoCntrl implements Controller {
 
     private StartApp startApp;
     private Order activeOrder;
@@ -47,7 +47,7 @@ public class ChooseOrderInfoCntrl implements Controller{
     }
 
     @FXML
-    private void exit(){
+    private void exit() {
         enterWindowCntrl.clear();
         startApp.showEnterWindow();
     }

@@ -253,7 +253,7 @@ public class StartApp extends Application {
 
     public void showChooseOrderInfo() {
 
-        primaryStage.setHeight(450);
+        primaryStage.setHeight(500);
         primaryStage.setWidth(670);
         primaryStage.show();
         mainWindowController.setMainAnchorPane(chooseOrderInfoLayout);
@@ -276,7 +276,7 @@ public class StartApp extends Application {
     }
 
     public void showEnterWindow() {
-        primaryStage.setHeight(450);
+        primaryStage.setHeight(650);
         primaryStage.setWidth(670);
         primaryStage.show();
         mainWindowController.hideGoogleMap();
