@@ -1,4 +1,4 @@
-package ua.artcode.taxi.dao;
+package ua.taxi.dao.sql;
 
 import java.util.List;
 

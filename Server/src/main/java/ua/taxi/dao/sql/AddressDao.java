@@ -1,6 +1,8 @@
-package ua.artcode.taxi.dao;
+package ua.taxi.dao.sql;
 
-import ua.artcode.taxi.model.Address;
+
+
+import ua.taxi.model.Order.Address;
 
 import java.util.List;
 
