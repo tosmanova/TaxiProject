@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import ua.taxi.StartApp;
+import ua.taxi.constant.WindowsSize;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.OrderStatus;
@@ -38,6 +39,10 @@ public class MainWindowCntrl implements Controller {
     private Label inProgresLabel;
     @FXML
     private Label doneLabel;
+    @FXML
+    private Label widthLabel;
+    @FXML
+    private Label heightLabel;
 
 
     @FXML
@@ -77,11 +82,9 @@ public class MainWindowCntrl implements Controller {
 
         AnchorPane googlePan = new AnchorPane();
         googlePan.getChildren().add(googleMapCntrl);
-        googlePan.setPrefWidth(600);
+        googlePan.setPrefWidth(WindowsSize.GOOGLE_PANE_WIDTH);
         setLeftAnchorPane(googlePan);
-        startApp.getPrimaryStage().setWidth(1360);
-        startApp.getPrimaryStage().setHeight(650);
-        startApp.getPrimaryStage().show();
+        startApp.changeWindowSize(WindowsSize.GOOGLE_MAP_WIDTH, WindowsSize.GOOGLE_MAP_HEIGHT);
     }
 
     public void hideGoogleMap() {
@@ -89,9 +92,7 @@ public class MainWindowCntrl implements Controller {
         AnchorPane clearPan = new AnchorPane();
         clearPan.setPrefWidth(20);
         setLeftAnchorPane(clearPan);
-        startApp.getPrimaryStage().setWidth(670);
-        startApp.getPrimaryStage().setHeight(450);
-        startApp.getPrimaryStage().show();
+        startApp.changeWindowSize(WindowsSize.ENTER_WIDTH, WindowsSize.ENTER_HEIGHT);
     }
 
 
@@ -114,5 +115,13 @@ public class MainWindowCntrl implements Controller {
     @Override
     public void setStartApp(StartApp startApp) {
         this.startApp = startApp;
+    }
+
+    public Label getWidthLabel() {
+        return widthLabel;
+    }
+
+    public Label getHeightLabel() {
+        return heightLabel;
     }
 }
