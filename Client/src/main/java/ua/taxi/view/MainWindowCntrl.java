@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import ua.taxi.StartApp;
-import ua.taxi.constant.WindowsSize;
+import ua.taxi.constants.WindowsSize;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.OrderStatus;

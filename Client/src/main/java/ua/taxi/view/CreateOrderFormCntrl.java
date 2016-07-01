@@ -10,7 +10,7 @@ import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderValidateMessage;
-import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.Passenger;
 import ua.taxi.utils.Utils;
 
 /**
@@ -23,7 +23,7 @@ public class CreateOrderFormCntrl implements Controller {
     private OrderStatusCntrl orderStatusCntrl;
     private PassangerRegisterFormCntrl passangerRegisterFormCntrl;
 
-    private Passanger passenger;
+    private Passenger passenger;
     private Address goFromAddress;
     private Address goToAddress;
     private boolean isOpenForEdit;
@@ -74,7 +74,7 @@ public class CreateOrderFormCntrl implements Controller {
         priceLabel.setText(String.valueOf(order.getPrice()));
     }
 
-    public void setLogedPassenger(Passanger passenger) {
+    public void setLogedPassenger(Passenger passenger) {
 
         this.passenger = passenger;
         phoneNumberField.setText(passenger.getPhone());

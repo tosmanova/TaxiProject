@@ -5,7 +5,7 @@ import ua.taxi.dao.*;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.User.*;
 
-import java.util.Collection;
+import java.sql.SQLException;
 
 /**
  * Created by serhii on 23.04.16.
@@ -23,11 +23,21 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserValidateMessage register(String phone, String pass, String name, Address homeAdress) {
-        if (userDao.getUser(phone) == null) {
-            User passanger = new Passanger(phone, pass, name, homeAdress);
-            userDao.addUser(passanger);
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
+        if (user == null) {
+            User passanger = new Passenger(phone, pass, name, homeAdress);
+            try {
+                userDao.createUser(passanger);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             LOGGER.trace("register: " + passanger);
-            return new UserValidateMessage(true, "Create UserValidateMessage", "Create new Passanger\n" + passanger, passanger);
+            return new UserValidateMessage(true, "Create UserValidateMessage", "Create new Passenger\n" + passanger, passanger);
         } else {
             LOGGER.warn(("register: User with this phone is already registered"));
             return new UserValidateMessage(false, "Create UserValidateMessage", "User with this phone\n" +
@@ -37,10 +47,19 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserValidateMessage register(String phone, String pass, String name, Car car) {
-        User user = userDao.getUser(phone);
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
         if (user == null) {
             User driver = new Driver(phone, pass, name, car);
-            userDao.addUser(driver);
+            try {
+                userDao.createUser(driver);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             LOGGER.trace("register: " + driver);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new driver\n" + driver, driver);
         } else {
@@ -52,33 +71,48 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int driverRegisteredQuantity() {
-        Collection<User> users = userDao.getAllUsers();
+       // Collection<User> users = userDao.getAllUsers();
         int count = 0;
-        for (User user : users) {
+        try {
+            count = userDao.driverRegisteredQuantity();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+       /* for (User user : users) {
             if (user instanceof Driver) {
                 count++;
             }
-        }
+        }*/
         LOGGER.trace("driverRegisteredQuantity: " + count);
         return count;
     }
 
     @Override
     public int passangerRegisteredQuantity() {
-        Collection<User> users = userDao.getAllUsers();
+        //Collection<User> users = userDao.getAllUsers();
         int count = 0;
-        for (User user : users) {
-            if (user instanceof Passanger) {
+        try {
+            count = userDao.passangerRegisteredQuantity();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        /*for (User user : users) {
+            if (user instanceof Passenger) {
                 count++;
             }
-        }
+        }*/
         LOGGER.trace("passangerRegisteredQuantity: " + count);
         return count;
     }
 
     @Override
     public UserValidateMessage login(String phone, String pass) {
-        User user = userDao.getUser(phone);
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
         if (user != null) {
             if (user.getPass().equals(pass)) {
                 LOGGER.trace("login: " + user);
@@ -93,9 +127,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserValidateMessage changePassanger(String phone, String pass, String name, Address homeAdress) {
 
-        if (userDao.getUser(phone) != null) {
-            User passanger = new Passanger(phone, pass, name, homeAdress);
-            User oldPassanger = userDao.update(passanger);
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
+
+        if (user != null) {
+            User passanger = new Passenger(phone, pass, name, homeAdress);
+            User oldPassanger = null;
+            try {
+                oldPassanger = userDao.update(passanger);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             LOGGER.trace("changePassanger: new" + passanger + "; old: " + oldPassanger);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + oldPassanger, passanger);
         } else {
@@ -107,9 +153,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserValidateMessage changeDriver(String phone, String pass, String name, Car car) {
-        if (userDao.getUser(phone) != null) {
+
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
+
+        if (user != null) {
             User driver = new Driver(phone, pass, name, car);
-            User oldDriver = userDao.update(driver);
+            User oldDriver = null;
+            try {
+                oldDriver = userDao.update(driver);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
             LOGGER.trace("changeDriver: new" + driver + "; old: " + oldDriver);
             return new UserValidateMessage(true, "Change driver", "Old user:\n" + oldDriver, driver);
         } else {
@@ -122,7 +181,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserValidateMessage getUser(String phone) {
 
-        User user = userDao.getUser(phone);
+        User user = null;
+        try {
+            user = userDao.getUser(phone);
+        } catch (SQLException e) {
+
+        }
+
         if (user != null) {
             LOGGER.trace("getUser: " + user);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + user, user);

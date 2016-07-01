@@ -1,24 +1,25 @@
 package ua.taxi.dao.sql;
 
-
+import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Created by serhii on 26.06.16.
+ * Created by andrii on 27.06.16.
  */
 public interface GenericDao<T> {
 
-    // return entity with id
-    T create(T el);
+        // return entity with id
+        int create(T el) throws SQLException;
 
-    boolean delete(T el);
+        boolean delete(T el) throws SQLException;
 
-    T findById(int id);
+        boolean delete(int id) throws SQLException;
 
-    List <T> getAll(int offset, int length);
+        T findById(int id) throws SQLException;
 
-    // use el id for find in db
-    T update(T el);
+        List<T> getAll(int offset, int length) throws SQLException;
 
-    T getLast();
+        // use el id for find in db
+        T update(int id, T el) throws SQLException;
+
 }

@@ -27,6 +27,7 @@ public class OrderServiceImpl implements OrderService {
     public OrderServiceImpl(OrderDao orderDao) {
         this.orderDao = orderDao;
         LOGGER.info("init OrderServiceImpl");
+
     }
 
 
@@ -36,13 +37,13 @@ public class OrderServiceImpl implements OrderService {
         double distance = getDistance(from, to);
         if (orderDao.getOrder(phone) == null) {
             Order newOrder = new Order(from, to, phone, name, price, distance);
-            orderDao.addOrder(newOrder);
+            orderDao.createOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
             return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
         } else if (orderDao.getOrder(phone).getOrderStatus() == OrderStatus.DONE) {
             orderDao.deleteOrder(phone);
             Order newOrder = new Order(from, to, phone, name, price, distance);
-            orderDao.addOrder(newOrder);
+            orderDao.createOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
             return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
         }

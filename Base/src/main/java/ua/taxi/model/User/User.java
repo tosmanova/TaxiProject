@@ -46,10 +46,31 @@ public abstract class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User{" +
+        return " User{" +
                 "phone='" + phone + '\'' +
-                ", pass='" + "******" + '\'' +
+                ", pass='" + pass + '\'' +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof User)) return false;
+
+        User user = (User) object;
+
+        if (phone != null ? !phone.equals(user.phone) : user.phone != null) return false;
+        if (pass != null ? !pass.equals(user.pass) : user.pass != null) return false;
+        return name != null ? name.equals(user.name) : user.name == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = phone != null ? phone.hashCode() : 0;
+        result = 31 * result + (pass != null ? pass.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
     }
 }

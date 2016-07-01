@@ -1,5 +1,6 @@
-package ua.taxi.dao;
+package ua.taxi.dao.appdb;
 
+import ua.taxi.dao.UserDao;
 import ua.taxi.model.User.User;
 
 import java.util.Collection;
@@ -17,8 +18,8 @@ public class UserDaoInnerDbImpl implements UserDao {
     }
 
     @Override
-    public Collection<User> addUser(User user){
-        return appDB.addUser(user);
+    public Collection<User> createUser(User user){
+        return appDB.createUser(user);
     }
 
     @Override
@@ -41,8 +42,18 @@ public class UserDaoInnerDbImpl implements UserDao {
         return appDB.update(newUser);
     }
 
-    @Override
+    //@Override
     public Collection<User> getAllUsers() {
         return appDB.getAllUsers();
+    }
+
+    @Override
+    public int driverRegisteredQuantity() {
+        return 0;
+    }
+
+    @Override
+    public int passangerRegisteredQuantity() {
+        return 0;
     }
 }

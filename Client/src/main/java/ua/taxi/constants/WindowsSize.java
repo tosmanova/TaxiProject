@@ -1,4 +1,4 @@
-package ua.taxi.constant;
+package ua.taxi.constants;
 
 import java.io.IOException;
 import java.util.Properties;

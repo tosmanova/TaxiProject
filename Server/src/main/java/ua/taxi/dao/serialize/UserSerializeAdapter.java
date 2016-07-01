@@ -2,7 +2,7 @@ package ua.taxi.dao.serialize;
 
 import ua.taxi.model.User.Car;
 import ua.taxi.model.User.Driver;
-import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.Passenger;
 import ua.taxi.model.User.User;
 import ua.taxi.utils.Utils;
 
@@ -21,9 +21,9 @@ public class UserSerializeAdapter {
         phone = user.getPhone();
         pass = user.getPass();
         name = user.getName();
-        if (user instanceof Passanger) {
-            Passanger passanger = (Passanger) user;
-            homeAdress = passanger.getHomeAdress().toString();
+        if (user instanceof Passenger) {
+            Passenger passenger = (Passenger) user;
+            homeAdress = passenger.getHomeAdress().toString();
             car = "null";
         } else {
             Driver driver = (Driver) user;
@@ -38,7 +38,7 @@ public class UserSerializeAdapter {
 
     User createUser() {
         if (car.equals("null")) {
-            return new Passanger(phone, pass, name, Utils.addressValidate(homeAdress));
+            return new Passenger(phone, pass, name, Utils.addressValidate(homeAdress));
         } else {
             String carA[] = car.split(" ");
             return new Driver(phone, pass, name, new Car(carA[0], carA[1], carA[2]));

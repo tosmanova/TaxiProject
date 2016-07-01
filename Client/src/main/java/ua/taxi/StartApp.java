@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import ua.taxi.constant.WindowsSize;
+import ua.taxi.constants.WindowsSize;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.TableViewOrder;
@@ -17,7 +17,6 @@ import ua.taxi.remote.RemoteUserService;
 import ua.taxi.service.*;
 import ua.taxi.remote.Client;
 import ua.taxi.view.*;
-import ua.taxi.constant.WindowsSize;
 
 import java.io.IOException;
 import java.util.List;

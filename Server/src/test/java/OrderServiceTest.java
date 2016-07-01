@@ -1,6 +1,6 @@
 import org.junit.*;
-import ua.taxi.dao.AppDB;
-import ua.taxi.dao.OrderDaoInnerDbImpl;
+import ua.taxi.dao.appdb.AppDB;
+import ua.taxi.dao.appdb.OrderDaoInnerDbImpl;
 import ua.taxi.dao.serialize.JsonSaveLoad;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
