@@ -1,6 +1,3 @@
-
-
-
 SET FOREIGN_KEY_CHECKS = 0;
 
 CREATE TABLE Users(
@@ -60,9 +57,9 @@ CREATE TABLE Orders(
 order_id INT AUTO_INCREMENT,
 from_address_id INT NOT NULL,
 to_address_id INT NOT NULL,
-userPhone VARCHAR(14) UNIQUE,
+userPhone VARCHAR(14) UNIQUE NOT NULL,
 userName VARCHAR(30),
-driverPhone VARCHAR(14) UNIQUE,
+driverPhone VARCHAR(14),
 price DECIMAL(5,2),
 distance DECIMAL(7,1),
 createTime TIMESTAMP,

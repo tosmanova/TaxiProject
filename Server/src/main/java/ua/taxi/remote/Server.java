@@ -5,6 +5,7 @@ import ua.taxi.dao.appdb.AppDB;
 import ua.taxi.dao.appdb.OrderDaoInnerDbImpl;
 import ua.taxi.dao.appdb.UserDaoInnerDbImpl;
 import ua.taxi.dao.serialize.JsonSaveLoad;
+import ua.taxi.dao.sql.OrderDaoSQLImpl;
 import ua.taxi.dao.sql.UserDaoSqlImpl;
 import ua.taxi.model.Remote.RemoteOrderObject;
 import ua.taxi.model.Remote.RemoteUserObject;
@@ -69,16 +70,16 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        AppDB appDB = new AppDB(new JsonSaveLoad());
-        appDB.loadAllData();
+        //AppDB appDB = new AppDB(new JsonSaveLoad());
+        //appDB.loadAllData();
         try {
             new Server(
-                    new OrderServiceDispatcher(new OrderServiceImpl(new OrderDaoInnerDbImpl(appDB))),
+                    new OrderServiceDispatcher(new OrderServiceImpl(new OrderDaoSQLImpl())),
                     new UserServiceDispatcher(new UserServiceImpl(new UserDaoSqlImpl())));
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        appDB.saveAllData();
+        //appDB.saveAllData();
     }
 
 }

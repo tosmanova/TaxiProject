@@ -45,7 +45,7 @@ public class OrderDaoSQLImpl implements OrderDao {
             return resultSet.getInt(1);
 
         } catch (SQLException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
             return 0;
         }
     }
@@ -60,6 +60,7 @@ public class OrderDaoSQLImpl implements OrderDao {
                             "o.to_address_id, " +
                             "o.userPhone, " +
                             "o.userName, " +
+                            "o.driverPhone, " +
                             "o.price, " +
                             "o.distance, " +
                             "o.createTime, " +
@@ -76,12 +77,12 @@ public class OrderDaoSQLImpl implements OrderDao {
             order.setDriverPhone(resultSet.getString(++i));
             order.setPrice(resultSet.getDouble(++i));
             order.setDistance(resultSet.getDouble(++i));
-            order.setCreateTime(resultSet.getTimestamp(++i).toLocalDateTime());
+            order.setCreateTime(resultSet.getTimestamp(++i).toLocalDateTime().withNano(0));
             order.setOrderStatus(orderStatusDao.findById(resultSet.getInt(++i)));
 
             return order;
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
             return null;
         }
     }
@@ -93,7 +94,7 @@ public class OrderDaoSQLImpl implements OrderDao {
              Statement statement = connection.createStatement()) {
 
             int from_address_id = addressDao.create(order.getFrom());
-            int to_address_id = addressDao.create(order.getFrom());
+            int to_address_id = addressDao.create(order.getTo());
             int status_id = orderStatusDao.create(order.getOrderStatus());
 
             PreparedStatement pst= connection.prepareStatement(
@@ -126,7 +127,7 @@ public class OrderDaoSQLImpl implements OrderDao {
             return list;
 
         } catch (SQLException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
             return null;
         }
     }
@@ -157,19 +158,21 @@ public class OrderDaoSQLImpl implements OrderDao {
             addressDao.update(to_address_id, newOrder.getTo());
             orderStatusDao.update(status_id, newOrder.getOrderStatus());
 
-            statement.execute(String.format(
+            PreparedStatement pst = connection.prepareStatement(
                     "UPDATE Orders SET " +
-                            "userName='%s', " +
-                            "driverPhone='%s', " +
-                            "price='%3.2f', " +
-                            "distance='%6.1f', " +
-                            "WHERE userPhone='%s'",
-                    newOrder.getUserName(),
-                    newOrder.getDriverPhone(),
-                    newOrder.getPrice(),
-                    newOrder.getDistance(),
-                    newOrder.getUserPhone()
-            ));
+                            "userName=?, " +
+                            "driverPhone=?, " +
+                            "price=?, " +
+                            "distance=? " +
+                            "WHERE userPhone=?"
+            );
+
+            pst.setString(1, newOrder.getUserName());
+            pst.setString(2, newOrder.getDriverPhone());
+            pst.setDouble(3, newOrder.getPrice());
+            pst.setDouble(4, newOrder.getDistance());
+            pst.setString(5, phone);
+            pst.execute();
 
             return oldOrder;
         } catch (SQLException e) {
@@ -194,13 +197,15 @@ public class OrderDaoSQLImpl implements OrderDao {
             int from_address_id = resultSet.getInt(1);
             int to_address_id = resultSet.getInt(2);
             int status_id = resultSet.getInt(3);
-            addressDao.delete(from_address_id);
-            addressDao.delete(to_address_id);
+
             orderStatusDao.delete(status_id);
 
             statement.execute(String.format(
                     "DELETE FROM Orders WHERE Orders.userPhone='%s'", phone
             ));
+
+            addressDao.delete(from_address_id);
+            addressDao.delete(to_address_id);
 
             return oldOrder;
         } catch (SQLException e) {
@@ -237,8 +242,42 @@ public class OrderDaoSQLImpl implements OrderDao {
     @Override
     public Collection<Order> getOrderList() {
 
+        List<Order> list = new ArrayList<>();
 
+        try (Connection connection = ConnectionFactory.createConnection();
+             Statement statement = connection.createStatement()) {
 
-        return null;
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT o.from_address_id, " +
+                            "o.to_address_id, " +
+                            "o.userPhone, " +
+                            "o.userName, " +
+                            "o.driverPhone, " +
+                            "o.price, " +
+                            "o.distance, " +
+                            "o.createTime, " +
+                            "o.status_id " +
+                            "FROM Orders o "
+            );
+            while (resultSet.next()) {
+                int i = 0;
+                Order order = new Order();
+                order.setFrom(addressDao.findById(resultSet.getInt(++i)));
+                order.setTo(addressDao.findById(resultSet.getInt(++i)));
+                order.setUserPhone(resultSet.getString(++i));
+                order.setUserName(resultSet.getString(++i));
+                order.setDriverPhone(resultSet.getString(++i));
+                order.setPrice(resultSet.getDouble(++i));
+                order.setDistance(resultSet.getDouble(++i));
+                order.setCreateTime(resultSet.getTimestamp(++i).toLocalDateTime().withNano(0));
+                order.setOrderStatus(orderStatusDao.findById(resultSet.getInt(++i)));
+                list.add(order);
+            }
+
+            return list;
+        } catch (SQLException e) {
+              e.printStackTrace();
+            return null;
+        }
     }
 }
