@@ -3,5 +3,15 @@ set IP: /Client/src/main/java/ua/taxi/to/Client.java
 1.Run Server /Server/src/main/java/ua/taxi/to/Server.java
 2.Run Client /Client/src/main/java/ua/taxi/StartApp.java
 
-Some Functions don`t work.
+3. For configure SQL:
+
+    edit User and password field: /Server/src/main/resources/daoConstants.properties
+    add this user to mysql;
+    add to mysql: /Server/src/main/resources/Schema.sql
+
+    for running tests do the same in /Server/src/test/resources
+
+
+
+
 
