@@ -26,9 +26,28 @@ public class Driver extends User implements Serializable {
 
     @Override
     public String toString() {
-        return "Driver{" +
-                "car=" + car +
+        return "Driver{ " +
+                " car= " + car +
                 super.toString() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof Driver)) return false;
+        if (!super.equals(object)) return false;
+
+        Driver driver = (Driver) object;
+
+        return car.equals(driver.car);
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + car.hashCode();
+        return result;
     }
 }

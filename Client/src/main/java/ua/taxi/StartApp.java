@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import ua.taxi.constants.WindowsSize;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.TableViewOrder;
@@ -127,7 +128,7 @@ public class StartApp extends Application {
             loader.setLocation(StartApp.class.getResource("/MainWindow.fxml"));
             rootLayout = (BorderPane) loader.load();
 
-            rootScene = new Scene(rootLayout, 670, 450);
+            rootScene = new Scene(rootLayout);
             primaryStage.setScene(rootScene);
             primaryStage.show();
 
@@ -135,6 +136,7 @@ public class StartApp extends Application {
             mainWindowController.setStartApp(this);
             mainWindowController.updateOrderCounters();
             mainWindowController.updateUserCounters();
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -245,17 +247,12 @@ public class StartApp extends Application {
     public void showChooseOrder() throws RemoteConnectionError {
 
         initOrderList();
-        primaryStage.setHeight(500);
-        primaryStage.setWidth(900);
-        primaryStage.show();
+        changeWindowSize(WindowsSize.CHOOSE_ORDER_WIDTH, WindowsSize.CHOOSE_ORDER_HEIGHT);
         mainWindowController.setMainAnchorPane(chooseOrderLayout);
     }
 
     public void showChooseOrderInfo() {
 
-        primaryStage.setHeight(500);
-        primaryStage.setWidth(670);
-        primaryStage.show();
         mainWindowController.setMainAnchorPane(chooseOrderInfoLayout);
     }
 
@@ -276,11 +273,16 @@ public class StartApp extends Application {
     }
 
     public void showEnterWindow() {
-        primaryStage.setHeight(650);
-        primaryStage.setWidth(670);
-        primaryStage.show();
         mainWindowController.hideGoogleMap();
         mainWindowController.setMainAnchorPane(enterWindowLayout);
+    }
+
+    public void changeWindowSize(int width, int height) {
+        primaryStage.setHeight(height);
+        primaryStage.setWidth(width);
+        primaryStage.show();
+        mainWindowController.getHeightLabel().setText(String.valueOf((int) primaryStage.getHeight()));
+        mainWindowController.getWidthLabel().setText(String.valueOf((int) primaryStage.getWidth()));
     }
 
     public Stage getPrimaryStage() {

@@ -7,7 +7,7 @@ import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.Order.OrderValidateMessage;
 import ua.taxi.model.User.Driver;
-import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.Passenger;
 import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
@@ -44,7 +44,7 @@ public class EnterWindowCntrl implements Controller {
         isPassanger = false;
         passangerRadioButton.setToggleGroup(togleGroup);
         anotation.setText("It`s an imitation of online taxi Program.\n" +
-                "You can enter as Passanger and create order to go\n" +
+                "You can enter as Passenger and create order to go\n" +
                 "from street A to street B. If you enter as a Driver\n" +
                 "you can see the orderList and choose order.\n" +
                 " Program use GoogleAPI for calculate distance");
@@ -143,7 +143,7 @@ public class EnterWindowCntrl implements Controller {
                         mainWindowCntrl.showGoogleMapRoute(orderValidateMessage.getOrder().getFrom(), orderValidateMessage.getOrder().getTo());
                         clear();
                     } else {
-                        createOrderFormCntrl.setLogedPassenger((Passanger) validateMessage.getUser());
+                        createOrderFormCntrl.setLogedPassenger((Passenger) validateMessage.getUser());
                         startApp.showCreateOrder();
                         clear();
                     }

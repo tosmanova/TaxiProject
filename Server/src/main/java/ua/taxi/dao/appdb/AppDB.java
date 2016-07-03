@@ -1,13 +1,13 @@
-package ua.taxi.dao;
+package ua.taxi.dao.appdb;
 
 import org.apache.log4j.Logger;
-import ua.taxi.dao.serialize.JsonSaveLoad;
+import ua.taxi.dao.OrderDao;
+import ua.taxi.dao.UserDao;
 import ua.taxi.dao.serialize.SaveLoad;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.model.User.User;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -49,12 +49,22 @@ public class AppDB implements OrderDao, UserDao {
     }
 
     @Override
-    public Collection<User> addUser(User user) {
+    public Collection<User> createUser(User user) {
         users.put(user.getPhone(), user);
         return users.values();
     }
 
     @Override
+    public int driverRegisteredQuantity() {
+        return 0;
+    }
+
+    @Override
+    public int passangerRegisteredQuantity() {
+        return 0;
+    }
+
+    //@Override
     public Collection<User> getAllUsers() {
         return users.values();
     }
@@ -83,7 +93,7 @@ public class AppDB implements OrderDao, UserDao {
     }
 
     @Override
-    public Collection<Order> addOrder(Order order) {
+    public Collection<Order> createOrder(Order order) {
         orders.put(order.getUserPhone(), order);
         return orders.values();
     }

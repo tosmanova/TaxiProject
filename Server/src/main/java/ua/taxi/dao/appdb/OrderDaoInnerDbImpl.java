@@ -1,6 +1,5 @@
-package ua.taxi.dao;
+package ua.taxi.dao.appdb;
 
-import ua.taxi.dao.AppDB;
 import ua.taxi.dao.OrderDao;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
@@ -19,8 +18,8 @@ public class OrderDaoInnerDbImpl implements OrderDao {
     }
 
     @Override
-    public Collection<Order> addOrder(Order order) {
-        return appDB.addOrder(order);
+    public Collection<Order> createOrder(Order order) {
+        return appDB.createOrder(order);
     }
 
     @Override

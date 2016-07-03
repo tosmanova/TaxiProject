@@ -1,3 +1,6 @@
+
+
+use TaxiProjectTest;
 SET FOREIGN_KEY_CHECKS = 0;
 
 CREATE TABLE Users(

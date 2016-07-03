@@ -57,4 +57,17 @@ public class Car implements Serializable {
     public String toString() {
         return  number + " " + model + " " + color;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+
+        Car car = (Car) object;
+
+        if (!number.equals(car.number)) return false;
+        if (!model.equals(car.model)) return false;
+        return color.equals(car.color);
+
+    }
 }

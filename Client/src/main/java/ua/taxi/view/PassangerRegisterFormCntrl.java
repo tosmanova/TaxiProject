@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
-import ua.taxi.model.User.Passanger;
+import ua.taxi.model.User.Passenger;
 import ua.taxi.model.User.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
@@ -75,15 +75,15 @@ public class PassangerRegisterFormCntrl implements Controller {
         createButton.setText("Create");
     }
 
-    public void setOpenForEdit(Passanger passanger) {
+    public void setOpenForEdit(Passenger passenger) {
         mainWindowCntrl.hideGoogleMap();
         isOpenForEdit = true;
         createButton.setText("Change");
-        phoneNumberField.setText(passanger.getPhone());
+        phoneNumberField.setText(passenger.getPhone());
         phoneNumberField.editableProperty().set(false);
-        passwordField.setText(passanger.getPass());
-        nameField.setText(passanger.getName());
-        homeAddressField.setText(passanger.getHomeAdress().toString());
+        passwordField.setText(passenger.getPass());
+        nameField.setText(passenger.getName());
+        homeAddressField.setText(passenger.getHomeAdress().toString());
     }
 
     private boolean textFieldsValidate() {
@@ -136,7 +136,7 @@ public class PassangerRegisterFormCntrl implements Controller {
                         , homeAddress);
             }
             if (userValidate.getState()) {
-                createOrderFormCntrl.setLogedPassenger((Passanger) userValidate.getUser());
+                createOrderFormCntrl.setLogedPassenger((Passenger) userValidate.getUser());
                 if (!isOpenForEdit) mainWindowCntrl.updateUserCounters();
                 startApp.showCreateOrder();
                 clear();

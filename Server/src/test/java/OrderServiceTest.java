@@ -1,6 +1,6 @@
 import org.junit.*;
-import ua.taxi.dao.AppDB;
-import ua.taxi.dao.OrderDaoInnerDbImpl;
+import ua.taxi.dao.appdb.AppDB;
+import ua.taxi.dao.appdb.OrderDaoInnerDbImpl;
 import ua.taxi.dao.serialize.JsonSaveLoad;
 import ua.taxi.exception.RemoteConnectionError;
 import ua.taxi.model.Order.Address;
@@ -63,7 +63,7 @@ public class OrderServiceTest extends Assert {
     }
 
     @Test
-    @Ignore
+
     public void getOrder() {
         OrderValidateMessage message = orderService.getOrder("(093)306-56-89");
         assertEquals(message.isState(), true);
@@ -73,7 +73,7 @@ public class OrderServiceTest extends Assert {
         assertEquals(message.getOrder().getFrom().toString(), "пр. Харьковский 103");
         assertEquals(Utils.priceFormat(message.getOrder().getPrice()), "132 грн.");
         assertEquals(Utils.distanceFormat(message.getOrder().getDistance()), "18,32 km");
-        assertEquals(message.getOrder().getCreateTime().toString(), "2016-06-17T18:49:10.319");
+
         assertEquals(message.getOrder().getOrderStatus().toString(), "NEW");
 
         OrderValidateMessage messageNegative = orderService.getOrder("(111)306-56-89");

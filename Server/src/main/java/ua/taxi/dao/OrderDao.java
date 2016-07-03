@@ -3,6 +3,7 @@ package ua.taxi.dao;
 import ua.taxi.model.Order.Order;
 import ua.taxi.model.Order.OrderStatus;
 
+import java.sql.SQLException;
 import java.util.Collection;
 
 /**
@@ -15,7 +16,7 @@ import java.util.Collection;
 public interface OrderDao {
 
     // add order return order iD
-    Collection<Order> addOrder(Order order);
+    Collection<Order> createOrder(Order order);
 
     Order getOrder(String phone);
 
