@@ -10,7 +10,7 @@ import java.io.Serializable;
  * User: Роман
  * Date: 23.04.16
  * Time: 17:03
- * To change this template use File | Settings | File Templates.
+ * To change this test use File | Settings | File Templates.
  */
 
 @XmlRootElement
