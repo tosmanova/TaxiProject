@@ -1,5 +1,6 @@
 package ua.taxi.dao.sql;
 
+import ua.taxi.dao.UserDao;
 import ua.taxi.model.User.Car;
 import ua.taxi.model.User.Driver;
 import ua.taxi.model.User.User;
@@ -19,10 +20,7 @@ public class DriverDao implements GenericDao<Driver> {
     private CarDao carDao;
     private UserDaoSqlImpl userDao;
 
-    public DriverDao() {
-        userDao = new UserDaoSqlImpl();
-        carDao = new CarDao();
-    }
+    public DriverDao() {    }
 
     @Override
     public int create(Driver driver) throws SQLException {
@@ -109,5 +107,21 @@ public class DriverDao implements GenericDao<Driver> {
         } catch (SQLException e) {
             throw e;
         }
+    }
+
+    public CarDao getCarDao() {
+        return carDao;
+    }
+
+    public void setCarDao(CarDao carDao) {
+        this.carDao = carDao;
+    }
+
+    public UserDaoSqlImpl getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDaoSqlImpl userDao) {
+        this.userDao = userDao;
     }
 }

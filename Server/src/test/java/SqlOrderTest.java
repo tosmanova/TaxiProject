@@ -21,7 +21,7 @@ import java.util.List;
  */
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SQL_OrderTest extends Assert {
+public class SqlOrderTest extends Assert {
 
 
     private OrderDaoSQLImpl orderDao;
@@ -29,25 +29,13 @@ public class SQL_OrderTest extends Assert {
 
     @BeforeClass
     public static void initTestSQL() {
-
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_CREATE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
     }
 
     @Before
     public void initUserDao() {
-        orderDao = new OrderDaoSQLImpl();
+        orderDao = TestUtils.getOrderDaoSQLImpl();
     }
-
 
     @Test
     public void _01_createOrder() throws SQLException {
@@ -126,16 +114,7 @@ public class SQL_OrderTest extends Assert {
     @AfterClass
     public static void removeTestSQL() {
 
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

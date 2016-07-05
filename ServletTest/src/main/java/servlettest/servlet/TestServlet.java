@@ -1,4 +1,4 @@
-package servlettest;
+package servlettest.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -24,9 +24,11 @@ public class TestServlet extends HttpServlet {
         System.out.printf("client %s, name %s, querry %s\n",
                 req.getRemoteUser(), name, query);
 
-        Arrays.stream(cookies).forEach((cookie ->
-                System.out.printf("name %s, value %s\n",
-                cookie.getName(), cookie.getValue())));
+        if(cookies !=null) {
+            Arrays.stream(cookies).forEach((cookie ->
+                    System.out.printf("name %s, value %s\n",
+                            cookie.getName(), cookie.getValue())));
+        }
 
         PrintWriter pw = resp.getWriter();
         pw.printf("<h1>Hello %s</h1>", name);

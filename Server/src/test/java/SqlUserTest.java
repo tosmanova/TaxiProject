@@ -1,5 +1,7 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.taxi.constants.DaoConstants;
 import ua.taxi.dao.sql.UserDaoSqlImpl;
 import ua.taxi.model.Order.Address;
@@ -20,28 +22,17 @@ import java.util.List;
  * Created by andrii on 29.06.16.
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SQL_UserTest extends Assert {
+public class SqlUserTest extends Assert {
 
     private UserDaoSqlImpl userDao;
 
     @BeforeClass
     public static void initTestSQL() {
-
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_CREATE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
     }
     @Before
     public  void initUserDao() {
-        userDao = new UserDaoSqlImpl();
+        userDao = TestUtils.getUserDao();
     }
 
     @Test
@@ -62,7 +53,7 @@ public class SQL_UserTest extends Assert {
         List<User> list = new ArrayList<>(userDao.createUser(driver));
         User user = list.get(0);
         assertTrue(user instanceof Driver);
-        assertTrue(((Driver) user).equals(driver));
+        assertTrue(user.equals(driver));
     }
 
     @Test
@@ -73,8 +64,8 @@ public class SQL_UserTest extends Assert {
         Passenger pass3 = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "29"));
         List<User> list = new ArrayList<>(userDao.createUser(pass));
         User user = list.get(0);
-        assertFalse(((Passenger) user).equals(pass2));
-        assertFalse(((Passenger) user).equals(pass2));
+        assertFalse(user.equals(pass2));
+        assertFalse(user.equals(pass2));
     }
 
     @Test
@@ -85,8 +76,8 @@ public class SQL_UserTest extends Assert {
         Driver driver3 = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("BB2222", "Vaz", "Baklazhan"));
         List<User> list = new ArrayList<>(userDao.createUser(driver));
         User user = list.get(0);
-        assertFalse(((Driver) user).equals(driver2));
-        assertFalse(((Driver) user).equals(driver3));
+        assertFalse(user.equals(driver2));
+        assertFalse(user.equals(driver3));
     }
 
     @Test
@@ -97,8 +88,8 @@ public class SQL_UserTest extends Assert {
         userDao.createUser(driver);
         User user1 = userDao.getUser(pass.getPhone());
         User user2 = userDao.getUser(driver.getPhone());
-        assertTrue(((Passenger) user1).equals(pass));
-        assertTrue(((Driver) user2).equals(driver));
+        assertTrue(user1.equals(pass));
+        assertTrue(user2.equals(driver));
     }
 
     @Test(expected = SQLException.class)
@@ -213,16 +204,7 @@ public class SQL_UserTest extends Assert {
     @AfterClass
     public static void removeTestSQL() {
 
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

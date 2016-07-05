@@ -10,29 +10,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-/**
- * Created by andrii on 30.06.16.
- * <p>
- * order_id INT AUTO_INCREMENT,
- * from_address_id INT NOT NULL,
- * to_address_id INT NOT NULL,
- * userPhone VARCHAR(14),
- * userName VARCHAR(30),
- * driverPhone VARCHAR(14),
- * price DECIMAL(5,2),
- * distance DECIMAL(7,1),
- * createTime TIMESTAMP,
- * status_id INT NOT NULL,
- */
+
 public class OrderDaoSQLImpl implements OrderDao {
 
-    AddressDao addressDao = new AddressDao();
-    OrderStatusDao orderStatusDao = new OrderStatusDao();
+    private AddressDao addressDao;
+    private OrderStatusDao orderStatusDao;
 
-    public int findOrderId(Order order) {
-
-        return findOrderId(order.getUserPhone());
-    }
 
     public int findOrderId(String phone) {
 
@@ -90,8 +73,7 @@ public class OrderDaoSQLImpl implements OrderDao {
     @Override
     public Collection<Order> createOrder(Order order) {
 
-        try (Connection connection = ConnectionFactory.createConnection();
-             Statement statement = connection.createStatement()) {
+        try (Connection connection = ConnectionFactory.createConnection()) {
 
             int from_address_id = addressDao.create(order.getFrom());
             int to_address_id = addressDao.create(order.getTo());
@@ -279,5 +261,21 @@ public class OrderDaoSQLImpl implements OrderDao {
               e.printStackTrace();
             return null;
         }
+    }
+
+    public AddressDao getAddressDao() {
+        return addressDao;
+    }
+
+    public void setAddressDao(AddressDao addressDao) {
+        this.addressDao = addressDao;
+    }
+
+    public OrderStatusDao getOrderStatusDao() {
+        return orderStatusDao;
+    }
+
+    public void setOrderStatusDao(OrderStatusDao orderStatusDao) {
+        this.orderStatusDao = orderStatusDao;
     }
 }

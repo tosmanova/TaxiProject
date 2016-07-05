@@ -3,9 +3,12 @@ import org.junit.runners.MethodSorters;
 import ua.taxi.constants.DaoConstants;
 import ua.taxi.dao.sql.AddressDao;
 import ua.taxi.model.Order.Address;
+import ua.taxi.utils.ConnectionFactory;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,24 +16,18 @@ import java.util.List;
  * Created by andrii on 29.06.16.
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SQL_AddressTest extends Assert{
+public class SqlAddressTest extends Assert{
 
     private AddressDao addressDao;
 
+    @BeforeClass
+    public static void initTestSQL() {
+        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
+    }
+
     @Before
-    public void initTestSQL() {
-
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_CREATE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        addressDao = new AddressDao();
+    public void initDao() {
+        addressDao = TestUtils.getAddressDao();
     }
 
     @Test
@@ -144,20 +141,25 @@ public class SQL_AddressTest extends Assert{
     }
 
     @After
-    public void removeTestSQL() {
+    public void clearBase() {
 
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
+        try (Connection connection = ConnectionFactory.createConnection();
+             Statement statement = connection.createStatement()) {
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 0");
+            statement.executeUpdate("TRUNCATE Addresses");
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 1");
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    @AfterClass
+    public static void removeTestSQL() {
+
+        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
+    }
 
 
 }

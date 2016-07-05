@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="addressDao" class="ua.taxi.dao.sql.AddressDao"/>
+    <bean id="orderStatusDao" class="ua.taxi.dao.sql.OrderStatusDao"/>
+
+    <bean id="carDao" class="ua.taxi.dao.sql.CarDao"/>
+
+    <bean id="driverDao" class="ua.taxi.dao.sql.DriverDao">
+        <property name="carDao" ref="carDao"/>
+        <property name="userDao" ref="userDaoSqlImpl"/>
+    </bean>
+
+    <bean id="passengerDao" class="ua.taxi.dao.sql.PassengerDao">
+        <property name="addressDao" ref="addressDao"/>
+        <property name="userDao" ref="userDaoSqlImpl"/>
+    </bean>
+
+    <bean id="userDaoSqlImpl" class="ua.taxi.dao.sql.UserDaoSqlImpl">
+        <property name="addressDao" ref="addressDao"/>
+        <property name="carDao" ref="carDao"/>
+        <property name="passengerDao" ref="passengerDao"/>
+        <property name="driverDao" ref="driverDao"/>
+    </bean>
+
+    <bean id="orderDaoSQLImpl" class="ua.taxi.dao.sql.OrderDaoSQLImpl">
+        <property name="addressDao" ref="addressDao"/>
+        <property name="orderStatusDao" ref="orderStatusDao"/>
+    </bean>
+
+</beans>

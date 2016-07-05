@@ -30,11 +30,16 @@ public class UserDaoSqlImpl implements UserDao {
     private static final String DRIVER = "Driver";
     private static final String PASSENGER = "Passenger";
 
+    private DriverDao driverDao;
+    private PassengerDao passengerDao;
+    private AddressDao addressDao;
+    private CarDao carDao;
+
+    public UserDaoSqlImpl(){    }
+
     @Override
     public Collection<User> createUser(User user) throws SQLException {
 
-        DriverDao driverDao = new DriverDao();
-        PassengerDao passengerDao = new PassengerDao();
         List<User> list = new ArrayList<>();
 
         String userType;
@@ -168,10 +173,6 @@ public class UserDaoSqlImpl implements UserDao {
 
     @Override
     public User delete(String phone) throws SQLException {
-        AddressDao addressDao = new AddressDao();
-        PassengerDao passengerDao = new PassengerDao();
-        DriverDao driverDao = new DriverDao();
-        CarDao carDao = new CarDao();
 
         try (Connection connection = ConnectionFactory.createConnection();
              Statement statement = connection.createStatement()) {
@@ -225,10 +226,6 @@ public class UserDaoSqlImpl implements UserDao {
     @Override
     public User update(User user) throws SQLException {
 
-
-        DriverDao driverDao = new DriverDao();
-        PassengerDao passengerDao = new PassengerDao();
-
         String userType;
 
         try (Connection connection = ConnectionFactory.createConnection();
@@ -263,28 +260,25 @@ public class UserDaoSqlImpl implements UserDao {
 
     @Override
     public int driverRegisteredQuantity() throws SQLException {
-        DriverDao driverDao = new DriverDao();
-        try (Connection connection = ConnectionFactory.createConnection();
-             Statement statement = connection.createStatement()) {
 
-            ResultSet resultSet = statement.executeQuery(String.format(
-                    "SELECT COUNT(*) FROM Users WHERE Users.type='%s'",
-                    DRIVER));
-            resultSet.next();
-            return resultSet.getInt(1);
-        } catch (SQLException e) {
-            throw e;
-        }
+        return getCount(String.format(
+                "SELECT COUNT(*) FROM Users WHERE Users.type='%s'",
+                DRIVER));
     }
 
     @Override
     public int passangerRegisteredQuantity() throws SQLException {
+        return getCount(String.format(
+                "SELECT COUNT(*) FROM Users WHERE Users.type='%s'",
+                PASSENGER));
+    }
+
+    private int getCount(String format) throws SQLException {
+
         try (Connection connection = ConnectionFactory.createConnection();
              Statement statement = connection.createStatement()) {
 
-            ResultSet resultSet = statement.executeQuery(String.format(
-                    "SELECT COUNT(*) FROM Users WHERE Users.type='%s'",
-                    PASSENGER));
+            ResultSet resultSet = statement.executeQuery(format);
             resultSet.next();
             return resultSet.getInt(1);
         } catch (SQLException e) {
@@ -292,5 +286,35 @@ public class UserDaoSqlImpl implements UserDao {
         }
     }
 
+    public DriverDao getDriverDao() {
+        return driverDao;
+    }
 
+    public void setDriverDao(DriverDao driverDao) {
+        this.driverDao = driverDao;
+    }
+
+    public PassengerDao getPassengerDao() {
+        return passengerDao;
+    }
+
+    public void setPassengerDao(PassengerDao passengerDao) {
+        this.passengerDao = passengerDao;
+    }
+
+    public AddressDao getAddressDao() {
+        return addressDao;
+    }
+
+    public void setAddressDao(AddressDao addressDao) {
+        this.addressDao = addressDao;
+    }
+
+    public CarDao getCarDao() {
+        return carDao;
+    }
+
+    public void setCarDao(CarDao carDao) {
+        this.carDao = carDao;
+    }
 }

@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Server</artifactId>
+    <version>1.0</version>
+    <packaging>war</packaging>
+
+
 
     <dependencies>
         <dependency>
@@ -29,6 +33,7 @@
     </dependencies>
 
     <build>
+        <finalName>TaxiProject</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -51,7 +56,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 

@@ -18,10 +18,7 @@ public class PassengerDao implements GenericDao<Passenger> {
     private AddressDao addressDao;
     private UserDaoSqlImpl userDao;
 
-    public PassengerDao() {
-        addressDao = new AddressDao();
-        userDao = new UserDaoSqlImpl();
-    }
+    public PassengerDao(){}
 
     @Override
     public int create(Passenger el) throws SQLException {
@@ -102,5 +99,21 @@ public class PassengerDao implements GenericDao<Passenger> {
         } catch (SQLException e) {
             throw e;
         }
+    }
+
+    public AddressDao getAddressDao() {
+        return addressDao;
+    }
+
+    public void setAddressDao(AddressDao addressDao) {
+        this.addressDao = addressDao;
+    }
+
+    public UserDaoSqlImpl getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDaoSqlImpl userDao) {
+        this.userDao = userDao;
     }
 }

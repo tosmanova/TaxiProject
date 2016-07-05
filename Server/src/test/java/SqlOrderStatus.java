@@ -13,29 +13,18 @@ import java.sql.Statement;
 /**
  * Created by andrii on 01.07.16.
  */
-public class SQL_OrderStatus extends Assert {
+public class SqlOrderStatus extends Assert {
 
     private OrderStatusDao statusDao;
 
     @BeforeClass
     public static void initTestSQL() {
-
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_CREATE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
     }
 
     @Before
     public void initStatusDao() {
-        statusDao = new OrderStatusDao();
+        statusDao = TestUtils.getOrderStatusDao();
     }
 
     @Test
@@ -97,17 +86,7 @@ public class SQL_OrderStatus extends Assert {
 
     @AfterClass
     public static void removeTestSQL() {
-
-        ProcessBuilder pb = new ProcessBuilder(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
-        try {
-            Process process = pb.start();
-            process.waitFor();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

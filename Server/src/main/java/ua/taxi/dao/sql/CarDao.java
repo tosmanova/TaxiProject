@@ -15,6 +15,8 @@ import java.util.List;
  */
 public class CarDao implements GenericDao<Car> {
 
+
+
     @Override
     public int create(Car car) throws SQLException {
 
@@ -92,8 +94,10 @@ public class CarDao implements GenericDao<Car> {
                     id));
 
             resultSet.next();
-            Car addedCar = new Car(resultSet.getString(2), resultSet.getString(3), resultSet.getString(4));
-            return addedCar;
+            return new Car(
+                    resultSet.getString("number"),
+                    resultSet.getString("model"),
+                    resultSet.getString("color"));
 
         } catch (SQLException e) {
             throw e;
@@ -112,9 +116,9 @@ public class CarDao implements GenericDao<Car> {
 
             while (resultSet.next()) {
                 list.add(new Car(
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getString(4)));
+                        resultSet.getString("number"),
+                        resultSet.getString("model"),
+                        resultSet.getString("color")));
             }
             return list;
         } catch (SQLException e) {
@@ -138,9 +142,9 @@ public class CarDao implements GenericDao<Car> {
 
             resultSet.next();
             return new Car(
-                    resultSet.getString(2),
-                    resultSet.getString(3),
-                    resultSet.getString(4));
+                    resultSet.getString("number"),
+                    resultSet.getString("model"),
+                    resultSet.getString("color"));
 
         } catch (SQLException e) {
             throw e;
