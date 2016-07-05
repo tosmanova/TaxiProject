@@ -56,6 +56,8 @@ public class UserServiceImpl implements UserService {
                 userDao.createUser(driver);
             } catch (SQLException e) {
                 e.printStackTrace();
+                LOGGER.warn((e));
+                return new UserValidateMessage(false, "Create UserValidateMessage", e.toString(), null);
             }
             LOGGER.trace("register: " + driver);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new driver\n" + driver, driver);
