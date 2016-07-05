@@ -1,6 +1,6 @@
 package ua.taxi.utils;
 
-import ua.taxi.constants.DaoConstants;
+import ua.taxi.constants.Constants;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,9 +21,9 @@ public class ConnectionFactory {
     public static Connection createConnection() throws SQLException {
 
         return DriverManager.getConnection(
-                DaoConstants.SQL_URL,
-                DaoConstants.SQL_USER,
-                DaoConstants.SQL_PASSWORD);
+                Constants.SQL_URL,
+                Constants.SQL_USER,
+                Constants.SQL_PASSWORD);
     }
 
 

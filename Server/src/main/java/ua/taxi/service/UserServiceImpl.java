@@ -15,10 +15,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     public static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
 
-    public UserServiceImpl(UserDao userDao) {
-
-        this.userDao = userDao;
-        LOGGER.info("init UserServiceImpl");
+    public UserServiceImpl() {
     }
 
     @Override
@@ -196,5 +193,13 @@ public class UserServiceImpl implements UserService {
             return new UserValidateMessage(false, "Change passenger error", "User with this phone\n" +
                     " is not present", null);
         }
+    }
+
+    public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
     }
 }

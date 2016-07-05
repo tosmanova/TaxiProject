@@ -1,8 +1,6 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.taxi.constants.DaoConstants;
+import ua.taxi.constants.Constants;
 import ua.taxi.dao.sql.UserDaoSqlImpl;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.User.Car;
@@ -11,7 +9,6 @@ import ua.taxi.model.User.Passenger;
 import ua.taxi.model.User.User;
 import ua.taxi.utils.ConnectionFactory;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,7 +25,7 @@ public class SqlUserTest extends Assert {
 
     @BeforeClass
     public static void initTestSQL() {
-        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
     }
     @Before
     public  void initUserDao() {
@@ -204,7 +201,7 @@ public class SqlUserTest extends Assert {
     @AfterClass
     public static void removeTestSQL() {
 
-        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

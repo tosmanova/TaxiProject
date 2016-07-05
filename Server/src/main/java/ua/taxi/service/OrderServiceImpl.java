@@ -1,6 +1,7 @@
 package ua.taxi.service;
 
 import org.apache.log4j.Logger;
+import ua.taxi.constants.Constants;
 import ua.taxi.dao.OrderDao;
 
 import ua.taxi.model.geolocation.GoogleMapsAPI;
@@ -19,17 +20,15 @@ import java.util.*;
 public class OrderServiceImpl implements OrderService {
 
     private OrderDao orderDao;
-    private GoogleMapsAPI googleMapsAPI = new GoogleMapsAPIImpl();
-    private final double MIN_PRICE = 40;
-    private final double KILOMETRE_PRICE = 5;
-    public static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class);
+    private GoogleMapsAPI googleMapsAPI= new GoogleMapsAPIImpl();
+    private static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class);
+
+    public OrderServiceImpl() {
+    }
 
     public OrderServiceImpl(OrderDao orderDao) {
         this.orderDao = orderDao;
-        LOGGER.info("init OrderServiceImpl");
-
     }
-
 
     @Override
     public OrderValidateMessage createOrder(String phone, String name, Address from, Address to) {
@@ -195,7 +194,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Double getPrice(Double distance) {
-        double price = MIN_PRICE + (distance / 1000) * KILOMETRE_PRICE;
+        double price = Constants.MIN_PRICE + (distance / 1000) * Constants.KILOMETRE_PRICE;
         LOGGER.trace(String.format("getPrice: for distance %f = %f", distance, price));
         return price;
     }
@@ -204,5 +203,13 @@ public class OrderServiceImpl implements OrderService {
         double price = getPrice(getDistance(from, to));
         LOGGER.trace(String.format("getDistance: from %s  to %s = %f", from, to, price));
         return price;
+    }
+
+    public OrderDao getOrderDao() {
+        return orderDao;
+    }
+
+    public void setOrderDao(OrderDao orderDao) {
+        this.orderDao = orderDao;
     }
 }

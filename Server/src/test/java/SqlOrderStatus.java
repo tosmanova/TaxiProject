@@ -1,11 +1,10 @@
 import org.junit.*;
-import ua.taxi.constants.DaoConstants;
+import ua.taxi.constants.Constants;
 import ua.taxi.dao.sql.OrderStatusDao;
 
 import ua.taxi.model.Order.OrderStatus;
 import ua.taxi.utils.ConnectionFactory;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,7 +18,7 @@ public class SqlOrderStatus extends Assert {
 
     @BeforeClass
     public static void initTestSQL() {
-        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
     }
 
     @Before
@@ -86,7 +85,7 @@ public class SqlOrderStatus extends Assert {
 
     @AfterClass
     public static void removeTestSQL() {
-        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

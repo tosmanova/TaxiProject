@@ -1,6 +1,7 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ua.taxi.dao.sql.*;
+import ua.taxi.service.OrderServiceImpl;
 
 import java.io.IOException;
 
@@ -10,12 +11,13 @@ import java.io.IOException;
 public class TestUtils {
 
 
-    private  static  ApplicationContext context;
+    private static ApplicationContext context;
+
     static {
-         context = new ClassPathXmlApplicationContext("app-context.xml");
+        context = new ClassPathXmlApplicationContext("app-context.xml");
     }
 
-    public static void sriptRun(String sqlCreateTestScript) {
+     static void sriptRun(String sqlCreateTestScript) {
 
         ProcessBuilder pb = new ProcessBuilder(sqlCreateTestScript);
         try {
@@ -29,25 +31,31 @@ public class TestUtils {
         }
     }
 
-    public static UserDaoSqlImpl getUserDao(){
+     static UserDaoSqlImpl getUserDao() {
         return (UserDaoSqlImpl) context.getBean("userDaoSqlImpl");
     }
-    public static DriverDao getDriverDao(){
+
+     static DriverDao getDriverDao() {
         return (DriverDao) context.getBean("driverDao");
     }
-    public static PassengerDao getPassengerDao(){
+
+     static PassengerDao getPassengerDao() {
         return (PassengerDao) context.getBean("passengerDao");
     }
-    public static CarDao getCarDao(){
+
+     static CarDao getCarDao() {
         return (CarDao) context.getBean("carDao");
     }
-    public static AddressDao getAddressDao(){
+
+     static AddressDao getAddressDao() {
         return (AddressDao) context.getBean("addressDao");
     }
-    public static OrderStatusDao getOrderStatusDao(){
+
+     static OrderStatusDao getOrderStatusDao() {
         return (OrderStatusDao) context.getBean("orderStatusDao");
     }
-    public static OrderDaoSQLImpl getOrderDaoSQLImpl(){
+
+     static OrderDaoSQLImpl getOrderDaoSQLImpl() {
         return (OrderDaoSQLImpl) context.getBean("orderDaoSQLImpl");
     }
 

@@ -1,14 +1,13 @@
 import org.apache.log4j.Logger;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import ua.taxi.constants.DaoConstants;
+import ua.taxi.constants.Constants;
 import ua.taxi.dao.sql.OrderDaoSQLImpl;
 import ua.taxi.model.Order.Address;
 import ua.taxi.model.Order.Order;
 import ua.taxi.service.OrderServiceImpl;
 import ua.taxi.utils.ConnectionFactory;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -29,7 +28,7 @@ public class SqlOrderTest extends Assert {
 
     @BeforeClass
     public static void initTestSQL() {
-        TestUtils.sriptRun(DaoConstants.SQL_CREATE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
     }
 
     @Before
@@ -114,7 +113,7 @@ public class SqlOrderTest extends Assert {
     @AfterClass
     public static void removeTestSQL() {
 
-        TestUtils.sriptRun(DaoConstants.SQL_REMOVE_TEST_SCRIPT);
+        TestUtils.sriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }
