@@ -10,13 +10,13 @@ import java.sql.SQLException;
  * Created by andrii on 27.06.16.
  */
 public class ConnectionFactory {
-   /* static {
+    static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     public static Connection createConnection() throws SQLException {
 

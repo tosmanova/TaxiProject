@@ -11,13 +11,14 @@ import javax.servlet.annotation.WebListener;
  * Created by andrii on 05.07.16.
  */
 
-@WebListener
+
 public class InitSpringContextListener implements ServletContextListener {
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        ApplicationContext context =
-                new ClassPathXmlApplicationContext("app-context.xml");
+
+        String springLocation = servletContextEvent.getServletContext().getInitParameter("springLocation");
+        ApplicationContext context = new ClassPathXmlApplicationContext(springLocation);
         servletContextEvent.getServletContext().setAttribute("spring-context", context);
     }
 

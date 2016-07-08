@@ -19,24 +19,13 @@ import java.io.IOException;
  * Created by andrii on 04.07.16.
  */
 
-@WebServlet(urlPatterns = {"/driverReg"} )
-public class DriverRegServlet extends HttpServlet {
-
-    private ApplicationContext applicationContext;
-    private UserServiceImpl userService;
-
-    private static Logger LOG = Logger.getLogger(DriverRegServlet.class);
-
-    @Override
-    public void init() throws ServletException {
-        applicationContext = (ApplicationContext) getServletContext().getAttribute("spring-context");
-        userService = (UserServiceImpl) applicationContext.getBean("userServiceImpl");
-    }
+@WebServlet(urlPatterns = {"/driver-register"})
+public class DriverRegServlet extends Servlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //redirect to DriverRegServlet.jsp
-        req.getRequestDispatcher("/WEB-INF/pages/driverReg.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/pages/test/driver-register.jsp").forward(req, resp);
     }
 
     @Override
@@ -49,7 +38,6 @@ public class DriverRegServlet extends HttpServlet {
         String carColor = req.getParameter("carColor");
         String carNumber = req.getParameter("carNumber");
 
-
         if (name == null
                 || phone == null
                 || pass.length() < 6
@@ -57,16 +45,16 @@ public class DriverRegServlet extends HttpServlet {
                 || carColor.length() < 2
                 || carNumber.length() < 8) {
 
-            resp.sendRedirect("html/error.jsp");
+            errorMessage(req, resp, "input error", "Input data Error");
         } else {
 
             UserValidateMessage message = userService.register(
                     phone, pass, name, new Car(carNumber, carModel, carColor));
-            if(message.getState()) {
+            if (message.getState()) {
                 req.setAttribute("user", message.getUser());
-                req.getRequestDispatcher("/WEB-INF/pages/userInfo.jsp").forward(req, resp);
-            }else {
-                resp.sendRedirect("html/error.jsp");
+                req.getRequestDispatcher("/WEB-INF/pages/test/userInfo.jsp").forward(req, resp);
+            } else {
+                errorMessage(req, resp, message.getTitle(), message.getBody());
             }
         }
 

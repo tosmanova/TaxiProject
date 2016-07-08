@@ -1,5 +1,6 @@
 package ua.taxi.model.Order;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -7,9 +8,11 @@ import java.time.temporal.ChronoUnit;
 /**
  * Created by serhii on 23.04.16.
  */
+
+
 public class Order implements Serializable {
 
-    // private long id;
+    //private long id;
 
     private Address from;
     private Address to;
@@ -124,6 +127,7 @@ public class Order implements Serializable {
                 ", orderStatus=" + orderStatus +
                 '}';
     }
+
 
 
     @Override

@@ -33,8 +33,6 @@
         <property name="orderStatusDao" ref="orderStatusDao"/>
     </bean>
 
-
-
     <bean id="userServiceImpl" class="ua.taxi.service.UserServiceImpl">
         <property name="userDao" ref="userDaoSqlImpl"/>
     </bean>

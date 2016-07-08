@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Демо: Адаптивное меню</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+body {
+	font: 90%/160% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 900px;
+	max-width: 96%;
+	margin: 0 auto;background: #efefef url(images/noise.png) repeat 0 0;
+}
+p {
+	margin: 0 0 20px;
+}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+h1, h2, h3 {
+	color: #000;
+	font-family:'Open Sans', Calibri, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 120%;
+	margin: 30px 0 10px;
+}
+h1 {
+	font-size: 1.7em;
+	color: #000;
+}
+h2 {
+	font-size: 1.4em;
+	border-top: solid 1px #DADADA;
+	padding-top: 20px;
+}
+h3 {
+	font-size: 1.1em;
+}
+
+/* меню */
+.nav {
+	margin: 20px 0;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; /* ie7 */
+}
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #999;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #000;
+}
+.nav .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 3px;
+}
+
+/* меню справа */
+.nav.right ul {
+	text-align: right;
+}
+
+/* меню по центру */
+.nav.center ul {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}	
+	.nav ul {
+		width: 180px;
+		padding: 5px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		background: #FAFAFA url(images/icon-menu.png) no-repeat 10px 11px;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* скрыть все <li> пункты */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* показывать только текущие активные <li> пункты */
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* при наведении на пункты меню */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* адаптивное меню справа */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* адаптивное меню по центру */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}
+</style>
+</head>
+
+<body>
+
+	<h1>Демо: Адаптивное меню для сайта</h1>
+	<p>Автор: <a href="http://twitter.com/nickla">Nick La</a>, Перевод и адаптация: <a href="http://twitter.com/dobrovoi">Dobrovoi</a>, блог:<a href="http://dbmast.ru">Dbmast.ru</a> (изучить: <a href="http://dbmast.ru/kak-sdelat-prostoe-adaptivnoe-menyu-s-pomoshhyu-css3">Как сделать адаптивное меню</a>)</p>
+	<h3>Измените размер окна браузера или проверьте работу меню с помощью любого мобильного устройства.</h3>
+
+	<h2>Выравнивание по левому краю</h2>
+	<nav class="nav">
+		<ul>
+			<li class="current"><a href="#">Главная</a></li>
+			<li><a href="#">О Нас</a></li>
+			<li><a href="#">Портфолио</a></li>
+			<li><a href="#">Наши Услуги</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+	
+	<p>Вы смотрите наглядный пример создания очень простого горизонтального меню с использованием чистой семантической HTML5 разметки, для реализации гибкой(адаптивной) конструкции, без подключения javascript. Данное меню может быть выравнено влево, вправо и располагаться чётко по центру. Меню имеет выделяемые активные/текущие пункты, ввиде изменения фона активных ссылок. Навигационная панель отлично перестраивается при изменении размера окна браузера и замечательно смотрится на экранах различных мобильных пользовательских устройств(планшеты, смартфоны, ноутбуки и мобильные телефоны). Поддержка всеми современными браузерами, включая даже, извечный тормоз прогресса, Internet Explorer! Цель этого урока, показать вам, как с помощью свойств CSS3, можно легко, превратить обычное горизонтальное меню, в компактную раскрывающуюся панель, при просмотре на экранах меньшего размера.</p>
+	
+	<h2>Выравнивание по правому краю</h2>
+	<nav class="nav right">
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li class="current"><a href="#">О Нас</a></li>
+			<li><a href="#">Портфолио</a></li>
+			<li><a href="#">Наши Услуги</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+	
+	<p>Вы смотрите наглядный пример создания очень простого горизонтального меню с использованием чистой семантической HTML5 разметки, для реализации гибкой(адаптивной) конструкции, без подключения javascript. Данное меню может быть выравнено влево, вправо и располагаться чётко по центру. Меню имеет выделяемые активные/текущие пункты, ввиде изменения фона активных ссылок. Навигационная панель отлично перестраивается при изменении размера окна браузера и замечательно смотрится на экранах различных мобильных пользовательских устройств(планшеты, смартфоны, ноутбуки и мобильные телефоны). Поддержка всеми современными браузерами, включая даже, извечный тормоз прогресса, Internet Explorer! Цель этого урока, показать вам, как с помощью свойств CSS3, можно легко, превратить обычное горизонтальное меню, в компактную раскрывающуюся панель, при просмотре на экранах меньшего размера.</p>
+	
+	<h2>Выравнивание по центру</h2>
+	<nav class="nav center">
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">О Нас</a></li>
+			<li><a href="#">Портфолио</a></li>
+			<li class="current"><a href="#">Наши Услуги</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+	
+	<p>Вы смотрите наглядный пример создания очень простого горизонтального меню с использованием чистой семантической HTML5 разметки, для реализации гибкой(адаптивной) конструкции, без подключения javascript. Данное меню может быть выравнено влево, вправо и располагаться чётко по центру. Меню имеет выделяемые активные/текущие пункты, ввиде изменения фона активных ссылок. Навигационная панель отлично перестраивается при изменении размера окна браузера и замечательно смотрится на экранах различных мобильных пользовательских устройств(планшеты, смартфоны, ноутбуки и мобильные телефоны). Поддержка всеми современными браузерами, включая даже, извечный тормоз прогресса, Internet Explorer! Цель этого урока, показать вам, как с помощью свойств CSS3, можно легко, превратить обычное горизонтальное меню, в компактную раскрывающуюся панель, при просмотре на экранах меньшего размера.</p>
+	
+</body>
+</html>
