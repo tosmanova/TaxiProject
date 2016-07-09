@@ -39,7 +39,7 @@
             <div id = "sidebar" class="col-xs-12">
                 <h3> Invite Drivers!</h3>
                 <p> Take special possibilities for work !</p>
-                <button type="button" class="btn btn-primary btn-lg" >Start Driving</button>
+                <a type="button" href="driver-register" class="btn btn-primary btn-lg" >Start Driving</a>
             </div>
         </div>
 
