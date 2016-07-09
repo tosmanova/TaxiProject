@@ -25,12 +25,12 @@ public class DriverRegServlet extends Servlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //redirect to DriverRegServlet.jsp
-        req.getRequestDispatcher("/WEB-INF/pages/test/driver-register.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/pages/driver-register.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //waiting data from the form
+      /*  //waiting data from the form
         String name = req.getParameter("name");
         String phone = Utils.phoneValidate(req.getParameter("phone"));
         String pass = req.getParameter("pass");
@@ -61,7 +61,7 @@ public class DriverRegServlet extends Servlet {
         //current localhost:8080/TaxiProject
         //Absolute path = /http/error.jsp  -> localhost:8080/http/error
         //Relative path = http/error.jsp -> localhost:8080/TaxiProject/http/error.jsp
-
+*/
 
     }
 }
