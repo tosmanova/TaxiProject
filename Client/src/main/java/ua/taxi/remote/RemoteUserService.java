@@ -1,11 +1,11 @@
 package ua.taxi.remote;
 
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Remote.RemoteUserObject;
-import ua.taxi.model.Remote.UserServiceMethods;
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.UserValidateMessage;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.remote.RemoteUserObject;
+import ua.taxi.model.remote.UserServiceMethods;
+import ua.taxi.model.user.Car;
+import ua.taxi.model.user.UserValidateMessage;
 import ua.taxi.service.UserService;
 
 import java.io.IOException;
@@ -34,10 +34,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 
@@ -53,10 +53,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 
@@ -73,10 +73,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 
@@ -93,10 +93,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 
@@ -110,10 +110,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 
@@ -157,10 +157,10 @@ public class RemoteUserService implements UserService {
             return (UserValidateMessage) send(remoteUserObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new UserValidateMessage(false, "Remote error", e.getMessage(), null);
+            return new UserValidateMessage(false, "remote error", e.getMessage(), null);
         }
     }
 

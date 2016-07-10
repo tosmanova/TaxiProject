@@ -1,17 +1,15 @@
 package ua.taxi.view;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.OrderValidateMessage;
-import ua.taxi.model.Order.TableViewOrder;
-import ua.taxi.model.User.Driver;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.order.TableViewOrder;
+import ua.taxi.model.user.Driver;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
 
 
 /**

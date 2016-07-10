@@ -1,6 +1,6 @@
 package ua.taxi.dao;
 
-import ua.taxi.model.User.User;
+import ua.taxi.model.user.User;
 
 import java.sql.SQLException;
 import java.util.Collection;
@@ -24,7 +24,7 @@ public interface UserDao {
     //return OldUser
     User update(User newUser) throws SQLException;
 
-    //Collection<User> getAllUsers() throws SQLException;
+    //Collection<user> getAllUsers() throws SQLException;
 
     int driverRegisteredQuantity() throws SQLException;
 

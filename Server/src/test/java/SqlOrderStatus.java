@@ -1,8 +1,8 @@
 import org.junit.*;
 import ua.taxi.constants.Constants;
-import ua.taxi.dao.sql.OrderStatusDao;
+import ua.taxi.dao.jdbcsql.OrderStatusDao;
 
-import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.order.OrderStatus;
 import ua.taxi.utils.ConnectionFactory;
 
 import java.sql.Connection;

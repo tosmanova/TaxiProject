@@ -1,14 +1,13 @@
 package ua.taxi.dao;
 
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
 
-import java.sql.SQLException;
 import java.util.Collection;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Роман
+ * user: Роман
  * Date: 23.04.16
  * Time: 23:52
  * To change this test use File | Settings | File Templates.

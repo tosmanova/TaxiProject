@@ -1,12 +1,11 @@
 package ua.taxi.service;
 
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
-import ua.taxi.model.Order.OrderValidateMessage;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
+import ua.taxi.model.order.OrderValidateMessage;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 

@@ -31,7 +31,7 @@ public class RequestLoggerFilter implements Filter{
             HttpServletRequest req = (HttpServletRequest) request;
             HttpServletResponse resp  = (HttpServletResponse) response;
 
-            LOG.info(String.format("User %s, request %s",
+            LOG.info(String.format("user %s, request %s",
                     req.getSession().getAttribute("currentUserPhone"),
                     req.getRequestURI()));
         }

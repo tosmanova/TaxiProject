@@ -4,8 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
 import ua.taxi.utils.DateUtils;
 import ua.taxi.utils.Utils;
 

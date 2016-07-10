@@ -7,9 +7,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.Driver;
-import ua.taxi.model.User.UserValidateMessage;
+import ua.taxi.model.user.Car;
+import ua.taxi.model.user.Driver;
+import ua.taxi.model.user.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 /**

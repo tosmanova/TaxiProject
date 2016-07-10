@@ -638,33 +638,33 @@ java.io.EOFException
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:05:27 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -676,13 +676,13 @@ java.io.EOFException
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:05:27 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -728,33 +728,33 @@ java.io.EOFException
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:09:38 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -766,13 +766,13 @@ java.io.EOFException
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:09:38 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -818,33 +818,33 @@ java.io.EOFException
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:38:15 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -856,13 +856,13 @@ java.io.EOFException
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:38:15 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -908,33 +908,33 @@ java.io.EOFException
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:41:37 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -946,13 +946,13 @@ java.io.EOFException
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1008,33 +1008,33 @@ java.io.EOFException
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:42:04 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1046,13 +1046,13 @@ java.io.EOFException
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1108,33 +1108,33 @@ java.io.EOFException
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:44:44 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1146,13 +1146,13 @@ java.io.EOFException
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1208,33 +1208,33 @@ java.io.EOFException
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:45:43 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1246,13 +1246,13 @@ java.io.EOFException
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1311,33 +1311,33 @@ java.io.EOFException
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:50:37 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1349,13 +1349,13 @@ java.io.EOFException
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1442,33 +1442,33 @@ java.io.EOFException
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:51:47 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1480,13 +1480,13 @@ java.io.EOFException
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
@@ -1542,33 +1542,33 @@ java.io.EOFException
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:53:46 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 12:53:46 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:53:46 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1580,13 +1580,13 @@ java.io.EOFException
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -1685,33 +1685,33 @@ java.io.EOFException
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 20:12:48 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1723,13 +1723,13 @@ java.io.EOFException
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -1848,33 +1848,33 @@ java.io.EOFException
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'driverDao' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 22:38:10 TRACE SpringFactoriesLoader:87 - Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.DriverDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userDaoSqlImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userDaoSqlImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userDaoSqlImpl' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.UserDaoSqlImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.sql.CarDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'carDao' of type [ua.taxi.dao.jdbcsql.CarDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.sql.DriverDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.sql.PassengerDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'driverDao' of type [ua.taxi.dao.jdbcsql.DriverDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'passengerDao' of type [ua.taxi.dao.jdbcsql.PassengerDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'toBlackList' of type [java.lang.String]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'carDao'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'passengerDao'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'passengerDao'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'passengerDao' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.PassengerDao]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.PassengerDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.sql.UserDaoSqlImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.jdbcsql.UserDaoSqlImpl]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'userDaoSqlImpl' that is not fully initialized yet - a consequence of a circular reference
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'passengerDao'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:247 - Returning eagerly cached instance of singleton bean 'driverDao' that is not fully initialized yet - a consequence of a circular reference
@@ -1886,13 +1886,13 @@ java.io.EOFException
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderDaoSQLImpl' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'addressDao'
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.sql.OrderDaoSQLImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.sql.AddressDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.dao.jdbcsql.OrderDaoSQLImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'addressDao' of type [ua.taxi.dao.jdbcsql.AddressDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderById'
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderList' of type [java.util.Collection]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.sql.OrderStatusDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderStatusDao' of type [ua.taxi.dao.jdbcsql.OrderStatusDao]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderStatusDao'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
@@ -13184,3 +13184,186 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-09 23:22:51 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-09 23:22:52 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
 2016-07-09 23:22:53 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 11:09:43 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:09:44 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:09:44 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:09:44 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:09:44 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:09:45 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:09:45 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:09:45 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:09:45 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:09:45 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:09:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: courses
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: courses
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Students
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Students
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: teachers
+2016-07-10 11:09:47 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: teachers
+2016-07-10 11:09:47 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 11:09:48 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:17:28 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:17:28 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:17:28 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:17:28 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:17:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:17:29 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:17:29 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:17:29 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:17:29 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:17:29 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:17:30 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: courses
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: courses
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Students
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Students
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: teachers
+2016-07-10 11:17:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: teachers
+2016-07-10 11:17:31 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 11:17:32 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:20:12 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:20:12 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:20:12 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:20:12 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:20:13 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:20:13 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:20:13 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:20:13 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:20:13 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:20:13 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:20:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:20:14 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:21:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:21:02 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:21:02 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:21:02 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:21:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:21:03 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:21:03 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:21:03 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:21:03 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:21:03 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:21:03 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:21:04 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:22:24 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:22:24 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:22:24 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:22:24 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:22:24 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:22:24 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:22:25 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:22:25 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:22:25 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:22:25 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:22:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:22:26 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:23:00 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:23:00 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:23:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:23:00 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:23:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:23:00 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:23:00 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:23:00 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:23:00 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:23:00 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:23:01 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:23:02 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: passengers
+2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: passengers
+2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 11:23:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 11:23:04 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance beforeQuery flushing : ua.taxi.model.user.Driver.car -> ua.taxi.model.user.Car]
+2016-07-10 11:23:04 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:23:59 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:23:59 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:23:59 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:23:59 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:23:59 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:24:00 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:24:00 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:24:00 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:24:00 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:24:00 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:24:00 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:24:01 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:24:02 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 11:24:03 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:46:37 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:46:38 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:46:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:46:38 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:46:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:46:38 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:46:38 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:46:38 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:46:38 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:46:38 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:46:39 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:46:39 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: passengers
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: passengers
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 11:46:42 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:55:29 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 11:55:29 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 11:55:29 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 11:55:29 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 11:55:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 11:55:29 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 11:55:29 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 11:55:29 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 11:55:29 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 11:55:29 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 11:55:30 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 11:55:30 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:55:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 11:55:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 11:55:32 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]

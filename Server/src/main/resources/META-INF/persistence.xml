@@ -5,13 +5,17 @@
              version="2.0">
 
     <!--some indetifier-->
-    <persistence-unit name="myunit" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="taxiProjectJPA" transaction-type="RESOURCE_LOCAL">
         <description>
             Persistence unit for the JPA tutorial of the Hibernate Getting Started Guide
         </description>
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <class>ua.taxi.test.model.Student</class>
+        <class>ua.taxi.model.user.Driver</class>
+        <class>ua.taxi.model.user.User</class>
+        <class>ua.taxi.model.user.Passenger</class>
+        <class>ua.taxi.model.user.Car</class>
+        <class>ua.taxi.model.order.Address</class>
 
         <!--<class>ua.artcode.library.model.Author</class>
         <class>ua.artcode.library.model.Book</class>

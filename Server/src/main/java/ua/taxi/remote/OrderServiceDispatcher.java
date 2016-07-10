@@ -2,8 +2,8 @@ package ua.taxi.remote;
 
 
 import org.apache.log4j.Logger;
-import ua.taxi.model.Remote.OrderServiceMethods;
-import ua.taxi.model.Remote.RemoteOrderObject;
+import ua.taxi.model.remote.OrderServiceMethods;
+import ua.taxi.model.remote.RemoteOrderObject;
 import ua.taxi.service.OrderServiceImpl;
 
 /**

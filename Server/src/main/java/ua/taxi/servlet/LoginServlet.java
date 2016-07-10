@@ -1,6 +1,6 @@
 package ua.taxi.servlet;
 
-import ua.taxi.model.User.UserValidateMessage;
+import ua.taxi.model.user.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 import javax.servlet.ServletException;

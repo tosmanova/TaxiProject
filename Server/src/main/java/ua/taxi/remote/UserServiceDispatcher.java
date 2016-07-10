@@ -1,7 +1,7 @@
 package ua.taxi.remote;
 
-import ua.taxi.model.Remote.RemoteUserObject;
-import ua.taxi.model.Remote.UserServiceMethods;
+import ua.taxi.model.remote.RemoteUserObject;
+import ua.taxi.model.remote.UserServiceMethods;
 import ua.taxi.service.UserServiceImpl;
 
 /**

@@ -2,8 +2,8 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import ua.taxi.constants.Constants;
-import ua.taxi.dao.sql.CarDao;
-import ua.taxi.model.User.Car;
+import ua.taxi.dao.jdbcsql.CarDao;
+import ua.taxi.model.user.Car;
 import ua.taxi.utils.ConnectionFactory;
 
 

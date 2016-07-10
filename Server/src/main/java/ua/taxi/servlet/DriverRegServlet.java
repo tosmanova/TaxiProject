@@ -1,15 +1,7 @@
 package ua.taxi.servlet;
 
-import org.apache.log4j.Logger;
-import org.springframework.context.ApplicationContext;
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.UserValidateMessage;
-import ua.taxi.service.UserServiceImpl;
-import ua.taxi.utils.Utils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

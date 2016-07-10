@@ -1,12 +1,12 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import ua.taxi.constants.Constants;
-import ua.taxi.dao.sql.UserDaoSqlImpl;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.Driver;
-import ua.taxi.model.User.Passenger;
-import ua.taxi.model.User.User;
+import ua.taxi.dao.jdbcsql.UserDaoSqlImpl;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.user.Car;
+import ua.taxi.model.user.Driver;
+import ua.taxi.model.user.Passenger;
+import ua.taxi.model.user.User;
 import ua.taxi.utils.ConnectionFactory;
 
 import java.sql.Connection;

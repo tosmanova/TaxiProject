@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<%--<% User transfered = (User) request.getAttribute("user");%>--%>
+<%--<% user transfered = (user) request.getAttribute("user");%>--%>
 <c:set var="transfered" value="${requestScope.user}"/>
 
 <div class="container">

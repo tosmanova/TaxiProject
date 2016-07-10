@@ -1,6 +1,6 @@
 package ua.taxi.utils;
 
-import ua.taxi.model.Order.Address;
+import ua.taxi.model.order.Address;
 
 /**
  * Created by Andrii on 4/30/2016.

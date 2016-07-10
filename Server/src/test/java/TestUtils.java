@@ -1,7 +1,6 @@
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.taxi.dao.sql.*;
-import ua.taxi.service.OrderServiceImpl;
+import ua.taxi.dao.jdbcsql.*;
 
 import java.io.IOException;
 

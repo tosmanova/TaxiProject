@@ -2,8 +2,8 @@ package ua.taxi.service;
 
 import org.apache.log4j.Logger;
 import ua.taxi.dao.*;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.User.*;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.user.*;
 
 import java.sql.SQLException;
 
@@ -36,8 +36,8 @@ public class UserServiceImpl implements UserService {
             LOGGER.trace("register: " + passanger);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new Passenger\n" + passanger, passanger);
         } else {
-            LOGGER.warn(("register: User with this phone is already registered"));
-            return new UserValidateMessage(false, "Create UserValidateMessage", "User with this phone\n" +
+            LOGGER.warn(("register: user with this phone is already registered"));
+            return new UserValidateMessage(false, "Create UserValidateMessage", "user with this phone\n" +
                     " is already registered", null);
         }
     }
@@ -62,22 +62,22 @@ public class UserServiceImpl implements UserService {
             LOGGER.trace("register: " + driver);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new driver\n" + driver, driver);
         } else {
-            LOGGER.warn(("register: User with this phone is already registered"));
-            return new UserValidateMessage(false, "Create UserValidateMessage", "User with this phone\n" +
+            LOGGER.warn(("register: user with this phone is already registered"));
+            return new UserValidateMessage(false, "Create UserValidateMessage", "user with this phone\n" +
                     " is already registered ", null);
         }
     }
 
     @Override
     public int driverRegisteredQuantity() {
-       // Collection<User> users = userDao.getAllUsers();
+       // Collection<user> users = userDao.getAllUsers();
         int count = 0;
         try {
             count = userDao.driverRegisteredQuantity();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-       /* for (User user : users) {
+       /* for (user user : users) {
             if (user instanceof Driver) {
                 count++;
             }
@@ -88,14 +88,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int passangerRegisteredQuantity() {
-        //Collection<User> users = userDao.getAllUsers();
+        //Collection<user> users = userDao.getAllUsers();
         int count = 0;
         try {
             count = userDao.passangerRegisteredQuantity();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        /*for (User user : users) {
+        /*for (user user : users) {
             if (user instanceof Passenger) {
                 count++;
             }
@@ -144,8 +144,8 @@ public class UserServiceImpl implements UserService {
             LOGGER.trace("changePassanger: new" + passanger + "; old: " + oldPassanger);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + oldPassanger, passanger);
         } else {
-            LOGGER.warn(("Change passenger Warning, User with this phone not present"));
-            return new UserValidateMessage(false, "Change passenger error", "User with this phone\n" +
+            LOGGER.warn(("Change passenger Warning, user with this phone not present"));
+            return new UserValidateMessage(false, "Change passenger error", "user with this phone\n" +
                     " is not present", null);
         }
     }
@@ -171,8 +171,8 @@ public class UserServiceImpl implements UserService {
             LOGGER.trace("changeDriver: new" + driver + "; old: " + oldDriver);
             return new UserValidateMessage(true, "Change driver", "Old user:\n" + oldDriver, driver);
         } else {
-            LOGGER.warn(("Change driver Warning, User with this phone not present"));
-            return new UserValidateMessage(false, "Change driver error", "User with this phone\n" +
+            LOGGER.warn(("Change driver Warning, user with this phone not present"));
+            return new UserValidateMessage(false, "Change driver error", "user with this phone\n" +
                     " is not present", null);
         }
     }
@@ -191,8 +191,8 @@ public class UserServiceImpl implements UserService {
             LOGGER.trace("getUser: " + user);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + user, user);
         } else {
-            LOGGER.warn(("getUser Warning, User with this phone not present"));
-            return new UserValidateMessage(false, "Change passenger error", "User with this phone\n" +
+            LOGGER.warn(("getUser Warning, user with this phone not present"));
+            return new UserValidateMessage(false, "Change passenger error", "user with this phone\n" +
                     " is not present", null);
         }
     }

@@ -2,7 +2,6 @@ package ua.taxi;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.taxi.dao.sql.OrderDaoSQLImpl;
 import ua.taxi.remote.OrderServiceDispatcher;
 import ua.taxi.remote.Server;
 import ua.taxi.remote.UserServiceDispatcher;

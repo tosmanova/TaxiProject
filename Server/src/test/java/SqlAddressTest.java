@@ -1,8 +1,8 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import ua.taxi.constants.Constants;
-import ua.taxi.dao.sql.AddressDao;
-import ua.taxi.model.Order.Address;
+import ua.taxi.dao.jdbcsql.AddressDao;
+import ua.taxi.model.order.Address;
 import ua.taxi.utils.ConnectionFactory;
 
 import java.sql.Connection;

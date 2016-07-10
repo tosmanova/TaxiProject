@@ -2,9 +2,9 @@ import org.apache.log4j.Logger;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
 import ua.taxi.constants.Constants;
-import ua.taxi.dao.sql.OrderDaoSQLImpl;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Order.Order;
+import ua.taxi.dao.jdbcsql.OrderDaoSQLImpl;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.order.Order;
 import ua.taxi.service.OrderServiceImpl;
 import ua.taxi.utils.ConnectionFactory;
 
@@ -45,7 +45,7 @@ public class SqlOrderTest extends Assert {
         Order rtOrder1 = list1.get(0);
         List<Order> list2 = new ArrayList<>(orderDao.createOrder(order2));
         Order rtOrder2 = list2.get(0);
-        LOGGER.trace("Create order test: Order:  " + order1.toString());
+        LOGGER.trace("Create order test: order:  " + order1.toString());
         LOGGER.trace("Create order test: Return: " + rtOrder1.toString());
         assertTrue(rtOrder1.equals(order1));
         assertTrue(rtOrder2.equals(order2));

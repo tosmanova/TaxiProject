@@ -7,10 +7,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderValidateMessage;
-import ua.taxi.model.User.Passenger;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderValidateMessage;
+import ua.taxi.model.user.Passenger;
 import ua.taxi.utils.Utils;
 
 /**

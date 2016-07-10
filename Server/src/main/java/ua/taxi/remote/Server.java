@@ -2,12 +2,8 @@ package ua.taxi.remote;
 
 import org.apache.log4j.Logger;
 
-import ua.taxi.dao.sql.OrderDaoSQLImpl;
-import ua.taxi.dao.sql.UserDaoSqlImpl;
-import ua.taxi.model.Remote.RemoteOrderObject;
-import ua.taxi.model.Remote.RemoteUserObject;
-import ua.taxi.service.OrderServiceImpl;
-import ua.taxi.service.UserServiceImpl;
+import ua.taxi.model.remote.RemoteOrderObject;
+import ua.taxi.model.remote.RemoteUserObject;
 
 import java.io.*;
 import java.net.ServerSocket;

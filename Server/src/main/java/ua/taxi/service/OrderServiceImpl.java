@@ -7,10 +7,10 @@ import ua.taxi.dao.OrderDao;
 import ua.taxi.model.geolocation.GoogleMapsAPI;
 import ua.taxi.model.geolocation.GoogleMapsAPIImpl;
 import ua.taxi.model.geolocation.Location;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
-import ua.taxi.model.Order.OrderValidateMessage;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
+import ua.taxi.model.order.OrderValidateMessage;
 
 import java.util.*;
 
@@ -38,16 +38,16 @@ public class OrderServiceImpl implements OrderService {
             Order newOrder = new Order(from, to, phone, name, price, distance);
             orderDao.createOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
-            return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
+            return new OrderValidateMessage(newOrder, "order Creation", newOrder.toString(), true);
         } else if (orderDao.getOrder(phone).getOrderStatus() == OrderStatus.DONE) {
             orderDao.deleteOrder(phone);
             Order newOrder = new Order(from, to, phone, name, price, distance);
             orderDao.createOrder(newOrder);
             LOGGER.trace("createOrder: " + newOrder);
-            return new OrderValidateMessage(newOrder, "Order Creation", newOrder.toString(), true);
+            return new OrderValidateMessage(newOrder, "order Creation", newOrder.toString(), true);
         }
-        LOGGER.warn("Order Creation: You already have active orders");
-        return new OrderValidateMessage(null, "Order Creation", "You already have active orders", false);
+        LOGGER.warn("order Creation: You already have active orders");
+        return new OrderValidateMessage(null, "order Creation", "You already have active orders", false);
     }
 
     @Override
@@ -56,10 +56,10 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderDao.getOrder(phone);
         if (order != null) {
             LOGGER.trace("getOrder" + order);
-            return new OrderValidateMessage(order, "Get Order", order.toString(), true);
+            return new OrderValidateMessage(order, "Get order", order.toString(), true);
         }
-        LOGGER.warn("Get Order. You don`t have any orders");
-        return new OrderValidateMessage(null, "Get Order", "You don`t have any orders", false);
+        LOGGER.warn("Get order. You don`t have any orders");
+        return new OrderValidateMessage(null, "Get order", "You don`t have any orders", false);
     }
 
     @Override
@@ -70,10 +70,10 @@ public class OrderServiceImpl implements OrderService {
             Order newOrder = new Order(from, to, phone, name, price, distance);
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
             LOGGER.trace("Change Order4 new: " + newOrder + ";  old:" + oldOrder);
-            return new OrderValidateMessage(newOrder, "Change Order", oldOrder.toString(), true);
+            return new OrderValidateMessage(newOrder, "Change order", oldOrder.toString(), true);
         }
         LOGGER.warn("Change Order4 error, You don`t have order with this phone");
-        return new OrderValidateMessage(null, "Change Order error", "You don`t have order with this phone", false);
+        return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
     }
 
     @Override
@@ -82,21 +82,21 @@ public class OrderServiceImpl implements OrderService {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
             LOGGER.trace("Change Order2 new: " + newOrder + "; old" + oldOrder);
-            return new OrderValidateMessage(newOrder, "Change Order", oldOrder.toString(), true);
+            return new OrderValidateMessage(newOrder, "Change order", oldOrder.toString(), true);
         }
         LOGGER.warn("Change Order2 error, You don`t have order with this phone");
-        return new OrderValidateMessage(null, "Change Order error", "You don`t have order with this phone", false);
+        return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
     }
 
     @Override
     public OrderValidateMessage cancelOrder(String phone) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.deleteOrder(phone);
-            LOGGER.trace("Cancel Order:" + oldOrder);
-            return new OrderValidateMessage(oldOrder, "Cancel Order", oldOrder.toString(), true);
+            LOGGER.trace("Cancel order:" + oldOrder);
+            return new OrderValidateMessage(oldOrder, "Cancel order", oldOrder.toString(), true);
         }
-        LOGGER.warn("Cancel Order You don`t have any orders");
-        return new OrderValidateMessage(null, "Cancel Order", "You don`t have any orders", false);
+        LOGGER.warn("Cancel order You don`t have any orders");
+        return new OrderValidateMessage(null, "Cancel order", "You don`t have any orders", false);
 
     }
 
@@ -111,11 +111,11 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
         if (orderDao.getOrder(phone) != null) {
             Order oldOrder = orderDao.changeStatus(phone, newStatus);
-            LOGGER.trace("changeOrderStatus new: " + newStatus + " Old Order: " + oldOrder);
-            return new OrderValidateMessage(oldOrder, "Change Order Status", oldOrder.toString(), true);
+            LOGGER.trace("changeOrderStatus new: " + newStatus + " Old order: " + oldOrder);
+            return new OrderValidateMessage(oldOrder, "Change order Status", oldOrder.toString(), true);
         }
-        LOGGER.warn("Change Order Status, You don`t have any orders");
-        return new OrderValidateMessage(null, "Change Order Status", "You don`t have any orders", false);
+        LOGGER.warn("Change order Status, You don`t have any orders");
+        return new OrderValidateMessage(null, "Change order Status", "You don`t have any orders", false);
     }
 
     @Override
@@ -147,12 +147,12 @@ public class OrderServiceImpl implements OrderService {
             if (order.getDriverPhone().equals(driverPhone)) {
                 if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
                     LOGGER.trace("getOrderInProgresByDriverPhone: " + order);
-                    return new OrderValidateMessage(order, "Active driver Order", "Active driver Order", true);
+                    return new OrderValidateMessage(order, "Active driver order", "Active driver order", true);
                 }
             }
         }
-        LOGGER.warn("IN_PROGRESS driver Order not found");
-        return new OrderValidateMessage(null, "Active driver Order", "IN_PROGRESS driver Order not found", false);
+        LOGGER.warn("IN_PROGRESS driver order not found");
+        return new OrderValidateMessage(null, "Active driver order", "IN_PROGRESS driver order not found", false);
     }
 
     @Override

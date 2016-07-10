@@ -1,9 +1,5 @@
 package ua.taxi.servlet;
 
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.UserValidateMessage;
-import ua.taxi.utils.Utils;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

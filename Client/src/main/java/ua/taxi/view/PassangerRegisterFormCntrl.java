@@ -8,9 +8,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.User.Passenger;
-import ua.taxi.model.User.UserValidateMessage;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.user.Passenger;
+import ua.taxi.model.user.UserValidateMessage;
 import ua.taxi.utils.Utils;
 
 /**

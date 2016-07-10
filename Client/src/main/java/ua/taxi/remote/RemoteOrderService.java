@@ -1,12 +1,12 @@
 package ua.taxi.remote;
 
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
-import ua.taxi.model.Order.OrderValidateMessage;
-import ua.taxi.model.Remote.OrderServiceMethods;
-import ua.taxi.model.Remote.RemoteOrderObject;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
+import ua.taxi.model.order.OrderValidateMessage;
+import ua.taxi.model.remote.OrderServiceMethods;
+import ua.taxi.model.remote.RemoteOrderObject;
 import ua.taxi.service.OrderService;
 
 import java.io.IOException;
@@ -50,10 +50,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
 
     }
@@ -69,10 +69,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 
@@ -86,10 +86,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 
@@ -102,10 +102,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 
@@ -162,10 +162,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 
@@ -180,10 +180,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 
@@ -197,10 +197,10 @@ public class RemoteOrderService implements OrderService {
             return (OrderValidateMessage) send(remoteOrderObject);
         } catch (IOException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-            return new OrderValidateMessage(null, "Remote error", e.getMessage(), false);
+            return new OrderValidateMessage(null, "remote error", e.getMessage(), false);
         }
     }
 

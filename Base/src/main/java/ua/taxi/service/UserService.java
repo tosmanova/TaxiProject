@@ -1,9 +1,9 @@
 package ua.taxi.service;
 
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.Order.Address;
-import ua.taxi.model.User.Car;
-import ua.taxi.model.User.UserValidateMessage;
+import ua.taxi.model.order.Address;
+import ua.taxi.model.user.Car;
+import ua.taxi.model.user.UserValidateMessage;
 
 /**
  * Created by serhii on 23.04.16.

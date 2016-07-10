@@ -5,13 +5,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
 import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.User.Driver;
-import ua.taxi.model.Order.Order;
-import ua.taxi.model.Order.OrderStatus;
+import ua.taxi.model.user.Driver;
+import ua.taxi.model.order.Order;
+import ua.taxi.model.order.OrderStatus;
 import ua.taxi.utils.DateUtils;
 import ua.taxi.utils.Utils;
-
-import java.time.format.DateTimeFormatter;
 
 /**
  * Created by Andrii on 4/28/2016.

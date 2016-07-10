@@ -6,29 +6,29 @@
 
     <!-- bean definitions here -->
 
-    <bean id="addressDao" class="ua.taxi.dao.sql.AddressDao"/>
-    <bean id="orderStatusDao" class="ua.taxi.dao.sql.OrderStatusDao"/>
+    <bean id="addressDao" class="ua.taxi.dao.jdbcsql.AddressDao"/>
+    <bean id="orderStatusDao" class="ua.taxi.dao.jdbcsql.OrderStatusDao"/>
 
-    <bean id="carDao" class="ua.taxi.dao.sql.CarDao"/>
+    <bean id="carDao" class="ua.taxi.dao.jdbcsql.CarDao"/>
 
-    <bean id="driverDao" class="ua.taxi.dao.sql.DriverDao">
+    <bean id="driverDao" class="ua.taxi.dao.jdbcsql.DriverDao">
         <property name="carDao" ref="carDao"/>
         <property name="userDao" ref="userDaoSqlImpl"/>
     </bean>
 
-    <bean id="passengerDao" class="ua.taxi.dao.sql.PassengerDao">
+    <bean id="passengerDao" class="ua.taxi.dao.jdbcsql.PassengerDao">
         <property name="addressDao" ref="addressDao"/>
         <property name="userDao" ref="userDaoSqlImpl"/>
     </bean>
 
-    <bean id="userDaoSqlImpl" class="ua.taxi.dao.sql.UserDaoSqlImpl">
+    <bean id="userDaoSqlImpl" class="ua.taxi.dao.jdbcsql.UserDaoSqlImpl">
         <property name="addressDao" ref="addressDao"/>
         <property name="carDao" ref="carDao"/>
         <property name="passengerDao" ref="passengerDao"/>
         <property name="driverDao" ref="driverDao"/>
     </bean>
 
-    <bean id="orderDaoSQLImpl" class="ua.taxi.dao.sql.OrderDaoSQLImpl">
+    <bean id="orderDaoSQLImpl" class="ua.taxi.dao.jdbcsql.OrderDaoSQLImpl">
         <property name="addressDao" ref="addressDao"/>
         <property name="orderStatusDao" ref="orderStatusDao"/>
     </bean>
