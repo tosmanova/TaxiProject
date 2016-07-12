@@ -1,13 +1,13 @@
 package ua.taxi.remote;
 
-import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.order.Address;
-import ua.taxi.model.order.Order;
-import ua.taxi.model.order.OrderStatus;
-import ua.taxi.model.order.OrderValidateMessage;
-import ua.taxi.model.remote.OrderServiceMethods;
-import ua.taxi.model.remote.RemoteOrderObject;
-import ua.taxi.service.OrderService;
+import ua.taxi.base.exception.RemoteConnectionError;
+import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.order.Order;
+import ua.taxi.base.model.order.OrderStatus;
+import ua.taxi.base.model.order.OrderValidateMessage;
+import ua.taxi.base.model.remote.OrderServiceMethods;
+import ua.taxi.base.model.remote.RemoteOrderObject;
+import ua.taxi.base.service.OrderService;
 
 import java.io.IOException;
 import java.util.List;

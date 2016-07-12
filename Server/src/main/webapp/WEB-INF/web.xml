@@ -7,7 +7,7 @@
     <welcome-file-list> <welcome-file>index.jsp</welcome-file> </welcome-file-list>
 
    <listener>
-       <listener-class>ua.taxi.listener.InitSpringContextListener</listener-class>
+       <listener-class>ua.taxi.server.listener.InitSpringContextListener</listener-class>
    </listener>
 
     <context-param>
@@ -17,7 +17,7 @@
 
     <filter>
         <filter-name>LoggingFilter</filter-name>
-        <filter-class> ua.taxi.filter.RequestLoggerFilter</filter-class>
+        <filter-class>ua.taxi.server.filter.RequestLoggerFilter</filter-class>
     </filter>
 
     <filter-mapping>

@@ -1,8 +1,8 @@
 package ua.taxi.remote;
 
 import org.apache.log4j.Logger;
-import ua.taxi.model.remote.RemoteOrderObject;
-import ua.taxi.model.remote.RemoteUserObject;
+import ua.taxi.base.model.remote.RemoteOrderObject;
+import ua.taxi.base.model.remote.RemoteUserObject;
 
 import java.io.*;
 import java.net.Socket;

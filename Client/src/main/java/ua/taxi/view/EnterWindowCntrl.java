@@ -3,13 +3,13 @@ package ua.taxi.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import ua.taxi.StartApp;
-import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.order.OrderStatus;
-import ua.taxi.model.order.OrderValidateMessage;
-import ua.taxi.model.user.Driver;
-import ua.taxi.model.user.Passenger;
-import ua.taxi.model.user.UserValidateMessage;
-import ua.taxi.utils.Utils;
+import ua.taxi.base.exception.RemoteConnectionError;
+import ua.taxi.base.model.order.OrderStatus;
+import ua.taxi.base.model.order.OrderValidateMessage;
+import ua.taxi.base.model.user.Driver;
+import ua.taxi.base.model.user.Passenger;
+import ua.taxi.base.model.user.UserValidateMessage;
+import ua.taxi.base.utils.Utils;
 
 /**
  * Created by Andrii on 4/28/2016.

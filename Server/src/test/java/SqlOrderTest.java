@@ -1,12 +1,11 @@
 import org.apache.log4j.Logger;
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import ua.taxi.constants.Constants;
-import ua.taxi.dao.jdbcsql.OrderDaoSQLImpl;
-import ua.taxi.model.order.Address;
-import ua.taxi.model.order.Order;
-import ua.taxi.service.OrderServiceImpl;
-import ua.taxi.utils.ConnectionFactory;
+import ua.taxi.server.constants.Constants;
+import ua.taxi.server.dao.OrderDao;
+import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.order.Order;
+import ua.taxi.server.utils.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -23,17 +22,17 @@ import java.util.List;
 public class SqlOrderTest extends Assert {
 
 
-    private OrderDaoSQLImpl orderDao;
-    public static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class);
+    private OrderDao orderDao;
+    public static final Logger LOGGER = Logger.getLogger(SqlOrderTest.class);
 
     @BeforeClass
     public static void initTestSQL() {
-        TestUtils.sriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
+        TestUtils.scriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
     }
 
     @Before
     public void initUserDao() {
-        orderDao = TestUtils.getOrderDaoSQLImpl();
+        //orderDao = TestUtils.getOrderDaoSQLImpl();
     }
 
     @Test
@@ -45,7 +44,7 @@ public class SqlOrderTest extends Assert {
         Order rtOrder1 = list1.get(0);
         List<Order> list2 = new ArrayList<>(orderDao.createOrder(order2));
         Order rtOrder2 = list2.get(0);
-        LOGGER.trace("Create order test: order:  " + order1.toString());
+        LOGGER.trace("Create order test: order: " + order1.toString());
         LOGGER.trace("Create order test: Return: " + rtOrder1.toString());
         assertTrue(rtOrder1.equals(order1));
         assertTrue(rtOrder2.equals(order2));
@@ -113,7 +112,7 @@ public class SqlOrderTest extends Assert {
     @AfterClass
     public static void removeTestSQL() {
 
-        TestUtils.sriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
+        TestUtils.scriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

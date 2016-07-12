@@ -112,9 +112,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -150,9 +150,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -188,9 +188,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -226,9 +226,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -268,9 +268,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -342,9 +342,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:47)
-	at ua.taxi.remote.Server.<init>(Server.java:37)
-	at ua.taxi.remote.Server.main(Server.java:74)
+	at Server.run(Server.java:47)
+	at Server.<init>(Server.java:37)
+	at Server.main(Server.java:74)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -509,9 +509,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:48)
-	at ua.taxi.remote.Server.<init>(Server.java:38)
-	at ua.taxi.remote.Server.main(Server.java:75)
+	at Server.run(Server.java:48)
+	at Server.<init>(Server.java:38)
+	at Server.main(Server.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -594,9 +594,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:49)
-	at ua.taxi.remote.Server.<init>(Server.java:39)
-	at ua.taxi.remote.Server.main(Server.java:76)
+	at Server.run(Server.java:49)
+	at Server.<init>(Server.java:39)
+	at Server.main(Server.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -687,7 +687,7 @@ java.io.EOFException
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
-2016-07-05 12:05:27 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ua.taxi.service.OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+2016-07-05 12:05:27 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:512 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7fa833: defining beans [addressDao,orderStatusDao,carDao,driverDao,passengerDao,userDaoSqlImpl,orderDaoSQLImpl,orderServiceImpl,userServiceImpl]; root of factory hierarchy
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'driverDao': [userDaoSqlImpl]
 2016-07-05 12:05:27 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'userDaoSqlImpl': [passengerDao, driverDao]
@@ -777,7 +777,7 @@ java.io.EOFException
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
-2016-07-05 12:09:38 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ua.taxi.service.OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+2016-07-05 12:09:38 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:512 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7fa833: defining beans [addressDao,orderStatusDao,carDao,driverDao,passengerDao,userDaoSqlImpl,orderDaoSQLImpl,orderServiceImpl,userServiceImpl]; root of factory hierarchy
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'driverDao': [userDaoSqlImpl]
 2016-07-05 12:09:38 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'userDaoSqlImpl': [passengerDao, driverDao]
@@ -867,7 +867,7 @@ java.io.EOFException
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderDaoSQLImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'orderServiceImpl'
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
-2016-07-05 12:38:15 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [ua.taxi.service.OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
+2016-07-05 12:38:15 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderServiceImpl' defined in class path resource [app-context.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [OrderServiceImpl]: Constructor threw exception; nested exception is java.lang.ExceptionInInitializerError
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:512 - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7fa833: defining beans [addressDao,orderStatusDao,carDao,driverDao,passengerDao,userDaoSqlImpl,orderDaoSQLImpl,orderServiceImpl,userServiceImpl]; root of factory hierarchy
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'driverDao': [userDaoSqlImpl]
 2016-07-05 12:38:15 DEBUG DefaultListableBeanFactory:568 - Retrieved dependent beans for bean 'userDaoSqlImpl': [passengerDao, driverDao]
@@ -959,10 +959,10 @@ java.io.EOFException
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:41:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:41:37 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@129cf23]
 2016-07-05 12:41:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1059,10 +1059,10 @@ java.io.EOFException
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:42:04 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:42:04 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@129cf23]
 2016-07-05 12:42:04 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1159,10 +1159,10 @@ java.io.EOFException
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:44:44 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:44:44 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@1e5415e]
 2016-07-05 12:44:44 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1259,10 +1259,10 @@ java.io.EOFException
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:45:43 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:45:43 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@129cf23]
 2016-07-05 12:45:43 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1362,10 +1362,10 @@ java.io.EOFException
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:50:37 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:50:37 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@129cf23]
 2016-07-05 12:50:37 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1398,9 +1398,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:46)
-	at ua.taxi.remote.Server.<init>(Server.java:36)
-	at ua.taxi.ServerRun.main(ServerRun.java:22)
+	at Server.run(Server.java:46)
+	at Server.<init>(Server.java:36)
+	at ua.taxi.server.ServerRun.main(ServerRun.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1493,10 +1493,10 @@ java.io.EOFException
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:51:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:51:47 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@129cf23]
 2016-07-05 12:51:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1593,22 +1593,22 @@ java.io.EOFException
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderDaoSQLImpl'
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.OrderServiceImpl]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.OrderServiceImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [OrderServiceImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [OrderServiceImpl]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'allOrders' of type [java.util.List]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'newOrders' of type [java.util.List]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [ua.taxi.dao.OrderDao]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [OrderDao]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'statusCounterMap' of type [java.util.Map]
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderServiceImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 12:53:47 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 12:53:47 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@11c1ea0]
 2016-07-05 12:53:47 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1641,9 +1641,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:46)
-	at ua.taxi.remote.Server.<init>(Server.java:36)
-	at ua.taxi.ServerRun.main(ServerRun.java:22)
+	at Server.run(Server.java:46)
+	at Server.<init>(Server.java:36)
+	at ua.taxi.server.ServerRun.main(ServerRun.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1736,22 +1736,22 @@ java.io.EOFException
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderServiceImpl' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderDaoSQLImpl'
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.OrderServiceImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.OrderServiceImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [OrderServiceImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [OrderServiceImpl]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'allOrders' of type [java.util.List]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'newOrders' of type [java.util.List]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [ua.taxi.dao.OrderDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [OrderDao]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'statusCounterMap' of type [java.util.Map]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderServiceImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 20:12:48 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 20:12:48 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@d41cee]
 2016-07-05 20:12:48 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1804,9 +1804,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:46)
-	at ua.taxi.remote.Server.<init>(Server.java:36)
-	at ua.taxi.ServerRun.main(ServerRun.java:22)
+	at Server.run(Server.java:46)
+	at Server.<init>(Server.java:36)
+	at ua.taxi.server.ServerRun.main(ServerRun.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1899,22 +1899,22 @@ java.io.EOFException
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'orderServiceImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'orderServiceImpl' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'orderDaoSQLImpl'
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.OrderServiceImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.OrderServiceImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [OrderServiceImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [OrderServiceImpl]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'allOrders' of type [java.util.List]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'newOrders' of type [java.util.List]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [ua.taxi.dao.OrderDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'orderDao' of type [OrderDao]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'statusCounterMap' of type [java.util.Map]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'orderServiceImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:221 - Creating shared instance of singleton bean 'userServiceImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:448 - Creating instance of bean 'userServiceImpl'
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:529 - Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'userDaoSqlImpl'
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [ua.taxi.service.UserServiceImpl]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [ua.taxi.service.UserServiceImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:265 - Getting BeanInfo for class [UserServiceImpl]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:284 - Caching PropertyDescriptors for class [UserServiceImpl]
 2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'class' of type [java.lang.Class]
-2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [ua.taxi.dao.UserDao]
+2016-07-05 22:38:10 TRACE CachedIntrospectionResults:297 - Found bean property 'userDao' of type [UserDao]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:484 - Finished creating instance of bean 'userServiceImpl'
 2016-07-05 22:38:10 DEBUG ClassPathXmlApplicationContext:769 - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@d41cee]
 2016-07-05 22:38:10 DEBUG DefaultListableBeanFactory:251 - Returning cached instance of singleton bean 'lifecycleProcessor'
@@ -1947,9 +1947,9 @@ java.io.EOFException
 	at java.io.ObjectInputStream$BlockDataInputStream.peekByte(ObjectInputStream.java:2626)
 	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1321)
 	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:373)
-	at ua.taxi.remote.Server.run(Server.java:46)
-	at ua.taxi.remote.Server.<init>(Server.java:36)
-	at ua.taxi.ServerRun.main(ServerRun.java:22)
+	at Server.run(Server.java:46)
+	at Server.<init>(Server.java:36)
+	at ua.taxi.server.ServerRun.main(ServerRun.java:22)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -13243,7 +13243,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:20:13 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:20:13 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:20:14 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:20:14 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:20:14 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
 2016-07-10 11:21:02 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
 	name: taxiProjectJPA
 	...]
@@ -13257,7 +13257,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:21:03 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:21:03 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:21:03 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:21:04 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:21:04 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
 2016-07-10 11:22:24 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
 	name: taxiProjectJPA
 	...]
@@ -13271,7 +13271,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:22:25 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:22:25 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:22:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:22:26 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:22:26 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
 2016-07-10 11:23:00 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
 	name: taxiProjectJPA
 	...]
@@ -13285,9 +13285,9 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:23:00 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:23:00 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:23:01 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:23:02 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
-2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:23:02 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:23:02 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
 2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
 2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
 2016-07-10 11:23:02 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
@@ -13299,7 +13299,7 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
 2016-07-10 11:23:03 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
 2016-07-10 11:23:04 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
-2016-07-10 11:23:04 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance beforeQuery flushing : ua.taxi.model.user.Driver.car -> ua.taxi.model.user.Car]
+2016-07-10 11:23:04 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance beforeQuery flushing : Driver.car -> Car]
 2016-07-10 11:23:04 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
 2016-07-10 11:23:59 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
 	name: taxiProjectJPA
@@ -13314,9 +13314,9 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:24:00 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:24:00 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:24:00 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:24:01 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
-2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
+2016-07-10 11:24:01 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:24:01 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
 2016-07-10 11:24:02 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
 2016-07-10 11:24:03 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
 2016-07-10 11:46:37 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
@@ -13332,9 +13332,9 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:46:38 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:46:38 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:46:39 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:46:39 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
-2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:46:39 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 11:46:39 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
 2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
 2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
 2016-07-10 11:46:40 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
@@ -13361,9 +13361,640 @@ java.lang.Exception: exception just for purpose of providing stack trace
 2016-07-10 11:55:29 INFO  connections:141 - HHH10001003: Autocommit mode: false
 2016-07-10 11:55:29 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
 2016-07-10 11:55:30 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2016-07-10 11:55:30 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
-2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Driver (class must be instantiated by Interceptor)
-2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: ua.taxi.model.user.Passenger (class must be instantiated by Interceptor)
+2016-07-10 11:55:30 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 11:55:31 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
 2016-07-10 11:55:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
 2016-07-10 11:55:31 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
 2016-07-10 11:55:32 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:42:56 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:42:57 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:42:57 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:42:57 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:42:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:42:57 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:42:57 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:42:57 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:42:57 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:42:57 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:42:58 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:42:58 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:42:59 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:42:59 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 17:42:59 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 17:43:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 17:43:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 17:43:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 17:43:00 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 17:43:03 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance beforeQuery flushing : Passenger.homeAdress -> Address]
+2016-07-10 17:43:03 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:45:26 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:45:27 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:45:27 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:45:27 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:45:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:45:27 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:45:27 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:45:27 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:45:27 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:45:27 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:45:28 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:45:28 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:45:28 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:45:28 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:45:29 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.TransientPropertyValueException: object references an unsaved transient instance - save the transient instance beforeQuery flushing : Passenger.homeAdress -> Address]
+2016-07-10 17:45:29 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:48:33 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:48:33 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:48:33 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:48:33 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:48:33 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:48:34 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:48:34 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:48:34 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:48:34 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:48:34 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:48:34 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:48:35 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:48:35 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:48:35 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:48:36 WARN  SqlExceptionHelper:129 - SQL Error: 1364, SQLState: HY000
+2016-07-10 17:48:36 ERROR SqlExceptionHelper:131 - Field 'lat' doesn't have a default value
+2016-07-10 17:48:36 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-07-10 17:48:36 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2016-07-10 17:48:36 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:50:24 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:50:24 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:50:24 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:50:24 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:50:24 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:50:25 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:50:25 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:50:25 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:50:25 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:50:25 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:50:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:50:26 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:50:26 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:50:26 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:50:26 WARN  SqlExceptionHelper:129 - SQL Error: 1364, SQLState: HY000
+2016-07-10 17:50:26 ERROR SqlExceptionHelper:131 - Field 'lat' doesn't have a default value
+2016-07-10 17:50:26 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-07-10 17:50:26 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2016-07-10 17:50:26 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:52:07 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:52:07 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:52:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:52:07 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:52:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:52:08 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:52:08 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:52:08 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:52:08 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:52:08 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:52:08 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:52:09 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:52:09 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:52:09 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:52:10 WARN  SqlExceptionHelper:129 - SQL Error: 1364, SQLState: HY000
+2016-07-10 17:52:10 ERROR SqlExceptionHelper:131 - Field 'lat' doesn't have a default value
+2016-07-10 17:52:10 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-07-10 17:52:10 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.exception.GenericJDBCException: could not execute statement]
+2016-07-10 17:52:10 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:57:18 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:57:19 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:57:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:57:19 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:57:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:57:19 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:57:19 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:57:19 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:57:19 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:57:19 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:57:20 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:57:20 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:57:20 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:57:20 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 17:57:21 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 17:57:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 17:57:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 17:57:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 17:57:22 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 17:57:25 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:57:25 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:57:25 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:57:25 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:57:25 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:57:25 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:57:25 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:57:25 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:57:25 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:57:25 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:57:25 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Passenger (class must be instantiated by Interceptor)
+2016-07-10 17:57:26 INFO  QueryTranslatorFactoryInitiator:47 - HHH000397: Using ASTQueryTranslatorFactory
+2016-07-10 17:57:26 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:58:20 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 17:58:20 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 17:58:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 17:58:20 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 17:58:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 17:58:20 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 17:58:20 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 17:58:20 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 17:58:20 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 17:58:20 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 17:58:21 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 17:58:21 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 17:58:22 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 17:58:22 WARN  SqlExceptionHelper:129 - SQL Error: 1062, SQLState: 23000
+2016-07-10 17:58:22 ERROR SqlExceptionHelper:131 - Duplicate entry '(093)306-01-13' for key 'UK_e8pwwyd4x0tdcvbeust6x0pyg'
+2016-07-10 17:58:22 INFO  AbstractBatchImpl:193 - HHH000010: On release of batch it still contained JDBC statements
+2016-07-10 17:58:22 ERROR ExceptionMapperStandardImpl:39 - HHH000346: Error during managed flush [org.hibernate.exception.ConstraintViolationException: could not execute statement]
+2016-07-10 17:58:22 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:34:27 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 18:34:27 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 18:34:27 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 18:34:27 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 18:34:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 18:34:27 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 18:34:27 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:34:27 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 18:34:27 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 18:34:27 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 18:34:28 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 18:34:28 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 18:34:28 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Addresses
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Cars
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Drivers
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: hibernate_sequence
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 18:34:29 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Passengers
+2016-07-10 18:34:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 18:34:30 INFO  InformationExtractorJdbcDatabaseMetaDataImpl:393 - HHH000262: Table not found: Users
+2016-07-10 18:34:31 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:36:14 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 18:36:15 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 18:36:15 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 18:36:15 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 18:36:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 18:36:15 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 18:36:15 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:36:15 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 18:36:15 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 18:36:15 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 18:36:16 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 18:36:16 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 18:36:17 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 18:36:17 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:48:52 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1b4f649: startup date [Sun Jul 10 18:48:52 EEST 2016]; root of context hierarchy
+2016-07-10 18:48:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-10 18:48:52 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 18:48:53 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-10 18:48:53 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-10 18:48:53 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-10 18:48:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-10 18:48:53 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 18:48:53 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:48:53 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 18:48:53 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 18:48:53 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 18:48:54 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 18:48:54 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 18:48:54 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 18:48:55 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:48:55 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: taxiProjectJPA
+	...]
+2016-07-10 18:48:55 WARN  connections:71 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2016-07-10 18:48:55 INFO  connections:127 - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-10 18:48:55 INFO  connections:136 - HHH10001001: Connection properties: {user=Andrii, password=****}
+2016-07-10 18:48:55 INFO  connections:141 - HHH10001003: Autocommit mode: false
+2016-07-10 18:48:55 INFO  DriverManagerConnectionProviderImpl:39 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2016-07-10 18:48:55 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-10 18:48:55 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-10 18:48:55 INFO  PojoInstantiator:47 - HHH000182: No default (no-argument) constructor for class: Driver (class must be instantiated by Interceptor)
+2016-07-10 18:48:55 INFO  connections:235 - HHH10001008: Cleaning up connection pool [jdbc:mysql://localhost:3306/TaxiProject]
+2016-07-12 15:33:53 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 15:33:53 EEST 2016]; root of context hierarchy
+2016-07-12 15:33:53 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 15:33:54 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 15:33:54 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 15:33:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 15:33:54 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 15:33:54 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 15:33:54 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 15:33:54 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 15:33:54 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 15:33:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 15:33:55 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 15:33:55 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 15:35:09 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 15:35:09 EEST 2016]; root of context hierarchy
+2016-07-12 15:35:09 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 15:35:09 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 15:35:09 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 15:35:10 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 15:35:10 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 15:35:10 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 15:35:10 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 15:35:10 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 15:35:10 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 15:35:10 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 15:35:11 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 15:35:11 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 15:46:37 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 15:46:37 EEST 2016]; root of context hierarchy
+2016-07-12 15:46:37 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 15:46:37 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 15:46:37 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 15:46:37 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 15:46:38 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 15:46:38 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 15:46:38 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 15:46:38 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 15:46:38 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 15:46:38 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 15:46:39 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 15:46:39 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 16:57:11 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 16:57:11 EEST 2016]; root of context hierarchy
+2016-07-12 16:57:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [test-app-context.xml]
+2016-07-12 16:57:34 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 16:57:34 EEST 2016]; root of context hierarchy
+2016-07-12 16:57:34 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 16:57:35 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 16:57:35 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 16:57:35 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 16:57:36 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 16:57:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 16:57:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 16:57:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 16:57:36 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 16:57:36 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 16:57:37 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 16:57:37 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:05:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 17:05:44 EEST 2016]; root of context hierarchy
+2016-07-12 17:05:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:05:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:05:45 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:05:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:05:46 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:05:46 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:05:46 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:05:46 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:05:46 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:05:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:05:47 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:05:47 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:13:56 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 17:13:56 EEST 2016]; root of context hierarchy
+2016-07-12 17:13:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:13:57 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:13:57 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:13:57 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:13:57 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:13:57 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:13:58 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:13:58 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:13:58 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:13:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:13:59 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:13:59 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:25:39 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1f95c5d: startup date [Tue Jul 12 17:25:39 EEST 2016]; root of context hierarchy
+2016-07-12 17:25:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:25:40 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:25:40 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:25:40 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:25:40 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:25:40 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:25:41 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:25:41 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:25:41 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:25:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:25:41 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:25:42 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.base.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:34:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 17:34:44 EEST 2016]; root of context hierarchy
+2016-07-12 17:34:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:34:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:34:45 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:34:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:34:46 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:34:46 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:34:46 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:34:46 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:34:46 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:34:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:34:47 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:34:47 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.base.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:36:18 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 17:36:18 EEST 2016]; root of context hierarchy
+2016-07-12 17:36:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:36:18 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:36:18 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:36:19 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:36:19 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:36:19 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:36:19 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:36:19 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:36:19 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:36:19 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:36:20 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:36:20 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.base.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:43:50 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 17:43:50 EEST 2016]; root of context hierarchy
+2016-07-12 17:43:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:43:50 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:43:50 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:43:51 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:43:51 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:43:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:43:51 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:43:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:43:51 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:43:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:43:52 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:43:52 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.base.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:51:47 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 17:51:47 EEST 2016]; root of context hierarchy
+2016-07-12 17:51:47 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:51:48 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:51:48 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:51:48 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:51:49 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:51:49 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:51:49 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:51:49 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:51:49 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:51:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:51:50 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:51:50 WARN  AnnotationBinder:860 - HHH000457: Joined inheritance hierarchy [ua.taxi.base.model.user.User] defined explicit @DiscriminatorColumn.  Legacy Hibernate behavior was to ignore the @DiscriminatorColumn.  However, as part of issue HHH-6911 we now apply the explicit @DiscriminatorColumn.  If you would prefer the legacy behavior, enable the `hibernate.discriminator.ignore_explicit_for_joined` setting (hibernate.discriminator.ignore_explicit_for_joined=true)
+2016-07-12 17:58:46 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 17:58:46 EEST 2016]; root of context hierarchy
+2016-07-12 17:58:46 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:58:47 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:58:47 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:58:47 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:58:47 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:58:47 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:58:48 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:58:48 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:58:48 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:58:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:58:49 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 17:59:05 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@32be31: startup date [Tue Jul 12 17:59:05 EEST 2016]; root of context hierarchy
+2016-07-12 17:59:05 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 17:59:06 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 17:59:06 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 17:59:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 17:59:06 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 17:59:06 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 17:59:07 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 17:59:07 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 17:59:07 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 17:59:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 17:59:07 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 18:06:30 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 18:06:30 EEST 2016]; root of context hierarchy
+2016-07-12 18:06:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 18:06:31 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 18:06:31 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 18:06:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 18:06:31 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 18:06:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 18:06:32 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 18:06:32 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 18:06:32 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 18:06:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 18:06:32 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 18:07:14 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 18:07:14 EEST 2016]; root of context hierarchy
+2016-07-12 18:07:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 18:07:14 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 18:07:14 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 18:07:15 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 18:07:15 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 18:07:15 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 18:07:15 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 18:07:15 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 18:07:15 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 18:07:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 18:07:16 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 18:36:32 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 18:36:32 EEST 2016]; root of context hierarchy
+2016-07-12 18:36:33 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 18:36:35 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 18:36:35 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 18:36:35 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 18:36:36 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 18:36:36 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 18:36:36 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 18:36:36 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 18:36:36 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 18:36:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 18:36:39 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 18:53:26 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 18:53:26 EEST 2016]; root of context hierarchy
+2016-07-12 18:53:27 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 18:53:27 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 18:53:27 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 18:53:27 WARN  ClassPathXmlApplicationContext:546 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [app-context.xml]: Cannot resolve reference to bean 'dataSource' while setting bean property 'dataSource'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [app-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.IllegalStateException: Could not load JDBC driver class [com.mysql.cj.jdbc.Driver]
+2016-07-12 18:59:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 18:59:44 EEST 2016]; root of context hierarchy
+2016-07-12 18:59:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 18:59:44 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 18:59:44 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 18:59:44 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 18:59:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 18:59:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 18:59:45 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 18:59:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 18:59:45 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 18:59:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 18:59:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:00:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:00:44 EEST 2016]; root of context hierarchy
+2016-07-12 19:00:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:00:45 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:00:45 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:00:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:00:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:00:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:00:45 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:00:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:00:45 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:00:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:00:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:01:50 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:01:50 EEST 2016]; root of context hierarchy
+2016-07-12 19:01:50 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:01:51 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:01:51 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:01:51 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:01:51 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:01:51 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:01:51 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:01:51 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:01:51 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:01:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:01:52 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:03:19 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:03:19 EEST 2016]; root of context hierarchy
+2016-07-12 19:03:19 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:03:19 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:03:19 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:03:20 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:03:20 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:03:20 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:03:20 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:03:20 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:03:20 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:03:20 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:03:21 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:06:44 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:06:44 EEST 2016]; root of context hierarchy
+2016-07-12 19:06:44 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:06:44 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:06:44 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:06:45 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:06:45 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:06:45 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:06:45 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:06:45 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:06:45 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:06:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:06:46 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:17:51 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:17:51 EEST 2016]; root of context hierarchy
+2016-07-12 19:17:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:17:52 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:17:52 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:17:52 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:17:53 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:17:53 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:17:53 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:17:53 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:17:53 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:17:53 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:17:54 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:27:58 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:27:58 EEST 2016]; root of context hierarchy
+2016-07-12 19:27:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:27:59 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:27:59 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:27:59 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:27:59 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:27:59 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:28:00 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:28:00 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:28:00 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:28:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:28:00 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:29:54 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:29:54 EEST 2016]; root of context hierarchy
+2016-07-12 19:29:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:29:55 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:29:55 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:29:55 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:29:55 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:29:55 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:29:55 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:29:55 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:29:55 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:29:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:29:56 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:30:30 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:30:30 EEST 2016]; root of context hierarchy
+2016-07-12 19:30:30 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:30:31 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:30:31 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:30:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:30:31 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:30:31 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:30:32 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:30:32 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:30:32 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:30:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:30:32 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-12 19:30:56 INFO  ClassPathXmlApplicationContext:578 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@80a178: startup date [Tue Jul 12 19:30:56 EEST 2016]; root of context hierarchy
+2016-07-12 19:30:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [app-context.xml]
+2016-07-12 19:30:57 INFO  PropertyPlaceholderConfigurer:172 - Loading properties file from class path resource [app.properties]
+2016-07-12 19:30:57 INFO  AutowiredAnnotationBeanPostProcessor:153 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-07-12 19:30:57 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2016-07-12 19:30:58 INFO  LocalContainerEntityManagerFactoryBean:339 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-12 19:30:58 INFO  LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-12 19:30:58 INFO  Version:45 - HHH000412: Hibernate Core {5.2.1.Final}
+2016-07-12 19:30:58 INFO  Environment:213 - HHH000206: hibernate.properties not found
+2016-07-12 19:30:58 INFO  Environment:318 - HHH000021: Bytecode provider name : javassist
+2016-07-12 19:30:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2016-07-12 19:30:59 INFO  Dialect:153 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect

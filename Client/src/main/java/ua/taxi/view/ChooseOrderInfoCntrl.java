@@ -3,11 +3,11 @@ package ua.taxi.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import ua.taxi.StartApp;
-import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.order.Order;
-import ua.taxi.model.order.OrderStatus;
-import ua.taxi.utils.DateUtils;
-import ua.taxi.utils.Utils;
+import ua.taxi.base.exception.RemoteConnectionError;
+import ua.taxi.base.model.order.Order;
+import ua.taxi.base.model.order.OrderStatus;
+import ua.taxi.base.utils.DateUtils;
+import ua.taxi.base.utils.Utils;
 
 /**
  * Created by Andrii on 5/9/2016.

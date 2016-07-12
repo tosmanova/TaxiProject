@@ -5,12 +5,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import ua.taxi.StartApp;
 import ua.taxi.constants.WindowsSize;
-import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.order.Address;
-import ua.taxi.model.order.OrderStatus;
-import ua.taxi.model.geolocation.Location;
-import ua.taxi.model.geolocation.GoogleMapsAPI;
-import ua.taxi.model.geolocation.GoogleMapsAPIImpl;
+import ua.taxi.base.exception.RemoteConnectionError;
+import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.order.OrderStatus;
+import ua.taxi.base.model.geolocation.Location;
+import ua.taxi.base.model.geolocation.GoogleMapsAPI;
+import ua.taxi.base.model.geolocation.GoogleMapsAPIImpl;
 
 import java.util.Map;
 

@@ -1,44 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+<!-- bean definitions here -->
 
-    <!-- bean definitions here -->
+    <tx:annotation-driven/>
+    <context:annotation-config/>
+    <context:component-scan base-package="ua.taxi.server"/>
+    <!-- get properties from properties file-->
+    <context:property-placeholder location="app.properties"/>
 
-    <bean id="addressDao" class="ua.taxi.dao.jdbcsql.AddressDao"/>
-    <bean id="orderStatusDao" class="ua.taxi.dao.jdbcsql.OrderStatusDao"/>
-
-    <bean id="carDao" class="ua.taxi.dao.jdbcsql.CarDao"/>
-
-    <bean id="driverDao" class="ua.taxi.dao.jdbcsql.DriverDao">
-        <property name="carDao" ref="carDao"/>
-        <property name="userDao" ref="userDaoSqlImpl"/>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${db.driver}" />
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.user}" />
+        <property name="password" value="${db.pass}" />
     </bean>
 
-    <bean id="passengerDao" class="ua.taxi.dao.jdbcsql.PassengerDao">
-        <property name="addressDao" ref="addressDao"/>
-        <property name="userDao" ref="userDaoSqlImpl"/>
+    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="ua.taxi.server" />
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+        <property name="jpaProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+            </props>
+        </property>
     </bean>
 
-    <bean id="userDaoSqlImpl" class="ua.taxi.dao.jdbcsql.UserDaoSqlImpl">
-        <property name="addressDao" ref="addressDao"/>
-        <property name="carDao" ref="carDao"/>
-        <property name="passengerDao" ref="passengerDao"/>
-        <property name="driverDao" ref="driverDao"/>
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
     </bean>
 
-    <bean id="orderDaoSQLImpl" class="ua.taxi.dao.jdbcsql.OrderDaoSQLImpl">
-        <property name="addressDao" ref="addressDao"/>
-        <property name="orderStatusDao" ref="orderStatusDao"/>
-    </bean>
 
-    <bean id="orderServiceImpl" class="ua.taxi.service.OrderServiceImpl">
-        <property name="orderDao" ref="orderDaoSQLImpl"/>
-    </bean>
-
-    <bean id="userServiceImpl" class="ua.taxi.service.UserServiceImpl">
-        <property name="userDao" ref="userDaoSqlImpl"/>
-    </bean>
 
 </beans>

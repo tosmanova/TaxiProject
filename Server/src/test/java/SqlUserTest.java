@@ -1,19 +1,20 @@
 import org.junit.*;
 import org.junit.runners.MethodSorters;
-import ua.taxi.constants.Constants;
-import ua.taxi.dao.jdbcsql.UserDaoSqlImpl;
-import ua.taxi.model.order.Address;
-import ua.taxi.model.user.Car;
-import ua.taxi.model.user.Driver;
-import ua.taxi.model.user.Passenger;
-import ua.taxi.model.user.User;
-import ua.taxi.utils.ConnectionFactory;
+import ua.taxi.server.constants.Constants;
+import ua.taxi.server.dao.UserDao;
+import ua.taxi.base.exception.NoUserWithPhoneException;
+import ua.taxi.base.exception.TaxiAppException;
+import ua.taxi.base.exception.UserPresentException;
+import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.user.Car;
+import ua.taxi.base.model.user.Driver;
+import ua.taxi.base.model.user.Passenger;
+import ua.taxi.base.model.user.User;
+import ua.taxi.server.utils.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by andrii on 29.06.16.
@@ -21,76 +22,50 @@ import java.util.List;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SqlUserTest extends Assert {
 
-    private UserDaoSqlImpl userDao;
+    private UserDao userDao;
 
     @BeforeClass
     public static void initTestSQL() {
-        TestUtils.sriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
+        TestUtils.scriptRun(Constants.SQL_CREATE_TEST_SCRIPT);
     }
+
     @Before
-    public  void initUserDao() {
+    public void initUserDao() {
         userDao = TestUtils.getUserDao();
     }
 
-    @Test
-    public void _01_createPassenger() throws SQLException {
 
+    @Test
+    public void _01_createPassenger() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
-        List<User> list = new ArrayList<>(userDao.createUser(pass));
-        User user = list.get(0);
+        User user = userDao.createUser(pass);
         assertTrue(user instanceof Passenger);
-        assertTrue(((Passenger) user).equals(pass));
-
+        assertEquals(user, pass);
     }
 
-    @Test
-    public void _02_createDriver() throws SQLException {
-
+    @Test(expected = UserPresentException.class)
+    public void _02_createUserNegative() throws TaxiAppException {
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
-        List<User> list = new ArrayList<>(userDao.createUser(driver));
-        User user = list.get(0);
-        assertTrue(user instanceof Driver);
-        assertTrue(user.equals(driver));
+        userDao.createUser(driver);
+        userDao.createUser(driver);
     }
 
-    @Test
-    public void _03_createPassengerNegative() throws SQLException {
-
-        Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
-        Passenger pass2 = new Passenger("(063)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
-        Passenger pass3 = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "29"));
-        List<User> list = new ArrayList<>(userDao.createUser(pass));
-        User user = list.get(0);
-        assertFalse(user.equals(pass2));
-        assertFalse(user.equals(pass2));
-    }
 
     @Test
-    public void _04_createDriverNegative() throws SQLException {
-
-        Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
-        Driver driver2 = new Driver("(093)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
-        Driver driver3 = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("BB2222", "Vaz", "Baklazhan"));
-        List<User> list = new ArrayList<>(userDao.createUser(driver));
-        User user = list.get(0);
-        assertFalse(user.equals(driver2));
-        assertFalse(user.equals(driver3));
-    }
-
-    @Test
-    public void _05_getUser() throws SQLException {
+    public void _05_getUser() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
         userDao.createUser(pass);
         userDao.createUser(driver);
         User user1 = userDao.getUser(pass.getPhone());
         User user2 = userDao.getUser(driver.getPhone());
-        assertTrue(user1.equals(pass));
-        assertTrue(user2.equals(driver));
+        assertEquals(user1 , pass);
+        assertEquals(user2 , driver);
     }
 
-    @Test(expected = SQLException.class)
-    public void _06_getUserNegative() throws SQLException {
+
+    @Test(expected = NoUserWithPhoneException.class)
+    public void _06_getUserNegative() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
         userDao.createUser(pass);
@@ -100,7 +75,7 @@ public class SqlUserTest extends Assert {
 
 
     @Test
-    public void _07_deleteUser() throws SQLException {
+    public void _07_deleteUser() throws TaxiAppException {
 
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
@@ -111,31 +86,35 @@ public class SqlUserTest extends Assert {
         assertTrue(userDao.delete("(063)306-01-13").equals(driver));
     }
 
-    @Test(expected = SQLException.class)
-    public void _08_deletePassenger() throws SQLException {
+
+    @Test(expected = TaxiAppException.class)
+    public void _08_deletePassenger() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         userDao.createUser(pass);
         userDao.delete("(093)306-01-13)");
         userDao.getUser("(093)306-01-13)");
     }
 
-    @Test(expected = SQLException.class)
-    public void _09_deleteDriver() throws SQLException {
+
+    @Test(expected = TaxiAppException.class)
+    public void _09_deleteDriver() throws TaxiAppException {
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
         userDao.createUser(driver);
         userDao.delete("(063)306-01-13");
         userDao.getUser("(063)306-01-13");
     }
 
-    @Test(expected = SQLException.class)
-    public void _10_deleteUserNegative() throws SQLException {
+
+    @Test(expected = TaxiAppException.class)
+    public void _10_deleteUserNegative() throws TaxiAppException {
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222", "Vaz", "Baklazhan"));
         userDao.createUser(driver);
         userDao.delete("(666)306-01-13");
     }
 
+    @Ignore
     @Test
-    public void  _11_updateUser() throws SQLException{
+    public void _11_updateUser() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Passenger pass1 = new Passenger("(093)306-01-13", "0553060113", "LLdrii", new Address("Entuziastiv", "35"));
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222KK", "Vaz", "Baklazhan"));
@@ -151,8 +130,9 @@ public class SqlUserTest extends Assert {
         assertFalse(userDao.getUser("(063)306-01-13").equals(driver));
     }
 
+    @Ignore
     @Test(expected = SQLException.class)
-    public void  _12_updateUserNegative() throws SQLException{
+    public void _12_updateUserNegative() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Driver driver = new Driver("(093)306-01-13", "0633060113", "Vasia", new Car("AA2222KK", "Vaz", "Baklazhan"));
 
@@ -160,8 +140,9 @@ public class SqlUserTest extends Assert {
         userDao.update(driver);
     }
 
+    @Ignore
     @Test
-    public void  _13_Count() throws SQLException{
+    public void _13_Count() throws TaxiAppException {
         Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
         Passenger pass1 = new Passenger("(055)306-01-13", "0553060113", "LLdrii", new Address("Entuziastiv", "35"));
         Driver driver = new Driver("(063)306-01-13", "0633060113", "Vasia", new Car("AA2222KK", "Vaz", "Baklazhan"));
@@ -173,16 +154,16 @@ public class SqlUserTest extends Assert {
         userDao.createUser(pass1);
         userDao.createUser(driver1);
         userDao.createUser(driver2);
-        int countP = userDao.passangerRegisteredQuantity();
+        int countP = userDao.passengerRegisteredQuantity();
         int countD = userDao.driverRegisteredQuantity();
-        assertEquals(countP,2);
-        assertEquals(countD,3);
+        assertEquals(countP, 2);
+        assertEquals(countD, 3);
     }
 
     @After
-    public void clearBase(){
+    public void clearBase() {
 
-        try (Connection connection = ConnectionFactory.createConnection();
+       try (Connection connection = ConnectionFactory.createConnection();
              Statement statement = connection.createStatement()) {
 
             statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 0");
@@ -194,14 +175,14 @@ public class SqlUserTest extends Assert {
             statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 1");
 
         } catch (SQLException e) {
-          e.printStackTrace();
+            e.printStackTrace();
         }
     }
 
     @AfterClass
     public static void removeTestSQL() {
 
-        TestUtils.sriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
+        TestUtils.scriptRun(Constants.SQL_REMOVE_TEST_SCRIPT);
     }
 
 }

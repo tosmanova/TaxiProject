@@ -6,12 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import ua.taxi.StartApp;
-import ua.taxi.exception.RemoteConnectionError;
-import ua.taxi.model.order.Address;
-import ua.taxi.model.order.Order;
-import ua.taxi.model.order.OrderValidateMessage;
-import ua.taxi.model.user.Passenger;
-import ua.taxi.utils.Utils;
+import ua.taxi.base.exception.RemoteConnectionError;
+import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.order.Order;
+import ua.taxi.base.model.order.OrderValidateMessage;
+import ua.taxi.base.model.user.Passenger;
+import ua.taxi.base.utils.Utils;
 
 /**
  * Created by Andrii on 4/28/2016.

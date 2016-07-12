@@ -21,7 +21,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>ua.taxi.remote.Server</mainClass>
+                  <mainClass>ua.taxi.server.remote.Server</mainClass>
                 </transformer>
               </transformers>
             </configuration>
