@@ -1,16 +1,10 @@
 package ua.taxi.server.dao.jpa;
 
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import ua.taxi.server.dao.UserDao;
-import ua.taxi.base.exception.NoUserWithPhoneException;
-import ua.taxi.base.exception.TaxiAppException;
-import ua.taxi.base.model.order.Address;
+import ua.taxi.base.model.user.Driver;
 import ua.taxi.base.model.user.Passenger;
+import ua.taxi.server.dao.UserDao;
 import ua.taxi.base.model.user.User;
 
 import javax.persistence.*;
@@ -23,45 +17,66 @@ import java.util.List;
 @Component
 public class UserDaoJPAImpl implements UserDao {
 
-    private static final Logger LOGGER = Logger.getLogger(UserDaoJPAImpl.class);
-
     @PersistenceContext
     private EntityManager manager;
 
+    @Override
     @Transactional
-    @Override
     public User createUser(User user) {
-
-        //EntityManager manager = entityManagerFactory.createEntityManager();
-        //manager.getTransaction().begin();
         manager.persist(user);
-        //manager.getTransaction().commit();
         return user;
-
-    }
-
-    public static void main(String[] args) throws TaxiAppException {
-        ApplicationContext context = new ClassPathXmlApplicationContext("/app-context.xml");
-        TempClass tempClass = context.getBean(TempClass.class);
-        System.out.println(tempClass.tset1());
-
-        UserDao userDao = context.getBean(UserDaoJPAImpl.class);
-       /* Passenger pass = new Passenger("(093)306-01-13", "0933060113", "Andrii", new Address("Entuziastiv", "27"));
-        User user = userDao.createUser(pass);*/
-
     }
 
     @Override
-
     public User getUser(String phone) {
-        //  EntityManager manager = entityManagerFactory.createEntityManager();
-        User user = manager.createQuery(
-                "SELECT u from User u where u.phone = :tPhone",
-                User.class
-        ).setParameter("tPhone", phone).getSingleResult();
+        return manager.createNamedQuery("findUserByPhone", User.class)
+                .setParameter(1, phone).getSingleResult();
+    }
 
-        manager.getTransaction().commit();
+
+    @Override
+    @Transactional
+    public User delete(String phone) {
+
+        User user = manager.createNamedQuery("findUserByPhone", User.class)
+                .setParameter(1, phone).getSingleResult();
+        manager.remove(user);
+        manager.flush();
         return user;
+    }
+
+    @Override
+    @Transactional
+    public User update(User newUser) {
+
+        User user = manager.createNamedQuery("findUserByPhone", User.class)
+                .setParameter(1, newUser.getPhone()).getSingleResult();
+
+        if(newUser instanceof Driver){
+            ((Driver) user).setCar(((Driver) newUser).getCar());
+        }else if (newUser instanceof Passenger){
+            ((Passenger) user).setHomeAdress(((Passenger) newUser).getHomeAdress());
+        }else {
+            throw new PersistenceException("Unidentified newUser");
+        }
+        user.setPass(newUser.getPass());
+        user.setName(newUser.getName());
+        manager.flush();
+        return user;
+    }
+
+    @Override
+    @Transactional
+    public int driverRegisteredQuantity() {
+        return ((Long) manager.createQuery("select count(d.id) from Driver d ")
+                .getSingleResult()).intValue();
+    }
+
+    @Override
+    @Transactional
+    public int passengerRegisteredQuantity() {
+        return ((Long) manager.createQuery("select count(p.id) from Passenger p ")
+                .getSingleResult()).intValue();
     }
 
     @Override
@@ -69,39 +84,4 @@ public class UserDaoJPAImpl implements UserDao {
         return null;
     }
 
-    @Override
-
-    public User delete(String phone) throws NoUserWithPhoneException {
-        // EntityManager manager = entityManagerFactory.createEntityManager();
-        User user = manager.createQuery(
-                "SELECT u from User u where u.phone = :tPhone",
-                User.class
-        ).setParameter("tPhone", phone).getSingleResult();
-        manager.remove(user);
-
-        return user;
-    }
-
-    @Override
-    public User update(User newUser) {
-        return null;
-    }
-
-    @Override
-    public int driverRegisteredQuantity() {
-        return 0;
-    }
-
-    @Override
-    public int passengerRegisteredQuantity() {
-        return 0;
-    }
-
-  /*  public EntityManager getManager() {
-        return manager;
-    }
-
-    public void setManager(EntityManager manager) {
-        this.manager = manager;
-    }*/
 }

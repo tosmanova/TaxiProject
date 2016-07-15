@@ -4,12 +4,13 @@ import ua.taxi.base.model.order.Order;
 import ua.taxi.base.model.order.OrderStatus;
 
 import java.util.Collection;
+import java.util.List;
 
 
 public interface OrderDao {
 
     // add order return order iD
-    Collection<Order> createOrder(Order order);
+    Order createOrder(Order order);
 
     Order getOrder(String phone);
 
@@ -19,8 +20,18 @@ public interface OrderDao {
     //return deleted order
     Order deleteOrder(String phone);
 
-    // return order with old Status
-    Order changeStatus(String phone, OrderStatus newStatus);
+    List<Order> getOrderList(long firstId, int offset);
 
-    Collection<Order> getOrderList();
+    List<Order> getOrderWithStatus(OrderStatus orderStatus, long firstId, int offset);
+
+    int getOrdersRegisteredQuantity();
+
+    int getOrdersNewCount();
+
+    int getOrdersDoneCount();
+
+    int getOrdersInProgressCount();
+
+
+
 }

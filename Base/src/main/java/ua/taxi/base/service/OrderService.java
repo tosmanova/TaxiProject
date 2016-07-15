@@ -24,11 +24,11 @@ public interface OrderService {
 
     OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone);
 
-    List<Order> getAllOrders() throws RemoteConnectionError;
+    List<Order> getAllOrders(long firstId, int offset);
 
-    List<Order> getNewOrders() throws RemoteConnectionError;
+    List<Order> getOrdersWithStatus(OrderStatus orderStatus, long firstId, int offset);
 
-    Map<OrderStatus, Integer> getStatusCounterMap() throws RemoteConnectionError;
+    Map<OrderStatus, Integer> getStatusCounterMap();
 
     OrderValidateMessage changeOrder(String phone, String name, Address from, Address to);
 
@@ -36,10 +36,10 @@ public interface OrderService {
 
     OrderValidateMessage cancelOrder(String phone);
 
-    Double getDistance(Address from, Address to) throws RemoteConnectionError;
+    Double getDistance(Address from, Address to);
 
-    Double getPrice(Double distance) throws RemoteConnectionError;
+    Double getPrice(Double distance);
 
-    Double getPrice(Address from, Address to) throws RemoteConnectionError;
+    Double getPrice(Address from, Address to);
 
 }

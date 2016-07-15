@@ -10,16 +10,19 @@ import ua.taxi.base.exception.TaxiAppException;
 import ua.taxi.base.model.order.Address;
 import ua.taxi.server.dao.UserDao;
 
+import javax.persistence.PersistenceException;
+
 /**
  * Created by serhii on 23.04.16.
  */
 
+@Service
 public class UserServiceImpl implements UserService {
 
-
+    @Autowired
     private UserDao userDao;
 
-    public static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
+    private static final Logger LOGGER = Logger.getLogger(UserServiceImpl.class);
 
     public UserServiceImpl() {
     }
@@ -32,7 +35,7 @@ public class UserServiceImpl implements UserService {
             userDao.createUser(passanger);
             LOGGER.trace("register: " + passanger);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new Passenger\n" + passanger, passanger);
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
             LOGGER.warn(("register: user with this phone is already registered"));
             return new UserValidateMessage(false, "Create UserValidateMessage", "user with this phone\n" +
                     " is already registered", null);
@@ -49,7 +52,7 @@ public class UserServiceImpl implements UserService {
 
             LOGGER.trace("register: " + driver);
             return new UserValidateMessage(true, "Create UserValidateMessage", "Create new driver\n" + driver, driver);
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
             LOGGER.warn(("register: user with this phone is already registered"));
             return new UserValidateMessage(false, "Create UserValidateMessage", "user with this phone\n" +
                     " is already registered ", null);
@@ -81,7 +84,7 @@ public class UserServiceImpl implements UserService {
                 LOGGER.trace("login: " + user);
                 return new UserValidateMessage(true, "login UserValidateMessage", "Pass is Ok", user);
             }
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
         }
         LOGGER.warn(("login Warning. Input is incorrect"));
         return new UserValidateMessage(false, "login Warning", "Input is incorrect", null);
@@ -96,7 +99,7 @@ public class UserServiceImpl implements UserService {
             User oldPassanger = userDao.update(passanger);
             LOGGER.trace("changePassanger: new" + passanger + "; old: " + oldPassanger);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + oldPassanger, passanger);
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
             LOGGER.warn(("Change passenger Warning, user with this phone not present"));
             return new UserValidateMessage(false, "Change passenger error", "user with this phone\n" +
                     " is not present", null);
@@ -111,7 +114,7 @@ public class UserServiceImpl implements UserService {
             User oldDriver = userDao.update(driver);
             LOGGER.trace("changeDriver: new" + driver + "; old: " + oldDriver);
             return new UserValidateMessage(true, "Change driver", "Old user:\n" + oldDriver, driver);
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
 
             LOGGER.warn(("Change driver Warning, user with this phone not present"));
             return new UserValidateMessage(false, "Change driver error", "user with this phone\n" +
@@ -126,7 +129,7 @@ public class UserServiceImpl implements UserService {
             User user = userDao.getUser(phone);
             LOGGER.trace("getUser: " + user);
             return new UserValidateMessage(true, "Change passenger", "Old user:\n" + user, user);
-        } catch (TaxiAppException e) {
+        } catch (PersistenceException e) {
             LOGGER.warn(("getUser Warning, user with this phone not present"));
             return new UserValidateMessage(false, "Change passenger error", "user with this phone\n" +
                     " is not present", null);

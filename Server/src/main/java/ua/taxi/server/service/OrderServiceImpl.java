@@ -15,18 +15,20 @@ import ua.taxi.base.model.order.Order;
 import ua.taxi.base.model.order.OrderStatus;
 import ua.taxi.base.model.order.OrderValidateMessage;
 
+import javax.persistence.PersistenceException;
 import java.util.*;
 
 /**
  * Created by Andrii on 4/29/2016.
  */
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
-
+    @Autowired
     private OrderDao orderDao;
 
-    private GoogleMapsAPI googleMapsAPI= new GoogleMapsAPIImpl();
+    private GoogleMapsAPI googleMapsAPI = new GoogleMapsAPIImpl();
     private static final Logger LOGGER = Logger.getLogger(OrderServiceImpl.class);
 
     public OrderServiceImpl() {
@@ -40,149 +42,144 @@ public class OrderServiceImpl implements OrderService {
     public OrderValidateMessage createOrder(String phone, String name, Address from, Address to) {
         double price = getPrice(from, to);
         double distance = getDistance(from, to);
-        if (orderDao.getOrder(phone) == null) {
-            Order newOrder = new Order(from, to, phone, name, price, distance);
-            orderDao.createOrder(newOrder);
-            LOGGER.trace("createOrder: " + newOrder);
-            return new OrderValidateMessage(newOrder, "order Creation", newOrder.toString(), true);
-        } else if (orderDao.getOrder(phone).getOrderStatus() == OrderStatus.DONE) {
-            orderDao.deleteOrder(phone);
-            Order newOrder = new Order(from, to, phone, name, price, distance);
-            orderDao.createOrder(newOrder);
-            LOGGER.trace("createOrder: " + newOrder);
-            return new OrderValidateMessage(newOrder, "order Creation", newOrder.toString(), true);
+
+        try {
+            Order order = orderDao.getOrder(phone);
+            if (order.getOrderStatus() == OrderStatus.DONE) {
+                orderDao.deleteOrder(phone);
+            } else {
+                LOGGER.warn("order Creation: You already have active orders");
+                return new OrderValidateMessage(null, "order Creation", "You already have active orders", false);
+            }
+        } catch (PersistenceException e) {
         }
-        LOGGER.warn("order Creation: You already have active orders");
-        return new OrderValidateMessage(null, "order Creation", "You already have active orders", false);
+        Order newOrder = new Order(from, to, phone, name, price, distance);
+        orderDao.createOrder(newOrder);
+        LOGGER.trace("createOrder: " + newOrder);
+        return new OrderValidateMessage(newOrder, "order Creation", newOrder.toString(), true);
     }
+
 
     @Override
     public OrderValidateMessage getOrder(String phone) {
 
-        Order order = orderDao.getOrder(phone);
-        if (order != null) {
+        try {
+            Order order = orderDao.getOrder(phone);
             LOGGER.trace("getOrder" + order);
             return new OrderValidateMessage(order, "Get order", order.toString(), true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("Get order. You don`t have any orders");
+            return new OrderValidateMessage(null, "Get order", "You don`t have any orders", false);
         }
-        LOGGER.warn("Get order. You don`t have any orders");
-        return new OrderValidateMessage(null, "Get order", "You don`t have any orders", false);
+
     }
 
     @Override
     public OrderValidateMessage changeOrder(String phone, String name, Address from, Address to) {
         double price = getPrice(from, to);
         double distance = getDistance(from, to);
-        if (orderDao.getOrder(phone) != null) {
+        try {
             Order newOrder = new Order(from, to, phone, name, price, distance);
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
-            LOGGER.trace("Change Order4 new: " + newOrder + ";  old:" + oldOrder);
+            LOGGER.trace("Change Order new: " + newOrder + ";  old:" + oldOrder);
             return new OrderValidateMessage(newOrder, "Change order", oldOrder.toString(), true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("Change Order error, You don`t have order with this phone \n" + e);
+            return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
         }
-        LOGGER.warn("Change Order4 error, You don`t have order with this phone");
-        return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
     }
 
     @Override
     public OrderValidateMessage changeOrder(String phone, Order newOrder) {
 
-        if (orderDao.getOrder(phone) != null) {
+        try {
             Order oldOrder = orderDao.updateOrder(phone, newOrder);
             LOGGER.trace("Change Order2 new: " + newOrder + "; old" + oldOrder);
             return new OrderValidateMessage(newOrder, "Change order", oldOrder.toString(), true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("Change Order2 error, You don`t have order with this phone");
+            return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
         }
-        LOGGER.warn("Change Order2 error, You don`t have order with this phone");
-        return new OrderValidateMessage(null, "Change order error", "You don`t have order with this phone", false);
     }
 
     @Override
     public OrderValidateMessage cancelOrder(String phone) {
-        if (orderDao.getOrder(phone) != null) {
+        try {
             Order oldOrder = orderDao.deleteOrder(phone);
             LOGGER.trace("Cancel order:" + oldOrder);
             return new OrderValidateMessage(oldOrder, "Cancel order", oldOrder.toString(), true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("Cancel order You don`t have any orders");
+            return new OrderValidateMessage(null, "Cancel order", "You don`t have any orders", false);
         }
-        LOGGER.warn("Cancel order You don`t have any orders");
-        return new OrderValidateMessage(null, "Cancel order", "You don`t have any orders", false);
-
     }
 
     @Override
     public int ordersRegisteredQuantity() {
-        Collection<Order> orders = orderDao.getOrderList();
-        LOGGER.trace("ordersRegisteredQuantity: " + orders.size());
-        return orders.size();
+        int regOrders = orderDao.getOrdersRegisteredQuantity();
+        LOGGER.trace("getOrdersRegisteredQuantity: " + regOrders);
+        return regOrders;
     }
 
     @Override
     public OrderValidateMessage changeOrderStatus(String phone, OrderStatus newStatus) {
-        if (orderDao.getOrder(phone) != null) {
-            Order oldOrder = orderDao.changeStatus(phone, newStatus);
+
+        try {
+            Order order = orderDao.getOrder(phone);
+            order.setOrderStatus(newStatus);
+            Order oldOrder = orderDao.updateOrder(phone, order);
             LOGGER.trace("changeOrderStatus new: " + newStatus + " Old order: " + oldOrder);
             return new OrderValidateMessage(oldOrder, "Change order Status", oldOrder.toString(), true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("Change order Status, You don`t have any orders");
+            return new OrderValidateMessage(null, "Change order Status", "You don`t have any orders", false);
         }
-        LOGGER.warn("Change order Status, You don`t have any orders");
-        return new OrderValidateMessage(null, "Change order Status", "You don`t have any orders", false);
     }
 
     @Override
-    public List<Order> getAllOrders() {
+    public List<Order> getAllOrders(long firstId, int offset) {
 
-        LOGGER.trace("getAllOrders size:" + orderDao.getOrderList().size());
-        return new ArrayList<>(orderDao.getOrderList());
+        List<Order> orderList = orderDao.getOrderList(firstId, offset);
+        LOGGER.trace("getAllOrders size:" + orderList.size());
+        return orderList;
     }
 
     @Override
-    public List<Order> getNewOrders() {
-        Collection<Order> allOrders = orderDao.getOrderList();
-        List<Order> newOrders = new ArrayList<>();
+    public List<Order> getOrdersWithStatus(OrderStatus orderStatus, long firstId, int offset) {
 
-        for (Order order : allOrders) {
-            if (order.getOrderStatus() == OrderStatus.NEW) {
-                newOrders.add(order);
-            }
-        }
-        LOGGER.trace("getNewOrders size:" + newOrders.size());
-        return new ArrayList<>(newOrders);
+        List<Order> orderList = orderDao.getOrderWithStatus(orderStatus, firstId, offset);
+        LOGGER.trace("getOrders with status" + orderStatus + " size:" + orderList.size());
+        return orderList;
     }
 
     @Override
     public OrderValidateMessage getOrderInProgresByDriverPhone(String driverPhone) {
-        System.out.println(driverPhone);
-        System.out.println(orderDao.getOrderList().size());
-        for (Order order : orderDao.getOrderList()) {
-            if (order.getDriverPhone().equals(driverPhone)) {
-                if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
-                    LOGGER.trace("getOrderInProgresByDriverPhone: " + order);
-                    return new OrderValidateMessage(order, "Active driver order", "Active driver order", true);
-                }
+        try {
+            Order order = orderDao.getOrder(driverPhone);
+            if (order.getOrderStatus() != OrderStatus.IN_PROGRESS) {
+                throw new PersistenceException();
             }
+            return new OrderValidateMessage(order, "Active driver order", "IN_PROGRESS driver order", true);
+        } catch (PersistenceException e) {
+            LOGGER.warn("IN_PROGRESS driver order not found for phone: " + driverPhone);
+            return new OrderValidateMessage(null, "Active driver order", "IN_PROGRESS driver order not found", false);
         }
-        LOGGER.warn("IN_PROGRESS driver order not found");
-        return new OrderValidateMessage(null, "Active driver order", "IN_PROGRESS driver order not found", false);
     }
 
     @Override
     public Map<OrderStatus, Integer> getStatusCounterMap() {
 
-        Collection<Order> orders = orderDao.getOrderList();
+
         Map<OrderStatus, Integer> counterMap = new HashMap<>();
-        int newOrder = 0;
-        int inProgress = 0;
-        int done = 0;
 
-        for (Order order : orders) {
+        int newOrder = orderDao.getOrdersNewCount();
+        int done = orderDao.getOrdersDoneCount();
+        int inProgress = orderDao.getOrdersInProgressCount();
 
-            if (order.getOrderStatus() == OrderStatus.NEW) {
-                newOrder++;
-            } else if (order.getOrderStatus() == OrderStatus.IN_PROGRESS) {
-                inProgress++;
-            } else if (order.getOrderStatus() == OrderStatus.DONE) {
-                done++;
-            }
-        }
         counterMap.put(OrderStatus.NEW, newOrder);
         counterMap.put(OrderStatus.DONE, done);
         counterMap.put(OrderStatus.IN_PROGRESS, inProgress);
+
         LOGGER.trace("getStatusCounterMap: " + " newOrder:" + newOrder + "; done: " + done + "; inProgress: " + inProgress);
         return counterMap;
     }
@@ -209,13 +206,5 @@ public class OrderServiceImpl implements OrderService {
         double price = getPrice(getDistance(from, to));
         LOGGER.trace(String.format("getDistance: from %s  to %s = %f", from, to, price));
         return price;
-    }
-
-    public OrderDao getOrderDao() {
-        return orderDao;
-    }
-
-    public void setOrderDao(OrderDao orderDao) {
-        this.orderDao = orderDao;
     }
 }

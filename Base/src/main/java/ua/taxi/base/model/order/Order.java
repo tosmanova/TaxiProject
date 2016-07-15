@@ -1,5 +1,6 @@
 package ua.taxi.base.model.order;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -8,22 +9,47 @@ import java.time.temporal.ChronoUnit;
  * Created by serhii on 23.04.16.
  */
 
-
+@Entity
+@Table(name = "Orders")
+@NamedQuery(name="findOrderByPhone", query = "SELECT u from Order u where u.userPhone = ?1")
 public class Order implements Serializable {
 
-    //private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST})
+    @JoinColumn(name = "address_to_id")
     private Address from;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST})
+    @JoinColumn(name = "address_from_id")
     private Address to;
+
+    @Column(nullable = false, length = 14, unique = true)
     private String userPhone;
+
+    @Column(nullable = false, length = 30)
     private String userName;
+
+    @Column(length = 14)
     private String driverPhone;
+
+    @Column(nullable = false)
     private Double price;
+
+    @Column(nullable = false)
     private Double distance;
+
+    @Column
     private LocalDateTime createTime;
+
+
+    @Enumerated(EnumType.STRING)
     private OrderStatus orderStatus;
 
-   public Order() {}
+    public Order() {
+    }
 
     public Order(Address from, Address to, String userPhone, String userName, Double price, Double distance) {
 
@@ -128,37 +154,19 @@ public class Order implements Serializable {
     }
 
 
-
     @Override
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (!(object instanceof Order)) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
-        Order order = (Order) object;
+        Order order = (Order) o;
 
-        if (from != null ? !from.equals(order.from) : order.from != null) return false;
-        if (to != null ? !to.equals(order.to) : order.to != null) return false;
-        if (userPhone != null ? !userPhone.equals(order.userPhone) : order.userPhone != null) return false;
-        if (userName != null ? !userName.equals(order.userName) : order.userName != null) return false;
-        if (driverPhone != null ? !driverPhone.equals(order.driverPhone) : order.driverPhone != null) return false;
-        if (price != null ? !price.equals(order.price) : order.price != null) return false;
-        if (distance != null ? !distance.equals(order.distance) : order.distance != null) return false;
-        if (createTime != null ? !createTime.equals(order.createTime) : order.createTime != null) return false;
-        return orderStatus == order.orderStatus;
+        return id == order.id;
 
     }
 
     @Override
     public int hashCode() {
-        int result = from != null ? from.hashCode() : 0;
-        result = 31 * result + (to != null ? to.hashCode() : 0);
-        result = 31 * result + (userPhone != null ? userPhone.hashCode() : 0);
-        result = 31 * result + (userName != null ? userName.hashCode() : 0);
-        result = 31 * result + (driverPhone != null ? driverPhone.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
-        result = 31 * result + (distance != null ? distance.hashCode() : 0);
-        result = 31 * result + (createTime != null ? createTime.hashCode() : 0);
-        result = 31 * result + (orderStatus != null ? orderStatus.hashCode() : 0);
-        return result;
+        return (int) (id ^ (id >>> 32));
     }
 }

@@ -28,7 +28,12 @@ public class Passenger extends User implements Serializable {
     }
 
     public Address getHomeAdress() {
+
         return homeAdress;
+    }
+
+    public void setHomeAdress(Address homeAdress) {
+        this.homeAdress = homeAdress;
     }
 
     @Override

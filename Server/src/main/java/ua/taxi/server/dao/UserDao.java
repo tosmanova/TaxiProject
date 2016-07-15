@@ -6,32 +6,31 @@ import ua.taxi.base.exception.TaxiAppException;
 import ua.taxi.base.exception.UserPresentException;
 import ua.taxi.base.model.user.User;
 
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 public interface UserDao {
     /**
-    * @param user element is added to database
-    * @return copy of user
-    * @throws UserPresentException if user is present in database
-    */
+     * @param user element is added to database
+     * @return copy of user
+     * @throws PersistenceException if user is present in database
+     */
 
-    User createUser(User user)  throws TaxiAppException;
+    User createUser(User user);
 
     /**
      * @param phone - unique User phone
      * @return User with phone
-     * @throws NoUserWithPhoneException if user with this phone don`t present in database
+     * @throws PersistenceException if user with this phone don`t present in database
      */
 
-    User getUser(String phone) throws TaxiAppException;
+    User getUser(String phone);
 
-    List<String> setToBlackList(String phone) throws TaxiAppException;
+    List<String> setToBlackList(String phone);
 
-    User delete(String phone) throws TaxiAppException;
+    User delete(String phone);
 
-    //return OldUser
-
-    User update(User newUser) throws TaxiAppException;
+    User update(User newUser);
 
     int driverRegisteredQuantity();
 

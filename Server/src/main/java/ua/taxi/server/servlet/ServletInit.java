@@ -13,13 +13,13 @@ import java.io.IOException;
 /**
  * Created by andrii on 07.07.16.
  */
-public class Servlet extends HttpServlet {
+public class ServletInit extends HttpServlet {
 
 
     private ApplicationContext applicationContext;
     protected UserServiceImpl userService;
 
-    private static Logger LOG = Logger.getLogger(DriverRegServlet.class);
+    private static Logger LOG = Logger.getLogger(DriverRegServletInit.class);
 
     @Override
     public void init() throws ServletException {

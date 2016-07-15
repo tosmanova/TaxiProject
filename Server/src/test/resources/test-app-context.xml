@@ -12,7 +12,7 @@
 
     <tx:annotation-driven/>
     <context:annotation-config/>
-    <context:component-scan base-package="ua.taxi"/>
+    <context:component-scan base-package="ua.taxi.server"/>
     <!-- get properties from properties file-->
     <context:property-placeholder location="test-app.properties"/>
 
@@ -25,7 +25,7 @@
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="ua.taxi.model" />
+        <property name="packagesToScan" value="ua.taxi.base.model" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
         </property>

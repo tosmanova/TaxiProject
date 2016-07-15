@@ -12,11 +12,11 @@ import java.io.IOException;
  * Created by andrii on 08.07.16.
  */
 @WebServlet(urlPatterns = {"/create-order"})
-public class CreateOrderServlet extends Servlet {
+public class CreateOrderServletInit extends ServletInit {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //redirect to DriverRegServlet.jsp
+        //redirect to DriverRegServletInit.jsp
         req.getRequestDispatcher("/WEB-INF/pages/create-order.jsp").forward(req, resp);
     }
 
