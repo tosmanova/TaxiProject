@@ -14,8 +14,8 @@ import java.io.IOException;
 /**
  * Created by andrii on 07.07.16.
  */
-@WebServlet(urlPatterns = {"/login"})
-public class LoginServletInit extends ServletInit {
+@WebServlet(urlPatterns = {"/login--"})
+public class zLoginServletInit extends ServletInit {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

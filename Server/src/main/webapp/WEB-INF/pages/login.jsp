@@ -1,7 +1,7 @@
 <%@include file="main-page-head.jsp"%>
 
 
-<form method="post" action="driver-register" class="form-horizontal">
+<form method="post" action="login" class="form-horizontal">
 
     <h3> Login: </h3>
 

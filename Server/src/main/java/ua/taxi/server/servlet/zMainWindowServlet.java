@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 
 @WebServlet(urlPatterns = {"/main-window"})
-public class MainWindowServlet extends HttpServlet {
+public class zMainWindowServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

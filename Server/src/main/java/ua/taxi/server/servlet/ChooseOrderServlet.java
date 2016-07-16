@@ -10,14 +10,13 @@ import java.io.IOException;
  * Created by andrii on 15.07.16.
  */
 
-@WebServlet(urlPatterns = {"/login"})
-public class LoginServlet extends ServletInit{
+@WebServlet(urlPatterns = {"/choose-order"})
+public class ChooseOrderServlet extends ServletInit{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/pages/choose-order.jsp").forward(req, resp);
     }
 
-
-
 }
+

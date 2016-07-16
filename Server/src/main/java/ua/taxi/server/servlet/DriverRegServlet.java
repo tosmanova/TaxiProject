@@ -12,11 +12,11 @@ import java.io.IOException;
  */
 
 @WebServlet(urlPatterns = {"/driver-register"})
-public class DriverRegServletInit extends ServletInit {
+public class DriverRegServlet extends ServletInit {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //redirect to DriverRegServletInit.jsp
+        //redirect to DriverRegServlet.jsp
         req.getRequestDispatcher("/WEB-INF/pages/driver-register.jsp").forward(req, resp);
     }
 

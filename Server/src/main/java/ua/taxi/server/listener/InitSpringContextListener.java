@@ -18,7 +18,9 @@ public class InitSpringContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent servletContextEvent) {
 
         String springLocation = servletContextEvent.getServletContext().getInitParameter("springLocation");
+
         ApplicationContext context = new ClassPathXmlApplicationContext(springLocation);
+
         servletContextEvent.getServletContext().setAttribute("spring-context", context);
     }
 

@@ -26,7 +26,7 @@
 <div class="container">
     <div class="col-xs-4 col-xs-offset-7" id="register-block">
         <div class="col-xs-12">
-            <h3><a href="main-page" id="registerRef">register</a> | <a href="main-page" id="loginRef">login</a></h3>
+            <h3><a href="passenger-register" id="registerRef">register</a> | <a href="login" id="loginRef">login</a></h3>
         </div>
     </div>
     <div class="row">
